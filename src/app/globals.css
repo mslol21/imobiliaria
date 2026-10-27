@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --color-brand-red: #B5121B;
+  --color-brand-red-dark: #8F0D15;
+  --color-brand-white: #FFFFFF;
+  --color-brand-gray-light: #F5F5F5;
+  --color-brand-charcoal: #242424;
+  --color-brand-muted: #737373;
+  --color-border-subtle: #E5E5E5;
+}
+
+@theme inline {
+  --color-brand-red: var(--color-brand-red);
+  --color-brand-red-dark: var(--color-brand-red-dark);
+  --color-brand-white: var(--color-brand-white);
+  --color-brand-gray-light: var(--color-brand-gray-light);
+  --color-brand-charcoal: var(--color-brand-charcoal);
+  --color-brand-muted: var(--color-brand-muted);
+  --color-border-subtle: var(--color-border-subtle);
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FFFFFF;
+  color: var(--color-brand-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background-color: #FFFFFF;
+  color: var(--color-brand-charcoal);
+}
+
+h1,
+h2,
+h3,
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Acessibilidade WCAG 2.2 AA: Foco visível com vermelho de alto contraste */
+:focus-visible {
+  outline: 2px solid var(--color-brand-red);
+  outline-offset: 2px;
+}
+
+/* Respeito às preferências de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
