@@ -30,7 +30,7 @@ export function Footer({ settings }: FooterProps) {
           {/* Coluna 1: Símbolo e Descrição */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-700 to-teal-800 text-white shadow-md shadow-cyan-950/40">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-700 text-white shadow-sm">
                 <svg
                   className="h-6 w-6 fill-none stroke-current stroke-[2.2]"
                   viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ export function Footer({ settings }: FooterProps) {
               </div>
               <div>
                 <span className="font-sans text-xl font-bold tracking-tight text-white block leading-none">
-                  {settings.agency_name || "Consultoria Imobiliária"}
+                  {settings.agency_name || "Imóveis para comprar e alugar"}
                 </span>
                 <span className="text-[11px] uppercase tracking-wider text-cyan-400 font-semibold mt-1 block">
                   Imóveis Selecionados
@@ -68,7 +68,7 @@ export function Footer({ settings }: FooterProps) {
               ) : (
                 <div className="inline-flex items-center gap-2 rounded-lg border border-cyan-900/40 bg-cyan-950/30 px-3 py-1.5 text-xs text-cyan-300">
                   <ShieldCheck className="h-4 w-4 text-cyan-400" />
-                  <span>Informações cadastrais personalizáveis no painel</span>
+                  <span>Dados profissionais a serem cadastrados</span>
                 </div>
               )}
             </div>
@@ -304,7 +304,7 @@ export function Footer({ settings }: FooterProps) {
         {/* Linha Inferior */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-zinc-800 pt-8 text-xs text-zinc-400 sm:flex-row">
           <p>
-            © {currentYear} {settings.agency_name || "Plataforma Imobiliária"}. Todos os direitos reservados.
+            © {currentYear} {settings.agency_name || "Imóveis"}. Todos os direitos reservados.
             {settings.cnpj ? ` • CNPJ: ${settings.cnpj}` : ""}
           </p>
           <div className="flex flex-wrap items-center gap-5">
