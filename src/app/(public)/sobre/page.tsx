@@ -11,9 +11,9 @@ import { Button } from "@/components/ui/button";
 import { getSiteSettings } from "@/services/settings.service";
 
 export const metadata: Metadata = {
-  title: "Sobre Nós | Consultoria e Atuação Imobiliária",
+  title: "Sobre Nós | Imóveis em Guaianases e Zona Leste",
   description:
-    "Conheça nossa metodologia, diferenciais e compromisso com excelência, discrição e segurança jurídica.",
+    "Conheça a proposta de atendimento imobiliário para Guaianases e bairros da Zona Leste de São Paulo.",
 };
 
 export default async function SobrePage() {
@@ -42,10 +42,10 @@ export default async function SobrePage() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7 rounded-3xl border border-[#E5E5E5] bg-white p-8 sm:p-12 shadow-xs space-y-6">
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-700">
-              Posicionamento & Metodologia
+              Sobre o atendimento
             </span>
             <h2 className="font-editorial text-3xl font-semibold text-[#242424]">
-              História e Atuação Consultiva
+              Atuação na Zona Leste
             </h2>
             <p className="text-base leading-relaxed text-[#242424]/90 whitespace-pre-line">
               {settings.about_history}
@@ -96,7 +96,7 @@ export default async function SobrePage() {
               Compromisso
             </span>
             <h2 className="font-editorial mt-1 text-3xl font-semibold text-[#242424]">
-              Nossos Pilares
+              O que você encontra aqui
             </h2>
           </div>
 
