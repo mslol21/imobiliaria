@@ -14,7 +14,7 @@ import { sanitizePhoneForWhatsApp } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Contato & Atendimento | Fale com um Especialista",
   description:
-    "Entre em contato com nossa equipe de consultoria para agendar visitas, avaliar seu imÃ³vel ou receber opÃ§Ãµes personalizadas.",
+    "Entre em contato com nossa equipe de consultoria para agendar visitas, avaliar seu imóvel ou receber opções personalizadas.",
 };
 
 export default async function ContatoPage() {
@@ -33,14 +33,14 @@ export default async function ContatoPage() {
             Fale Conosco
           </h1>
           <p className="mt-3 max-w-2xl text-base text-[#D4D4D4]">
-            Estamos prontos para atender vocÃª com discriÃ§Ã£o, agilidade e conhecimento aprofundado do mercado.
+            Estamos prontos para atender você com discrição, agilidade e conhecimento aprofundado do mercado.
           </p>
         </div>
       </section>
 
       <div className="mx-auto max-w-7xl px-4 pt-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-          {/* InformaÃ§Ãµes de Contato */}
+          {/* Informações de Contato */}
           <div className="lg:col-span-5 space-y-6">
             <div className="rounded-2xl border border-[#E5E5E5] bg-[#F5F5F5] p-7 shadow-xs space-y-6">
               <div>
@@ -48,7 +48,7 @@ export default async function ContatoPage() {
                   Canais de Atendimento
                 </span>
                 <h2 className="font-editorial mt-1 text-2xl font-semibold text-[#242424]">
-                  InformaÃ§Ãµes de Contato
+                  Informações de Contato
                 </h2>
               </div>
 
@@ -59,7 +59,7 @@ export default async function ContatoPage() {
                   </div>
                   <div>
                     <strong className="block font-semibold text-[#242424]">
-                      LocalizaÃ§Ã£o
+                      Localização
                     </strong>
                     <span className="text-[#737373]">
                       {settings.address_line
@@ -134,7 +134,7 @@ export default async function ContatoPage() {
                   </div>
                   <div>
                     <strong className="block font-semibold text-[#242424]">
-                      HorÃ¡rio de Atendimento
+                      Horário de Atendimento
                     </strong>
                     <span className="text-[#737373]">
                       {settings.business_hours}
@@ -145,14 +145,14 @@ export default async function ContatoPage() {
             </div>
           </div>
 
-          {/* FormulÃ¡rio */}
+          {/* Formulário */}
           <div className="lg:col-span-7">
             <div className="rounded-2xl border border-[#E5E5E5] bg-white p-7 sm:p-10 shadow-sm">
               <h2 className="font-editorial text-2xl sm:text-3xl font-semibold text-[#242424] mb-2">
                 Envie sua mensagem
               </h2>
               <p className="text-sm text-[#737373] mb-6">
-                Preencha os campos abaixo e nosso consultor retornarÃ¡ rapidamente.
+                Preencha os campos abaixo e nosso consultor retornará rapidamente.
               </p>
 
               <PublicContactForm

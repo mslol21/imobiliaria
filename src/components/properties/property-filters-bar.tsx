@@ -185,7 +185,7 @@ export function PropertyFiltersBar({
               onChange={(e) => setFinalidade(e.target.value)}
               className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] focus:border-cyan-600 focus:outline-none"
             >
-              <option value="todos">Venda e LocaÃ§Ã£o</option>
+              <option value="todos">Venda e Locação</option>
               <option value="venda">Comprar</option>
               <option value="aluguel">Alugar</option>
             </select>
@@ -193,7 +193,7 @@ export function PropertyFiltersBar({
         )}
 
         <div>
-          <Label htmlFor="filter-type">Tipo de ImÃ³vel</Label>
+          <Label htmlFor="filter-type">Tipo de Imóvel</Label>
           <select
             id="filter-type"
             value={tipo}
@@ -216,7 +216,7 @@ export function PropertyFiltersBar({
             list="filter-cities-list"
             value={cidade}
             onChange={(e) => setCidade(e.target.value)}
-            placeholder="Ex: SÃ£o Paulo"
+            placeholder="Ex: São Paulo"
           />
           <datalist id="filter-cities-list">
             {cities.map((c) => (
@@ -242,10 +242,10 @@ export function PropertyFiltersBar({
         </div>
       </div>
 
-      {/* Faixas de PreÃ§o e Ãrea */}
+      {/* Faixas de Preço e Área */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Label htmlFor="filter-price-min">Valor mÃ­nimo (R$)</Label>
+          <Label htmlFor="filter-price-min">Valor mínimo (R$)</Label>
           <Input
             id="filter-price-min"
             type="number"
@@ -257,7 +257,7 @@ export function PropertyFiltersBar({
           />
         </div>
         <div>
-          <Label htmlFor="filter-price-max">Valor mÃ¡ximo (R$)</Label>
+          <Label htmlFor="filter-price-max">Valor máximo (R$)</Label>
           <Input
             id="filter-price-max"
             type="number"
@@ -269,7 +269,7 @@ export function PropertyFiltersBar({
           />
         </div>
         <div>
-          <Label htmlFor="filter-area-min">Ãrea mÃ­nima (mÂ²)</Label>
+          <Label htmlFor="filter-area-min">Área mínima (m²)</Label>
           <Input
             id="filter-area-min"
             type="number"
@@ -280,7 +280,7 @@ export function PropertyFiltersBar({
           />
         </div>
         <div>
-          <Label htmlFor="filter-area-max">Ãrea mÃ¡xima (mÂ²)</Label>
+          <Label htmlFor="filter-area-max">Área máxima (m²)</Label>
           <Input
             id="filter-area-max"
             type="number"
@@ -292,13 +292,13 @@ export function PropertyFiltersBar({
         </div>
       </div>
 
-      {/* DormitÃ³rios e EspecificaÃ§Ãµes */}
+      {/* Dormitórios e Especificações */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
-          { label: "DormitÃ³rios (mÃ­n.)", val: dormitorios, setter: setDormitorios },
-          { label: "SuÃ­tes (mÃ­n.)", val: suites, setter: setSuites },
-          { label: "Banheiros (mÃ­n.)", val: banheiros, setter: setBanheiros },
-          { label: "Vagas (mÃ­n.)", val: vagas, setter: setVagas },
+          { label: "Dormitórios (mín.)", val: dormitorios, setter: setDormitorios },
+          { label: "Suítes (mín.)", val: suites, setter: setSuites },
+          { label: "Banheiros (mín.)", val: banheiros, setter: setBanheiros },
+          { label: "Vagas (mín.)", val: vagas, setter: setVagas },
         ].map((group) => (
           <div key={group.label}>
             <Label>{group.label}</Label>
@@ -323,11 +323,11 @@ export function PropertyFiltersBar({
         ))}
       </div>
 
-      {/* CaracterÃ­sticas Extras */}
+      {/* Características Extras */}
       <div className="flex flex-wrap gap-3 pt-1">
         {[
           {
-            label: "ImÃ³vel mobiliado",
+            label: "Imóvel mobiliado",
             checked: mobiliado,
             toggle: () => setMobiliado((v) => !v),
           },
@@ -337,7 +337,7 @@ export function PropertyFiltersBar({
             toggle: () => setAceitaAnimais((v) => !v),
           },
           {
-            label: "SeleÃ§Ã£o Alto PadrÃ£o",
+            label: "Seleção Alto Padrão",
             checked: altoPadrao,
             toggle: () => setAltoPadrao((v) => !v),
           },
@@ -397,7 +397,7 @@ export function PropertyFiltersBar({
 
   return (
     <section
-      aria-label="Filtros e ordenaÃ§Ã£o de imÃ³veis"
+      aria-label="Filtros e ordenação de imóveis"
       className="mb-8 rounded-2xl border border-[#E5E5E5] bg-white p-4 sm:p-6 shadow-sm"
     >
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -425,7 +425,7 @@ export function PropertyFiltersBar({
           >
             <SlidersHorizontal className="h-4 w-4 text-cyan-700" />
             <span>
-              {showAdvancedDesktop ? "Ocultar filtros" : "Filtros avanÃ§ados"}
+              {showAdvancedDesktop ? "Ocultar filtros" : "Filtros avançados"}
             </span>
             {activeFilterCount > 0 && (
               <span className="ml-1 rounded-full bg-cyan-700 px-2 py-0.5 text-[11px] text-white">
@@ -451,11 +451,11 @@ export function PropertyFiltersBar({
             <strong className="font-semibold text-[#242424]">
               {totalResults}
             </strong>{" "}
-            {totalResults === 1 ? "imÃ³vel encontrado" : "imÃ³veis encontrados"}
+            {totalResults === 1 ? "imóvel encontrado" : "imóveis encontrados"}
           </p>
         </div>
 
-        {/* OrdenaÃ§Ã£o */}
+        {/* Ordenação */}
         <div className="flex items-center gap-2">
           <ArrowUpDown
             className="h-4 w-4 text-cyan-700 shrink-0"
@@ -485,7 +485,7 @@ export function PropertyFiltersBar({
         </div>
       </div>
 
-      {/* Barra RÃ¡pida Desktop */}
+      {/* Barra Rápida Desktop */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -513,7 +513,7 @@ export function PropertyFiltersBar({
         ) : (
           <div className="grid grid-cols-12 gap-3 items-end">
             <div className="col-span-3">
-              <Label htmlFor="quick-type">Tipo de ImÃ³vel</Label>
+              <Label htmlFor="quick-type">Tipo de Imóvel</Label>
               <select
                 id="quick-type"
                 value={tipo}
@@ -536,7 +536,7 @@ export function PropertyFiltersBar({
                 id="quick-city"
                 value={cidade}
                 onChange={(e) => setCidade(e.target.value)}
-                placeholder="Ex: SÃ£o Paulo"
+                placeholder="Ex: São Paulo"
               />
             </div>
             <div className="col-span-3">
@@ -569,7 +569,7 @@ export function PropertyFiltersBar({
           <div className="mt-auto flex max-h-[90dvh] w-full flex-col rounded-t-3xl bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-[#E5E5E5] px-5 py-4">
               <h2 className="font-editorial text-xl font-semibold text-[#242424]">
-                Filtrar ImÃ³veis
+                Filtrar Imóveis
               </h2>
               <Button
                 type="button"

@@ -100,7 +100,7 @@ export function PropertyGallery({
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/15 pointer-events-none" />
 
-        {/* Contador e BotÃ£o Lightbox */}
+        {/* Contador e Botão Lightbox */}
         <div className="absolute top-4 right-4 flex items-center gap-2">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-black/65 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
             <Camera className="h-3.5 w-3.5 text-cyan-700" />
@@ -134,7 +134,7 @@ export function PropertyGallery({
             <button
               type="button"
               onClick={goNext}
-              aria-label="PrÃ³xima fotografia"
+              aria-label="Próxima fotografia"
               className="absolute right-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-[#242424] shadow-md transition-transform hover:scale-105 hover:text-cyan-700 cursor-pointer"
             >
               <ChevronRight className="h-5 w-5" />
@@ -231,7 +231,7 @@ export function PropertyGallery({
                 <button
                   type="button"
                   onClick={goNext}
-                  aria-label="PrÃ³xima"
+                  aria-label="Próxima"
                   className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white hover:bg-white/30 cursor-pointer"
                 >
                   <ChevronRight className="h-6 w-6" />

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -21,7 +21,7 @@ function AdminLoginFormContent() {
   const statusParam = searchParams.get("status");
   const redirectTo = searchParams.get("redirectTo") || "/admin";
 
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("admin@admin.com");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -44,14 +44,14 @@ function AdminLoginFormContent() {
   }
 
   return (
-    <div className="min-h-dvh bg-[#242424] flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-dvh bg-zinc-900 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs font-medium text-[#D4D4D4] hover:text-white mb-6"
+          className="inline-flex items-center gap-2 text-xs font-medium text-zinc-400 hover:text-white mb-6"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
-          <span>Voltar ao site pÃºblico</span>
+          <span>Voltar ao site público</span>
         </Link>
 
         <div className="flex items-center gap-3">
@@ -61,14 +61,18 @@ function AdminLoginFormContent() {
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"
+              />
             </svg>
           </div>
           <div>
-            <h1 className="font-editorial text-2xl font-semibold text-white">
+            <h1 className="text-2xl font-bold text-white">
               Painel Administrativo
             </h1>
-            <p className="text-xs text-[#A3A3A3]">
+            <p className="text-xs text-zinc-400">
               Acesso exclusivo para administradores
             </p>
           </div>
@@ -76,20 +80,20 @@ function AdminLoginFormContent() {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="rounded-2xl bg-white p-7 sm:p-9 shadow-2xl border border-[#E5E5E5] space-y-6">
+        <div className="rounded-2xl bg-white p-7 sm:p-9 shadow-2xl border border-zinc-200 space-y-6">
           {statusParam === "supabase_unconfigured" && (
             <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-xs text-amber-950 space-y-2">
               <div className="flex items-center gap-2 font-semibold">
                 <Database className="h-4 w-4 text-amber-800 shrink-0" />
-                <span>ConfiguraÃ§Ã£o do Supabase Pendente</span>
+                <span>Configuração do Supabase Pendente</span>
               </div>
               <p className="leading-relaxed">
-                Para autenticar administradores e gerenciar dados em produÃ§Ã£o:
+                Para autenticar administradores e gerenciar dados em produção:
               </p>
               <ol className="list-decimal pl-4 space-y-1">
                 <li>Preencha <code>.env.local</code> com as chaves do Supabase.</li>
                 <li>Execute a migration <code>supabase/migrations/0001_initial_schema.sql</code>.</li>
-                <li>Crie o usuÃ¡rio em Authentication e vincule o perfil em <code>public.profiles</code>.</li>
+                <li>Crie o usuário em Authentication e vincule o perfil em <code>public.profiles</code>.</li>
               </ol>
             </div>
           )}
@@ -98,7 +102,7 @@ function AdminLoginFormContent() {
             <div className="rounded-xl border border-red-200 bg-red-50 p-3.5 text-xs text-red-900 flex items-start gap-2">
               <AlertCircle className="h-4 w-4 text-red-700 shrink-0 mt-0.5" />
               <span>
-                UsuÃ¡rio nÃ£o possui perfil ativo de administrador em <code>public.profiles</code>.
+                Usuário não possui perfil ativo de administrador em <code>public.profiles</code>.
               </span>
             </div>
           )}
@@ -113,7 +117,7 @@ function AdminLoginFormContent() {
                 autoComplete="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@seudominio.com.br"
+                placeholder="admin@admin.com"
               />
             </div>
 
@@ -126,7 +130,7 @@ function AdminLoginFormContent() {
                 autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
+                placeholder="••••••••••••"
               />
             </div>
 
@@ -142,16 +146,18 @@ function AdminLoginFormContent() {
               variant="default"
               size="lg"
               disabled={loading}
-              className="w-full"
+              className="w-full bg-cyan-700 hover:bg-cyan-800 text-white font-semibold"
             >
               <Lock className="h-4 w-4" />
-              <span>{loading ? "Verificando..." : "Entrar no Painel"}</span>
+              <span>{loading ? "Autenticando..." : "Entrar no painel"}</span>
             </Button>
           </form>
 
-          <div className="border-t border-[#E5E5E5] pt-4 flex items-center justify-center gap-2 text-[11px] text-[#737373]">
-            <ShieldCheck className="h-4 w-4 text-cyan-700" />
-            <span>SessÃµes criptografadas com Supabase Auth & RLS</span>
+          <div className="border-t border-zinc-100 pt-4 text-center">
+            <span className="text-[11px] text-zinc-500 inline-flex items-center gap-1.5">
+              <ShieldCheck className="h-3.5 w-3.5 text-cyan-700" />
+              <span>Sessão protegida por criptografia e RLS</span>
+            </span>
           </div>
         </div>
       </div>
@@ -163,8 +169,8 @@ export default function AdminLoginPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-dvh bg-[#242424] flex items-center justify-center text-white text-sm">
-          Carregando autenticaÃ§Ã£o...
+        <div className="min-h-dvh bg-zinc-900 flex items-center justify-center text-white">
+          <span>Carregando autenticação...</span>
         </div>
       }
     >
@@ -172,4 +178,3 @@ export default function AdminLoginPage() {
     </Suspense>
   );
 }
-

@@ -11,9 +11,9 @@ import { Button } from "@/components/ui/button";
 import { getSiteSettings } from "@/services/settings.service";
 
 export const metadata: Metadata = {
-  title: "Sobre NÃ³s | Consultoria e AtuaÃ§Ã£o ImobiliÃ¡ria",
+  title: "Sobre Nós | Consultoria e Atuação Imobiliária",
   description:
-    "ConheÃ§a nossa metodologia, diferenciais e compromisso com excelÃªncia, discriÃ§Ã£o e seguranÃ§a jurÃ­dica.",
+    "Conheça nossa metodologia, diferenciais e compromisso com excelência, discrição e segurança jurídica.",
 };
 
 export default async function SobrePage() {
@@ -37,7 +37,7 @@ export default async function SobrePage() {
         </div>
       </section>
 
-      {/* TrajetÃ³ria e Posicionamento */}
+      {/* Trajetória e Posicionamento */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7 rounded-3xl border border-[#E5E5E5] bg-white p-8 sm:p-12 shadow-xs space-y-6">
@@ -45,7 +45,7 @@ export default async function SobrePage() {
               Posicionamento & Metodologia
             </span>
             <h2 className="font-editorial text-3xl font-semibold text-[#242424]">
-              HistÃ³ria e AtuaÃ§Ã£o Consultiva
+              História e Atuação Consultiva
             </h2>
             <p className="text-base leading-relaxed text-[#242424]/90 whitespace-pre-line">
               {settings.about_history}
@@ -68,7 +68,7 @@ export default async function SobrePage() {
                 <Compass className="h-6 w-6" />
               </div>
               <h2 className="font-editorial text-3xl font-semibold">
-                Consultoria ImobiliÃ¡ria
+                Consultoria Imobiliária
               </h2>
               <p className="text-sm sm:text-base leading-relaxed text-[#D4D4D4]">
                 {settings.about_consulting}
@@ -83,7 +83,7 @@ export default async function SobrePage() {
                 </Link>
               </Button>
               <Button asChild variant="outlineLight">
-                <Link href="/imoveis">Explorar catÃ¡logo</Link>
+                <Link href="/imoveis">Explorar catálogo</Link>
               </Button>
             </div>
           </div>

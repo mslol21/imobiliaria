@@ -38,7 +38,7 @@ export function PropertyLeadCard({
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState(
-    `OlÃ¡! Tenho interesse no imÃ³vel ${property.reference_code} (${property.title}) e gostaria de receber mais informaÃ§Ãµes.`
+    `Olá! Tenho interesse no imóvel ${property.reference_code} (${property.title}) e gostaria de receber mais informações.`
   );
   const [consentLgpd, setConsentLgpd] = useState(true);
   const [honeypot, setHoneypot] = useState("");
@@ -54,11 +54,11 @@ export function PropertyLeadCard({
     setIntentTab(nextIntent);
     if (nextIntent === "agendar_visita") {
       setMessage(
-        `OlÃ¡! Gostaria de agendar uma visita ao imÃ³vel ${property.reference_code} (${property.title}).`
+        `Olá! Gostaria de agendar uma visita ao imóvel ${property.reference_code} (${property.title}).`
       );
     } else {
       setMessage(
-        `OlÃ¡! Tenho interesse no imÃ³vel ${property.reference_code} (${property.title}) e gostaria de receber mais informaÃ§Ãµes.`
+        `Olá! Tenho interesse no imóvel ${property.reference_code} (${property.title}) e gostaria de receber mais informações.`
       );
     }
   }
@@ -121,14 +121,14 @@ export function PropertyLeadCard({
 
   return (
     <div className="rounded-2xl border border-[#E5E5E5] bg-white p-6 shadow-sm">
-      {/* CabeÃ§alho */}
+      {/* Cabeçalho */}
       <div className="mb-5 flex items-center justify-between border-b border-[#E5E5E5] pb-4">
         <div>
           <span className="text-[11px] font-semibold uppercase tracking-widest text-cyan-700">
             Atendimento
           </span>
           <h3 className="font-editorial text-2xl font-semibold text-[#242424]">
-            Interesse no ImÃ³vel
+            Interesse no Imóvel
           </h3>
         </div>
         <Button
@@ -136,7 +136,7 @@ export function PropertyLeadCard({
           variant="secondary"
           size="sm"
           onClick={handleShare}
-          aria-label="Compartilhar este imÃ³vel"
+          aria-label="Compartilhar este imóvel"
         >
           <Share2 className="h-3.5 w-3.5 text-[#242424]" />
           <span>{copiedShare ? "Copiado!" : "Compartilhar"}</span>
@@ -174,7 +174,7 @@ export function PropertyLeadCard({
         </button>
       </div>
 
-      {/* BotÃ£o de WhatsApp */}
+      {/* Botão de WhatsApp */}
       <div className="mb-6">
         <Button
           asChild
@@ -189,7 +189,7 @@ export function PropertyLeadCard({
         </Button>
       </div>
 
-      {/* FormulÃ¡rio */}
+      {/* Formulário */}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="hidden" aria-hidden="true">
           <label htmlFor="website_honeypot">Deixe em branco</label>
@@ -258,12 +258,12 @@ export function PropertyLeadCard({
           />
           <span>
             Concordo com o tratamento dos dados exclusivamente para retorno
-            comercial sobre este imÃ³vel, conforme a{" "}
+            comercial sobre este imóvel, conforme a{" "}
             <Link
               href="/privacidade"
               className="underline font-medium text-cyan-700"
             >
-              PolÃ­tica de Privacidade (LGPD)
+              Política de Privacidade (LGPD)
             </Link>
             .
           </span>
@@ -300,7 +300,7 @@ export function PropertyLeadCard({
               ? "Enviando..."
               : intentTab === "agendar_visita"
                 ? "Solicitar Agendamento de Visita"
-                : "Enviar SolicitaÃ§Ã£o de Atendimento"}
+                : "Enviar Solicitação de Atendimento"}
           </span>
         </Button>
 

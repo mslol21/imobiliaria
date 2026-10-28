@@ -50,7 +50,7 @@ export async function generateMetadata({
 
   if (!property) {
     return {
-      title: "ImÃ³vel nÃ£o encontrado",
+      title: "Imóvel não encontrado",
     };
   }
 
@@ -149,12 +149,12 @@ export default async function PropertyDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Breadcrumb e Barra de IdentificaÃ§Ã£o */}
+      {/* Breadcrumb e Barra de Identificação */}
       <div className="border-b border-[#E5E5E5] bg-[#F5F5F5]">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-3.5 text-xs text-[#737373] sm:px-6 lg:px-8">
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 flex-wrap">
             <Link href="/" className="hover:text-cyan-700">
-              InÃ­cio
+              Início
             </Link>
             <ChevronRight className="h-3.5 w-3.5" />
             <Link
@@ -171,7 +171,7 @@ export default async function PropertyDetailPage({
 
           <div className="flex items-center gap-2">
             <span className="rounded-md bg-white px-2.5 py-1 font-semibold text-[#242424] border border-[#E5E5E5]">
-              CÃ³digo: {property.reference_code}
+              Código: {property.reference_code}
             </span>
             <Badge
               variant={
@@ -187,7 +187,7 @@ export default async function PropertyDetailPage({
       </div>
 
       <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
-        {/* CabeÃ§alho do ImÃ³vel */}
+        {/* Cabeçalho do Imóvel */}
         <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-8 space-y-3">
             <div className="flex flex-wrap items-center gap-2">
@@ -201,7 +201,7 @@ export default async function PropertyDetailPage({
                 property.property_type === "alto_padrao") && (
                 <Badge variant="outline" className="border-cyan-700/40 text-cyan-700">
                   <Sparkles className="h-3 w-3" />
-                  <span>Alto PadrÃ£o</span>
+                  <span>Alto Padrão</span>
                 </Badge>
               )}
             </div>
@@ -237,12 +237,12 @@ export default async function PropertyDetailPage({
               {property.rent_price && property.rent_price > 0 && (
                 <div className="flex items-baseline justify-between">
                   <span className="text-xs font-semibold uppercase tracking-wider text-[#737373]">
-                    LocaÃ§Ã£o Mensal
+                    Locação Mensal
                   </span>
                   <span className="font-editorial text-2xl sm:text-3xl font-bold text-cyan-700">
                     {formatCurrencyBRL(property.rent_price)}
                     <small className="ml-1 font-sans text-xs font-normal text-[#737373]">
-                      /mÃªs
+                      /mês
                     </small>
                   </span>
                 </div>
@@ -251,11 +251,11 @@ export default async function PropertyDetailPage({
               <div className="border-t border-[#E5E5E5] pt-2.5 mt-2.5 grid grid-cols-2 gap-2 text-xs text-[#737373]">
                 <div>
                   <span className="block text-[11px] uppercase tracking-wider text-[#737373]">
-                    CondomÃ­nio
+                    Condomínio
                   </span>
                   <strong className="font-semibold text-[#242424]">
                     {property.condo_fee && property.condo_fee > 0
-                      ? `${formatCurrencyBRL(property.condo_fee)}/mÃªs`
+                      ? `${formatCurrencyBRL(property.condo_fee)}/mês`
                       : "Sob consulta / Isento"}
                   </strong>
                 </div>
@@ -276,7 +276,7 @@ export default async function PropertyDetailPage({
           </div>
         </div>
 
-        {/* Layout: ConteÃºdo (Esquerda) + ConversÃ£o (Direita) */}
+        {/* Layout: Conteúdo (Esquerda) + Conversão (Direita) */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-8 space-y-10">
             {/* Galeria de Fotos */}
@@ -285,13 +285,13 @@ export default async function PropertyDetailPage({
               propertyTitle={property.title}
             />
 
-            {/* Ficha TÃ©cnica */}
+            {/* Ficha Técnica */}
             <section
-              aria-label="CaracterÃ­sticas principais do imÃ³vel"
+              aria-label="Características principais do imóvel"
               className="rounded-2xl border border-[#E5E5E5] bg-white p-6 sm:p-8 shadow-xs"
             >
               <h2 className="font-editorial text-2xl font-semibold text-[#242424] mb-6">
-                Ficha TÃ©cnica da Propriedade
+                Ficha Técnica da Propriedade
               </h2>
 
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
@@ -299,7 +299,7 @@ export default async function PropertyDetailPage({
                   <div className="flex items-center gap-2 text-[#242424]">
                     <Maximize2 className="h-4 w-4 text-cyan-700" />
                     <span className="text-xs font-semibold uppercase tracking-wider">
-                      Ãrea Ãštil
+                      Área Ãštil
                     </span>
                   </div>
                   <p className="mt-1.5 text-lg font-bold text-[#242424]">
@@ -311,7 +311,7 @@ export default async function PropertyDetailPage({
                   <div className="flex items-center gap-2 text-[#242424]">
                     <Compass className="h-4 w-4 text-cyan-700" />
                     <span className="text-xs font-semibold uppercase tracking-wider">
-                      Ãrea Total
+                      Área Total
                     </span>
                   </div>
                   <p className="mt-1.5 text-lg font-bold text-[#242424]">
@@ -323,13 +323,13 @@ export default async function PropertyDetailPage({
                   <div className="flex items-center gap-2 text-[#242424]">
                     <BedDouble className="h-4 w-4 text-cyan-700" />
                     <span className="text-xs font-semibold uppercase tracking-wider">
-                      DormitÃ³rios
+                      Dormitórios
                     </span>
                   </div>
                   <p className="mt-1.5 text-lg font-bold text-[#242424]">
                     {property.bedrooms}{" "}
                     <span className="text-xs font-normal text-[#737373]">
-                      ({property.suites} suÃ­tes)
+                      ({property.suites} suítes)
                     </span>
                   </p>
                 </div>
@@ -367,7 +367,7 @@ export default async function PropertyDetailPage({
                       </span>
                     </div>
                     <p className="mt-1.5 text-lg font-bold text-[#242424]">
-                      {property.floor_number}Âº andar
+                      {property.floor_number}º andar
                     </p>
                   </div>
                 )}
@@ -380,7 +380,7 @@ export default async function PropertyDetailPage({
                     </span>
                   </div>
                   <p className="mt-1.5 text-lg font-bold text-[#242424]">
-                    {property.is_furnished ? "Sim" : "NÃ£o"}
+                    {property.is_furnished ? "Sim" : "Não"}
                   </p>
                 </div>
 
@@ -398,9 +398,9 @@ export default async function PropertyDetailPage({
               </div>
             </section>
 
-            {/* DescriÃ§Ã£o e Diferenciais */}
+            {/* Descrição e Diferenciais */}
             <section
-              aria-label="DescriÃ§Ã£o completa do imÃ³vel"
+              aria-label="Descrição completa do imóvel"
               className="rounded-2xl border border-[#E5E5E5] bg-white p-6 sm:p-8 shadow-xs space-y-6"
             >
               <div>
@@ -451,15 +451,15 @@ export default async function PropertyDetailPage({
               )}
             </section>
 
-            {/* LocalizaÃ§Ã£o e Privacidade */}
+            {/* Localização e Privacidade */}
             <section
-              aria-label="LocalizaÃ§Ã£o do imÃ³vel"
+              aria-label="Localização do imóvel"
               className="rounded-2xl border border-[#E5E5E5] bg-white p-6 sm:p-8 shadow-xs space-y-5"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                 <div>
                   <h2 className="font-editorial text-2xl font-semibold text-[#242424]">
-                    LocalizaÃ§Ã£o
+                    Localização
                   </h2>
                   <p className="text-sm text-[#737373] mt-1">
                     {property.neighborhood} â€¢ {property.city}, {property.state}
@@ -473,7 +473,7 @@ export default async function PropertyDetailPage({
                   <div className="inline-flex items-center gap-2 rounded-lg bg-[#F5F5F5] px-3 py-2 text-xs text-[#242424] border border-[#E5E5E5]">
                     <ShieldAlert className="h-4 w-4 text-cyan-700 shrink-0" />
                     <span>
-                      EndereÃ§o exato sob consulta para preservar a privacidade
+                      Endereço exato sob consulta para preservar a privacidade
                     </span>
                   </div>
                 )}
@@ -481,7 +481,7 @@ export default async function PropertyDetailPage({
 
               <div className="overflow-hidden rounded-xl border border-[#E5E5E5] bg-[#F5F5F5] h-80 w-full">
                 <iframe
-                  title={`Mapa de localizaÃ§Ã£o em ${property.neighborhood}, ${property.city}`}
+                  title={`Mapa de localização em ${property.neighborhood}, ${property.city}`}
                   width="100%"
                   height="100%"
                   loading="lazy"
@@ -495,7 +495,7 @@ export default async function PropertyDetailPage({
             </section>
           </div>
 
-          {/* Coluna Lateral: ConversÃ£o e Atendimento */}
+          {/* Coluna Lateral: Conversão e Atendimento */}
           <aside className="lg:col-span-4">
             <div className="sticky top-24 space-y-6">
               <PropertyLeadCard
@@ -519,33 +519,33 @@ export default async function PropertyDetailPage({
                   </div>
                 </div>
                 <p className="mt-3 text-xs leading-relaxed text-[#D4D4D4]">
-                  Todas as visitas sÃ£o privativas e acompanhadas por um consultor experiente. Solicite plantas, certidÃµes e condiÃ§Ãµes comerciais completas.
+                  Todas as visitas são privativas e acompanhadas por um consultor experiente. Solicite plantas, certidões e condições comerciais completas.
                 </p>
               </div>
             </div>
           </aside>
         </div>
 
-        {/* ImÃ³veis Semelhantes */}
+        {/* Imóveis Semelhantes */}
         {relatedProperties.length > 0 && (
           <section
-            aria-label="ImÃ³veis semelhantes"
+            aria-label="Imóveis semelhantes"
             className="mt-20 border-t border-[#E5E5E5] pt-16"
           >
             <div className="mb-8 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-700">
-                  RecomendaÃ§Ãµes
+                  Recomendações
                 </span>
                 <h2 className="font-editorial mt-1 text-3xl font-semibold text-[#242424]">
-                  ImÃ³veis Semelhantes
+                  Imóveis Semelhantes
                 </h2>
               </div>
               <Link
                 href={property.purpose === "aluguel" ? "/alugar" : "/comprar"}
                 className="text-sm font-semibold text-cyan-700 hover:underline"
               >
-                Ver mais opÃ§Ãµes â†’
+                Ver mais opções â†’
               </Link>
             </div>
 

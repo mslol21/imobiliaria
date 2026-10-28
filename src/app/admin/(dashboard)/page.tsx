@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import {
   Building2,
@@ -37,13 +37,13 @@ export default async function AdminDashboardPage() {
 
   const metricCards = [
     {
-      label: "Total de ImÃ³veis",
+      label: "Total de Imóveis",
       value: metrics.totalProperties,
       icon: Building2,
       tone: "bg-cyan-700 text-white",
     },
     {
-      label: "ImÃ³veis Publicados",
+      label: "Imóveis Publicados",
       value: metrics.publishedProperties,
       icon: CheckCircle2,
       tone: "bg-white text-[#242424]",
@@ -55,25 +55,25 @@ export default async function AdminDashboardPage() {
       tone: "bg-white text-[#242424]",
     },
     {
-      label: "ImÃ³veis para Venda",
+      label: "Imóveis para Venda",
       value: metrics.forSaleProperties,
       icon: Tag,
       tone: "bg-white text-[#242424]",
     },
     {
-      label: "ImÃ³veis para Aluguel",
+      label: "Imóveis para Aluguel",
       value: metrics.forRentProperties,
       icon: KeyRound,
       tone: "bg-white text-[#242424]",
     },
     {
-      label: "ImÃ³veis Vendidos",
+      label: "Imóveis Vendidos",
       value: metrics.soldProperties,
       icon: Award,
       tone: "bg-white text-[#242424]",
     },
     {
-      label: "ImÃ³veis Alugados",
+      label: "Imóveis Alugados",
       value: metrics.rentedProperties,
       icon: Award,
       tone: "bg-white text-[#242424]",
@@ -94,11 +94,11 @@ export default async function AdminDashboardPage() {
 
   return (
     <div className="space-y-8">
-      {/* CabeÃ§alho */}
+      {/* Cabeçalho */}
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
         <div>
           <span className="text-xs font-semibold uppercase tracking-widest text-cyan-700">
-            VisÃ£o Geral
+            Visão Geral
           </span>
           <h1 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#242424]">
             Dashboard Comercial
@@ -109,7 +109,7 @@ export default async function AdminDashboardPage() {
           <Button asChild variant="default">
             <Link href="/admin/imoveis/novo">
               <PlusCircle className="h-4 w-4" />
-              <span>Cadastrar ImÃ³vel</span>
+              <span>Cadastrar Imóvel</span>
             </Link>
           </Button>
           <Button asChild variant="secondary">
@@ -121,7 +121,7 @@ export default async function AdminDashboardPage() {
         </div>
       </div>
 
-      {/* Grid com os 9 Indicadores ObrigatÃ³rios */}
+      {/* Grid com os 9 Indicadores Obrigatórios */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {metricCards.map((card) => (
           <div
@@ -153,10 +153,10 @@ export default async function AdminDashboardPage() {
             <PlusCircle className="h-5 w-5 text-cyan-700" />
             <div>
               <strong className="block text-sm font-semibold text-[#242424]">
-                Novo ImÃ³vel
+                Novo Imóvel
               </strong>
               <span className="text-xs text-[#737373]">
-                Cadastrar venda ou locaÃ§Ã£o
+                Cadastrar venda ou locação
               </span>
             </div>
           </div>
@@ -189,7 +189,7 @@ export default async function AdminDashboardPage() {
             <Settings className="h-5 w-5 text-cyan-700" />
             <div>
               <strong className="block text-sm font-semibold text-[#242424]">
-                ConfiguraÃ§Ãµes da ImobiliÃ¡ria
+                Configurações da Imobiliária
               </strong>
               <span className="text-xs text-[#737373]">
                 Nome, logo, CRECI e WhatsApp
@@ -200,28 +200,28 @@ export default async function AdminDashboardPage() {
         </Link>
       </div>
 
-      {/* Tabela de ImÃ³veis Recentes */}
+      {/* Tabela de Imóveis Recentes */}
       <div className="rounded-2xl border border-[#E5E5E5] bg-white shadow-xs overflow-hidden">
         <div className="flex items-center justify-between border-b border-[#E5E5E5] px-6 py-4">
           <h2 className="font-editorial text-xl font-semibold text-[#242424]">
-            ImÃ³veis Recentes
+            Imóveis Recentes
           </h2>
           <Link
             href="/admin/imoveis"
             className="text-xs font-semibold text-cyan-700 hover:underline"
           >
-            Gerenciar todos â†’
+            Gerenciar todos →
           </Link>
         </div>
 
         {recentSlice.length === 0 ? (
           <div className="p-10 text-center text-sm text-[#737373]">
-            Nenhum imÃ³vel cadastrado no banco. Clique em{" "}
+            Nenhum imóvel cadastrado no banco. Clique em{" "}
             <Link
               href="/admin/imoveis/novo"
               className="font-semibold text-cyan-700 underline"
             >
-              Cadastrar ImÃ³vel
+              Cadastrar Imóvel
             </Link>{" "}
             para adicionar o primeiro registro.
           </div>
@@ -230,12 +230,12 @@ export default async function AdminDashboardPage() {
             <table className="w-full text-left text-sm">
               <thead className="bg-[#F5F5F5] text-xs uppercase tracking-wider text-[#737373]">
                 <tr>
-                  <th className="px-6 py-3.5">CÃ³digo / TÃ­tulo</th>
+                  <th className="px-6 py-3.5">Código / Título</th>
                   <th className="px-6 py-3.5">Finalidade</th>
-                  <th className="px-6 py-3.5">LocalizaÃ§Ã£o</th>
+                  <th className="px-6 py-3.5">Localização</th>
                   <th className="px-6 py-3.5">Valor</th>
                   <th className="px-6 py-3.5">Status</th>
-                  <th className="px-6 py-3.5 text-right">AÃ§Ã£o</th>
+                  <th className="px-6 py-3.5 text-right">Ação</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#E5E5E5]">
@@ -294,4 +294,3 @@ export default async function AdminDashboardPage() {
     </div>
   );
 }
-

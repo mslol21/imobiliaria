@@ -8,9 +8,9 @@ import {
 import { PublicContactForm } from "@/components/forms/public-contact-form";
 
 export const metadata: Metadata = {
-  title: "Anunciar Meu ImÃ³vel | CaptaÃ§Ã£o e AvaliaÃ§Ã£o",
+  title: "Anunciar Meu Imóvel | Captação e Avaliação",
   description:
-    "Comercialize seu imÃ³vel com fotos profissionais, avaliaÃ§Ã£o tÃ©cnica fundamentada e qualificaÃ§Ã£o rigorosa de interessados.",
+    "Comercialize seu imóvel com fotos profissionais, avaliação técnica fundamentada e qualificação rigorosa de interessados.",
 };
 
 export default function AnunciarImovelPage() {
@@ -20,13 +20,13 @@ export default function AnunciarImovelPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-700 mb-4">
             <Sparkles className="h-3.5 w-3.5" />
-            <span>CaptaÃ§Ã£o de ImÃ³veis</span>
+            <span>Captação de Imóveis</span>
           </div>
           <h1 className="font-editorial text-4xl sm:text-5xl font-semibold max-w-3xl">
-            Seu imÃ³vel merece a apresentaÃ§Ã£o certa.
+            Seu imóvel merece a apresentação certa.
           </h1>
           <p className="mt-3 max-w-2xl text-base text-[#D4D4D4]">
-            Conduzimos a venda ou locaÃ§Ã£o do seu patrimÃ´nio com avaliaÃ§Ã£o de mercado precisa, fotografia arquitetÃ´nica e seguranÃ§a jurÃ­dica integral.
+            Conduzimos a venda ou locação do seu patrimônio com avaliação de mercado precisa, fotografia arquitetônica e segurança jurídica integral.
           </p>
         </div>
       </section>
@@ -37,21 +37,21 @@ export default function AnunciarImovelPage() {
             {[
               {
                 icon: Camera,
-                title: "ApresentaÃ§Ã£o Visual Premium",
+                title: "Apresentação Visual Premium",
                 description:
-                  "Fotografia de alta resoluÃ§Ã£o que valoriza os detalhes arquitetÃ´nicos e atrai o pÃºblico qualificado.",
+                  "Fotografia de alta resolução que valoriza os detalhes arquitetônicos e atrai o público qualificado.",
               },
               {
                 icon: TrendingUp,
-                title: "AvaliaÃ§Ã£o TÃ©cnica Precisa",
+                title: "Avaliação Técnica Precisa",
                 description:
-                  "Estudo comparativo de mercado baseado em negociaÃ§Ãµes reais da sua regiÃ£o.",
+                  "Estudo comparativo de mercado baseado em negociações reais da sua região.",
               },
               {
                 icon: ShieldCheck,
                 title: "Sigilo e Privacidade",
                 description:
-                  "Possibilidade de ocultar o endereÃ§o exato do anÃºncio e acompanhamento rigoroso em todas as visitas.",
+                  "Possibilidade de ocultar o endereço exato do anúncio e acompanhamento rigoroso em todas as visitas.",
               },
             ].map((item) => (
               <div
@@ -76,16 +76,16 @@ export default function AnunciarImovelPage() {
           <div className="lg:col-span-7">
             <div className="rounded-2xl border border-[#E5E5E5] bg-white p-7 sm:p-10 shadow-sm">
               <h2 className="font-editorial text-2xl sm:text-3xl font-semibold text-[#242424] mb-2">
-                Cadastrar meu imÃ³vel para avaliaÃ§Ã£o
+                Cadastrar meu imóvel para avaliação
               </h2>
               <p className="text-sm text-[#737373] mb-6">
-                Informe as caracterÃ­sticas do imÃ³vel para que nosso consultor de captaÃ§Ã£o entre em contato.
+                Informe as características do imóvel para que nosso consultor de captação entre em contato.
               </p>
 
               <PublicContactForm
                 source="anunciar_imovel"
                 propertyTypeContext={true}
-                submitLabel="Quero anunciar meu imÃ³vel"
+                submitLabel="Quero anunciar meu imóvel"
               />
             </div>
           </div>

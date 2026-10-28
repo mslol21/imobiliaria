@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import {
   LayoutDashboard,
@@ -22,12 +22,12 @@ const ADMIN_NAV = [
   },
   {
     href: "/admin/imoveis",
-    label: "ImÃ³veis",
+    label: "Imóveis",
     icon: Home,
   },
   {
     href: "/admin/imoveis/novo",
-    label: "Novo ImÃ³vel",
+    label: "Novo Imóvel",
     icon: PlusCircle,
   },
   {
@@ -42,7 +42,7 @@ const ADMIN_NAV = [
   },
   {
     href: "/admin/configuracoes",
-    label: "ConfiguraÃ§Ãµes",
+    label: "Configurações",
     icon: Settings,
   },
 ];
@@ -72,7 +72,7 @@ export default async function AdminDashboardLayout({
               </div>
               <div>
                 <span className="font-editorial text-lg font-semibold block leading-none">
-                  GestÃ£o ImobiliÃ¡ria
+                  Gestão Imobiliária
                 </span>
                 <span className="text-[10px] uppercase tracking-widest text-cyan-700 font-semibold">
                   Painel Privado
@@ -107,7 +107,7 @@ export default async function AdminDashboardLayout({
           </nav>
         </div>
 
-        {/* RodapÃ© da Sidebar */}
+        {/* Rodapé da Sidebar */}
         <div className="hidden lg:block p-4 border-t border-white/10 space-y-3">
           <div className="rounded-xl bg-white/5 p-3 text-xs">
             <div className="flex items-center gap-1.5 font-semibold text-cyan-700">
@@ -125,7 +125,7 @@ export default async function AdminDashboardLayout({
               target="_blank"
               className="flex items-center justify-between rounded-lg px-3 py-2 text-xs text-[#D4D4D4] hover:bg-white/10 hover:text-white"
             >
-              <span>Visualizar site pÃºblico</span>
+              <span>Visualizar site público</span>
               <ExternalLink className="h-3.5 w-3.5" />
             </Link>
 
@@ -135,14 +135,14 @@ export default async function AdminDashboardLayout({
                 className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-xs text-red-300 hover:bg-red-950/40 hover:text-red-200 cursor-pointer"
               >
                 <LogOut className="h-3.5 w-3.5" />
-                <span>Encerrar sessÃ£o</span>
+                <span>Encerrar sessão</span>
               </button>
             </form>
           </div>
         </div>
       </aside>
 
-      {/* ConteÃºdo Principal */}
+      {/* Conteúdo Principal */}
       <div className="flex-1 flex flex-col min-w-0">
         <main className="flex-1 p-4 sm:p-6 lg:p-10 max-w-7xl w-full mx-auto">
           {children}
