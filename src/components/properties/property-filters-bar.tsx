@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
@@ -398,7 +398,7 @@ export function PropertyFiltersBar({
   return (
     <section
       aria-label="Filtros e ordenação de imóveis"
-      className="mb-8 rounded-2xl border border-[#E5E5E5] bg-white p-4 sm:p-6 shadow-sm"
+      className="mb-8 rounded-2xl border border-cyan-100 bg-white p-4 sm:p-6 shadow-sm border-t-4 border-t-cyan-600"
     >
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-3">
@@ -406,9 +406,9 @@ export function PropertyFiltersBar({
             type="button"
             variant="outline"
             onClick={() => setMobileDrawerOpen(true)}
-            className="lg:hidden"
+            className="lg:hidden border-cyan-200 text-cyan-800 hover:bg-cyan-50"
           >
-            <SlidersHorizontal className="h-4 w-4" />
+            <SlidersHorizontal className="h-4 w-4 text-cyan-700" />
             <span>Filtrar</span>
             {activeFilterCount > 0 && (
               <span className="ml-1 rounded-full bg-cyan-700 px-2 py-0.5 text-[11px] text-white">
@@ -421,7 +421,7 @@ export function PropertyFiltersBar({
             type="button"
             variant="secondary"
             onClick={() => setShowAdvancedDesktop((prev) => !prev)}
-            className="hidden lg:inline-flex"
+            className="hidden lg:inline-flex bg-cyan-50/80 hover:bg-cyan-100 text-cyan-800 border-cyan-200 font-semibold"
           >
             <SlidersHorizontal className="h-4 w-4 text-cyan-700" />
             <span>
@@ -440,19 +440,19 @@ export function PropertyFiltersBar({
               variant="ghost"
               size="sm"
               onClick={clearAllFilters}
-              className="text-xs text-[#737373] hover:text-cyan-700"
+              className="text-xs text-zinc-500 hover:text-cyan-700 hover:bg-cyan-50"
             >
               <RotateCcw className="h-3.5 w-3.5" />
               <span>Limpar filtros</span>
             </Button>
           )}
 
-          <p className="text-sm text-[#737373]">
-            <strong className="font-semibold text-[#242424]">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-cyan-50 border border-cyan-200/80 px-3 py-1 text-xs font-semibold text-cyan-800">
+            <strong className="font-bold text-cyan-950">
               {totalResults}
             </strong>{" "}
-            {totalResults === 1 ? "imóvel encontrado" : "imóveis encontrados"}
-          </p>
+            <span>{totalResults === 1 ? "imóvel encontrado" : "imóveis encontrados"}</span>
+          </div>
         </div>
 
         {/* Ordenação */}

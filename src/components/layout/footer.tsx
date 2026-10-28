@@ -24,15 +24,15 @@ export function Footer({ settings }: FooterProps) {
   const cleanWhatsapp = sanitizePhoneForWhatsApp(settings.whatsapp);
 
   return (
-    <footer className="bg-zinc-900 text-zinc-300 border-t border-zinc-800">
+    <footer className="bg-slate-950 text-slate-300 border-t-4 border-cyan-700 relative">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
           {/* Coluna 1: Símbolo e Descrição */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800 text-cyan-400 border border-zinc-700/60 shadow-xs">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-700 to-teal-800 text-white shadow-md shadow-cyan-950/40">
                 <svg
-                  className="h-5 w-5 fill-none stroke-current stroke-[2.2]"
+                  className="h-6 w-6 fill-none stroke-current stroke-[2.2]"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
                 >
@@ -53,7 +53,7 @@ export function Footer({ settings }: FooterProps) {
               </div>
             </Link>
 
-            <p className="text-sm leading-relaxed text-zinc-400 max-w-sm">
+            <p className="text-sm leading-relaxed text-slate-400 max-w-sm">
               {settings.agency_slogan ||
                 "Explore oportunidades para comprar ou alugar com segurança, transparência e atendimento especializado."}
             </p>
@@ -61,12 +61,12 @@ export function Footer({ settings }: FooterProps) {
             {/* CRECI */}
             <div className="pt-2">
               {settings.creci ? (
-                <div className="inline-flex items-center gap-2 rounded-md border border-zinc-700/60 bg-zinc-800/60 px-3 py-1.5 text-xs text-zinc-300">
+                <div className="inline-flex items-center gap-2 rounded-lg border border-cyan-900/50 bg-cyan-950/40 px-3 py-1.5 text-xs text-cyan-200">
                   <ShieldCheck className="h-4 w-4 text-cyan-400" />
                   <span>Registro Profissional: {settings.creci}</span>
                 </div>
               ) : (
-                <div className="inline-flex items-center gap-2 rounded-md border border-zinc-700/40 bg-zinc-800/40 px-3 py-1.5 text-xs text-zinc-400">
+                <div className="inline-flex items-center gap-2 rounded-lg border border-cyan-900/40 bg-cyan-950/30 px-3 py-1.5 text-xs text-cyan-300">
                   <ShieldCheck className="h-4 w-4 text-cyan-400" />
                   <span>Informações cadastrais personalizáveis no painel</span>
                 </div>

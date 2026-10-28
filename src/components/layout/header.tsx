@@ -57,20 +57,23 @@ export function Header({ settings }: HeaderProps) {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-zinc-200"
+          ? "bg-white/95 backdrop-blur-md shadow-md border-b border-cyan-100"
           : "bg-white/90 backdrop-blur-xs border-b border-zinc-200/80"
       )}
     >
+      {/* Barra de Acento Colorida de Topo */}
+      <div className="h-1 w-full bg-gradient-to-r from-cyan-600 via-teal-500 to-cyan-700" />
+
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Símbolo Imobiliário Discreto (sem nome comercial inventado) */}
+        {/* Símbolo Imobiliário */}
         <Link
           href="/"
           className="group flex items-center gap-3 focus-visible:outline-none"
           aria-label="Página Inicial da Plataforma Imobiliária"
         >
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-900 text-cyan-400 shadow-xs transition-colors duration-200 group-hover:bg-cyan-700 group-hover:text-white">
+          <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-700 to-teal-800 text-white shadow-md shadow-cyan-900/20 transition-all duration-200 group-hover:from-cyan-600 group-hover:to-teal-700 group-hover:scale-105">
             <svg
-              className="h-5 w-5 fill-none stroke-current stroke-[2.2]"
+              className="h-6 w-6 fill-none stroke-current stroke-[2.2]"
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
@@ -127,12 +130,17 @@ export function Header({ settings }: HeaderProps) {
         <div className="hidden lg:flex lg:items-center lg:gap-3">
           <Link
             href="/anunciar"
-            className="text-xs font-semibold text-zinc-600 hover:text-cyan-700 transition-colors px-2 py-1"
+            className="rounded-lg px-3 py-2 text-xs font-semibold text-cyan-800 bg-cyan-50/80 hover:bg-cyan-100 border border-cyan-200/80 transition-colors"
           >
             Anunciar Imóvel
           </Link>
 
-          <Button asChild variant="default" size="default">
+          <Button
+            asChild
+            variant="default"
+            size="default"
+            className="bg-gradient-to-r from-cyan-600 via-cyan-700 to-teal-700 hover:from-cyan-700 hover:to-teal-800 text-white font-semibold shadow-md shadow-cyan-900/15 border-0"
+          >
             <a
               href={contactHref}
               target={cleanWhatsapp ? "_blank" : undefined}

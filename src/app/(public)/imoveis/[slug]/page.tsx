@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -57,7 +57,7 @@ export async function generateMetadata({
   const cover = getCoverImage(property);
   const title =
     property.meta_title ||
-    `${property.title} â€” ${property.neighborhood}, ${property.city} (${property.reference_code})`;
+    `${property.title} — ${property.neighborhood}, ${property.city} (${property.reference_code})`;
   const description =
     property.meta_description ||
     property.short_description ||
@@ -221,49 +221,49 @@ export default async function PropertyDetailPage({
           </div>
 
           {/* Valores Comerciais */}
-          <div className="lg:col-span-4 rounded-2xl border border-[#E5E5E5] bg-[#F5F5F5] p-5 shadow-xs">
-            <div className="space-y-2">
+          <div className="lg:col-span-4 rounded-2xl border-2 border-cyan-700/60 bg-gradient-to-br from-cyan-950 via-slate-900 to-cyan-900 text-white p-6 shadow-xl">
+            <div className="space-y-3">
               {property.sale_price && property.sale_price > 0 && (
-                <div className="flex items-baseline justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#737373]">
+                <div className="flex items-baseline justify-between border-b border-cyan-800/60 pb-2.5">
+                  <span className="text-xs font-bold uppercase tracking-wider text-cyan-300">
                     Valor de Venda
                   </span>
-                  <span className="font-editorial text-2xl sm:text-3xl font-bold text-cyan-700">
+                  <span className="font-editorial text-2xl sm:text-3xl font-extrabold text-white">
                     {formatCurrencyBRL(property.sale_price)}
                   </span>
                 </div>
               )}
 
               {property.rent_price && property.rent_price > 0 && (
-                <div className="flex items-baseline justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#737373]">
+                <div className="flex items-baseline justify-between border-b border-cyan-800/60 pb-2.5">
+                  <span className="text-xs font-bold uppercase tracking-wider text-teal-300">
                     Locação Mensal
                   </span>
-                  <span className="font-editorial text-2xl sm:text-3xl font-bold text-cyan-700">
+                  <span className="font-editorial text-2xl sm:text-3xl font-extrabold text-white">
                     {formatCurrencyBRL(property.rent_price)}
-                    <small className="ml-1 font-sans text-xs font-normal text-[#737373]">
+                    <small className="ml-1 font-sans text-xs font-medium text-cyan-200">
                       /mês
                     </small>
                   </span>
                 </div>
               )}
 
-              <div className="border-t border-[#E5E5E5] pt-2.5 mt-2.5 grid grid-cols-2 gap-2 text-xs text-[#737373]">
+              <div className="pt-1 grid grid-cols-2 gap-3 text-xs text-slate-300">
                 <div>
-                  <span className="block text-[11px] uppercase tracking-wider text-[#737373]">
+                  <span className="block text-[11px] uppercase tracking-wider text-cyan-300 font-semibold">
                     Condomínio
                   </span>
-                  <strong className="font-semibold text-[#242424]">
+                  <strong className="font-bold text-white text-sm">
                     {property.condo_fee && property.condo_fee > 0
                       ? `${formatCurrencyBRL(property.condo_fee)}/mês`
                       : "Sob consulta / Isento"}
                   </strong>
                 </div>
                 <div>
-                  <span className="block text-[11px] uppercase tracking-wider text-[#737373]">
+                  <span className="block text-[11px] uppercase tracking-wider text-cyan-300 font-semibold">
                     IPTU ({property.iptu_periodicity})
                   </span>
-                  <strong className="font-semibold text-[#242424]">
+                  <strong className="font-bold text-white text-sm">
                     {property.iptu_periodicity === "isento"
                       ? "Isento"
                       : property.iptu_price && property.iptu_price > 0

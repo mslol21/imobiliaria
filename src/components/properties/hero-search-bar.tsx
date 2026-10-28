@@ -74,11 +74,11 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
   }
 
   return (
-    <div className="w-full max-w-5xl rounded-2xl bg-white p-4 sm:p-6 shadow-[0_16px_40px_rgba(0,0,0,0.14)] border border-zinc-200 text-left">
+    <div className="w-full max-w-5xl rounded-2xl bg-white p-4 sm:p-6 shadow-[0_20px_50px_rgba(8,145,178,0.12)] border border-cyan-100 border-t-4 border-t-cyan-600 text-left">
       {/* Alternância Comprar / Alugar */}
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3 border-b border-zinc-200 pb-3.5">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3 border-b border-zinc-100 pb-3.5">
         <div
-          className="inline-flex rounded-xl bg-zinc-100 p-1 border border-zinc-200/80"
+          className="inline-flex rounded-xl bg-zinc-100/80 p-1 border border-zinc-200/80"
           role="tablist"
           aria-label="Finalidade do imóvel"
         >
@@ -93,8 +93,8 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
             className={cn(
               "rounded-lg px-5 py-2 text-xs sm:text-sm font-semibold transition-all cursor-pointer",
               purpose === "venda"
-                ? "bg-cyan-700 text-white shadow-xs"
-                : "text-zinc-600 hover:text-zinc-900"
+                ? "bg-gradient-to-r from-cyan-600 to-cyan-700 text-white shadow-sm"
+                : "text-zinc-600 hover:text-cyan-700 hover:bg-white/80"
             )}
           >
             Comprar
@@ -110,8 +110,8 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
             className={cn(
               "rounded-lg px-5 py-2 text-xs sm:text-sm font-semibold transition-all cursor-pointer",
               purpose === "aluguel"
-                ? "bg-cyan-700 text-white shadow-xs"
-                : "text-zinc-600 hover:text-zinc-900"
+                ? "bg-gradient-to-r from-teal-600 to-emerald-700 text-white shadow-sm"
+                : "text-zinc-600 hover:text-teal-700 hover:bg-white/80"
             )}
           >
             Alugar
@@ -213,7 +213,7 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
           <Button
             type="submit"
             variant="default"
-            className="h-11 w-full justify-center bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-xs"
+            className="h-11 w-full justify-center bg-gradient-to-r from-cyan-600 via-cyan-700 to-teal-700 hover:from-cyan-700 hover:to-teal-800 text-white font-semibold shadow-md shadow-cyan-900/20 border-0"
           >
             <Search className="h-4 w-4" />
             <span>Buscar imóveis</span>
