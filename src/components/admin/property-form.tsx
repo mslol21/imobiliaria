@@ -198,8 +198,8 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
   return (
     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
       {/* 1. IDENTIFICAÇÃO */}
-      <section className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35] border-b border-[#E2DBD0] pb-3">
+      <section className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490] border-b border-[#e2e8f0] pb-3">
           1. Identificação do Imóvel
         </h2>
 
@@ -241,7 +241,7 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
               <button
                 type="button"
                 onClick={handleAutoSlug}
-                className="text-[11px] font-semibold text-[#183B35] underline cursor-pointer"
+                className="text-[11px] font-semibold text-[#0e7490] underline cursor-pointer"
               >
                 Gerar automaticamente
               </button>
@@ -263,7 +263,7 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
             <select
               id="prop-type"
               {...form.register("property_type")}
-              className="h-11 w-full rounded-lg border border-[#E2DBD0] bg-white px-3 text-sm"
+              className="h-11 w-full rounded-lg border border-[#e2e8f0] bg-white px-3 text-sm"
             >
               {(Object.keys(PROPERTY_TYPE_LABELS) as PropertyType[]).map(
                 (k) => (
@@ -280,7 +280,7 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
             <select
               id="prop-purpose"
               {...form.register("purpose")}
-              className="h-11 w-full rounded-lg border border-[#E2DBD0] bg-white px-3 text-sm"
+              className="h-11 w-full rounded-lg border border-[#e2e8f0] bg-white px-3 text-sm"
             >
               {(Object.keys(PROPERTY_PURPOSE_LABELS) as PropertyPurpose[]).map(
                 (k) => (
@@ -319,8 +319,8 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
       </section>
 
       {/* 2. LOCALIZAÇÃO */}
-      <section className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35] border-b border-[#E2DBD0] pb-3">
+      <section className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490] border-b border-[#e2e8f0] pb-3">
           2. Localização & Privacidade
         </h2>
 
@@ -385,11 +385,11 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
           </div>
 
           <div className="sm:col-span-12 pt-2">
-            <label className="inline-flex items-center gap-3 rounded-xl bg-[#F5F1E9] p-4 border border-[#E2DBD0] cursor-pointer">
+            <label className="inline-flex items-center gap-3 rounded-xl bg-[#f8fafc] p-4 border border-[#e2e8f0] cursor-pointer">
               <input
                 type="checkbox"
                 {...form.register("hide_exact_address")}
-                className="h-4 w-4 rounded border-[#E2DBD0] text-[#183B35]"
+                className="h-4 w-4 rounded border-[#e2e8f0] text-[#0e7490]"
               />
               <span className="text-xs sm:text-sm font-medium text-[#242424]">
                 <strong>Ocultar endereço completo no site público</strong>{" "}
@@ -402,8 +402,8 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
       </section>
 
       {/* 3. VALORES COMERCIAIS */}
-      <section className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35] border-b border-[#E2DBD0] pb-3">
+      <section className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490] border-b border-[#e2e8f0] pb-3">
           3. Valores e Encargos (R$)
         </h2>
 
@@ -479,7 +479,7 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
               />
               <select
                 {...form.register("iptu_periodicity")}
-                className="h-11 rounded-lg border border-[#E2DBD0] bg-white px-2.5 text-xs"
+                className="h-11 rounded-lg border border-[#e2e8f0] bg-white px-2.5 text-xs"
               >
                 <option value="mensal">Mensal</option>
                 <option value="anual">Anual</option>
@@ -491,8 +491,8 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
       </section>
 
       {/* 4. CARACTERÍSTICAS E COMODIDADES */}
-      <section className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-6">
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35] border-b border-[#E2DBD0] pb-3">
+      <section className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-6">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490] border-b border-[#e2e8f0] pb-3">
           4. Características Físicas e Comodidades
         </h2>
 
@@ -582,7 +582,7 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
             <input
               type="checkbox"
               {...form.register("is_furnished")}
-              className="h-4 w-4 rounded border-[#E2DBD0] text-[#183B35]"
+              className="h-4 w-4 rounded border-[#e2e8f0] text-[#0e7490]"
             />
             <span>Imóvel Mobiliado</span>
           </label>
@@ -590,17 +590,17 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
             <input
               type="checkbox"
               {...form.register("is_pet_friendly")}
-              className="h-4 w-4 rounded border-[#E2DBD0] text-[#183B35]"
+              className="h-4 w-4 rounded border-[#e2e8f0] text-[#0e7490]"
             />
             <span>Aceita Animais (Pet Friendly)</span>
           </label>
-          <label className="inline-flex items-center gap-2 text-sm font-semibold text-[#183B35] cursor-pointer">
+          <label className="inline-flex items-center gap-2 text-sm font-semibold text-[#0e7490] cursor-pointer">
             <input
               type="checkbox"
               {...form.register("is_high_end")}
-              className="h-4 w-4 rounded border-[#E2DBD0] text-[#183B35]"
+              className="h-4 w-4 rounded border-[#e2e8f0] text-[#0e7490]"
             />
-            <Sparkles className="h-4 w-4 text-[#B79A68]" />
+            <Sparkles className="h-4 w-4 text-[#0891b2]" />
             <span>Selo Seleção Alto Padrão</span>
           </label>
         </div>
@@ -619,8 +619,8 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
                   className={cn(
                     "rounded-lg border px-3 py-1.5 text-xs transition-colors cursor-pointer",
                     checked
-                      ? "border-[#183B35] bg-[#183B35] text-white font-medium"
-                      : "border-[#E2DBD0] bg-[#F5F1E9]/50 text-[#242424]"
+                      ? "border-[#0e7490] bg-[#0e7490] text-white font-medium"
+                      : "border-[#e2e8f0] bg-[#f8fafc]/50 text-[#242424]"
                   )}
                 >
                   {amenity}
@@ -670,7 +670,7 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
               {watchedHighlights.map((item) => (
                 <li
                   key={item}
-                  className="flex items-center justify-between rounded-lg bg-[#F5F1E9] px-3.5 py-2 text-xs text-[#242424]"
+                  className="flex items-center justify-between rounded-lg bg-[#f8fafc] px-3.5 py-2 text-xs text-[#242424]"
                 >
                   <span>{item}</span>
                   <button
@@ -688,8 +688,8 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
       </section>
 
       {/* 5. GESTÃO DE FOTOGRAFIAS (SUPABASE STORAGE) */}
-      <section className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35] border-b border-[#E2DBD0] pb-3">
+      <section className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490] border-b border-[#e2e8f0] pb-3">
           5. Galeria de Fotografias
         </h2>
 
@@ -703,8 +703,8 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
       </section>
 
       {/* 6. CONTROLE E SEO */}
-      <section className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35] border-b border-[#E2DBD0] pb-3">
+      <section className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490] border-b border-[#e2e8f0] pb-3">
           6. Controle Comercial & SEO
         </h2>
 
@@ -713,7 +713,7 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
             <Label>Status de Publicação</Label>
             <select
               {...form.register("publication_status")}
-              className="h-11 w-full rounded-lg border border-[#E2DBD0] bg-white px-3 text-sm"
+              className="h-11 w-full rounded-lg border border-[#e2e8f0] bg-white px-3 text-sm"
             >
               {(
                 Object.keys(PUBLICATION_STATUS_LABELS) as PublicationStatus[]
@@ -729,7 +729,7 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
             <Label>Status de Disponibilidade</Label>
             <select
               {...form.register("availability_status")}
-              className="h-11 w-full rounded-lg border border-[#E2DBD0] bg-white px-3 text-sm"
+              className="h-11 w-full rounded-lg border border-[#e2e8f0] bg-white px-3 text-sm"
             >
               {(
                 Object.keys(AVAILABILITY_STATUS_LABELS) as AvailabilityStatus[]
@@ -742,11 +742,11 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
           </div>
 
           <div className="flex items-end">
-            <label className="flex h-11 w-full items-center gap-3 rounded-lg border border-[#E2DBD0] bg-[#F5F1E9] px-4 text-sm font-semibold text-[#183B35] cursor-pointer">
+            <label className="flex h-11 w-full items-center gap-3 rounded-lg border border-[#e2e8f0] bg-[#f8fafc] px-4 text-sm font-semibold text-[#0e7490] cursor-pointer">
               <input
                 type="checkbox"
                 {...form.register("is_featured")}
-                className="h-4 w-4 rounded border-[#E2DBD0] text-[#183B35]"
+                className="h-4 w-4 rounded border-[#e2e8f0] text-[#0e7490]"
               />
               <span>Exibir na Home (Imóvel em Destaque)</span>
             </label>
@@ -798,7 +798,7 @@ export function PropertyForm({ initialProperty }: PropertyFormProps) {
           Cancelar
         </Button>
         <Button type="submit" variant="default" size="lg" disabled={submitting}>
-          <Save className="h-4 w-4 text-[#B79A68]" />
+          <Save className="h-4 w-4 text-[#0891b2]" />
           <span>
             {submitting
               ? "Salvando imóvel..."

@@ -8,13 +8,13 @@ export default async function AdminBannersPage() {
   return (
     <div className="space-y-6">
       <div>
-        <span className="text-xs font-semibold uppercase tracking-widest text-[#B79A68]">
+        <span className="text-xs font-semibold uppercase tracking-widest text-[#0891b2]">
           Identidade Visual da Home
         </span>
-        <h1 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#183B35]">
+        <h1 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#0e7490]">
           Gestão de Banners e Destaques
         </h1>
-        <p className="text-sm text-[#5C5B57] mt-1">
+        <p className="text-sm text-[#64748b] mt-1">
           Configure a imagem arquitetônica, título e chamada principal do Hero da
           página inicial.
         </p>

@@ -122,8 +122,8 @@ export function SettingsForm({ initialSettings }: SettingsFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
       {/* Dados Societários e Contato */}
-      <section className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35] border-b border-[#E2DBD0] pb-3">
+      <section className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490] border-b border-[#e2e8f0] pb-3">
           1. Identidade, Dados Legais e Contato
         </h2>
 
@@ -226,8 +226,8 @@ export function SettingsForm({ initialSettings }: SettingsFormProps) {
       </section>
 
       {/* Conteúdo Institucional (Sobre Nós) */}
-      <section className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35] border-b border-[#E2DBD0] pb-3">
+      <section className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490] border-b border-[#e2e8f0] pb-3">
           2. Informações Institucionais (Home & Sobre Nós)
         </h2>
 
@@ -282,7 +282,7 @@ export function SettingsForm({ initialSettings }: SettingsFormProps) {
             {differentials.map((diff, idx) => (
               <div
                 key={idx}
-                className="grid grid-cols-1 gap-3 rounded-xl border border-[#E2DBD0] bg-[#F5F1E9]/50 p-4 sm:grid-cols-12 items-start"
+                className="grid grid-cols-1 gap-3 rounded-xl border border-[#e2e8f0] bg-[#f8fafc]/50 p-4 sm:grid-cols-12 items-start"
               >
                 <div className="sm:col-span-4">
                   <Input
@@ -320,8 +320,8 @@ export function SettingsForm({ initialSettings }: SettingsFormProps) {
       </section>
 
       {/* Redes Sociais */}
-      <section className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35] border-b border-[#E2DBD0] pb-3">
+      <section className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-5">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490] border-b border-[#e2e8f0] pb-3">
           3. Redes Sociais
         </h2>
 
@@ -381,7 +381,7 @@ export function SettingsForm({ initialSettings }: SettingsFormProps) {
 
       <div className="flex justify-end">
         <Button type="submit" variant="default" size="lg" disabled={saving}>
-          <Save className="h-4 w-4 text-[#B79A68]" />
+          <Save className="h-4 w-4 text-[#0891b2]" />
           <span>{saving ? "Salvando..." : "Salvar Configurações"}</span>
         </Button>
       </div>

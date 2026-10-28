@@ -92,22 +92,22 @@ export function AdminPropertyTable({ properties }: AdminPropertyTableProps) {
   return (
     <div className="space-y-4">
       {feedback && (
-        <div className="rounded-xl border border-[#183B35]/20 bg-white px-4 py-3 text-xs font-medium text-[#183B35] flex items-center justify-between">
+        <div className="rounded-xl border border-[#0e7490]/20 bg-white px-4 py-3 text-xs font-medium text-[#0e7490] flex items-center justify-between">
           <span>{feedback}</span>
           <button
             type="button"
             onClick={() => setFeedback(null)}
-            className="text-[#5C5B57] hover:text-[#242424] cursor-pointer"
+            className="text-[#64748b] hover:text-[#242424] cursor-pointer"
           >
             Fechar
           </button>
         </div>
       )}
 
-      <div className="rounded-2xl border border-[#E2DBD0] bg-white shadow-xs overflow-hidden">
+      <div className="rounded-2xl border border-[#e2e8f0] bg-white shadow-xs overflow-hidden">
         {properties.length === 0 ? (
           <div className="p-12 text-center space-y-3">
-            <p className="text-sm text-[#5C5B57]">
+            <p className="text-sm text-[#64748b]">
               Nenhum imóvel encontrado para os critérios selecionados.
             </p>
             <Button asChild variant="default" size="sm">
@@ -117,7 +117,7 @@ export function AdminPropertyTable({ properties }: AdminPropertyTableProps) {
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
-              <thead className="bg-[#F5F1E9] text-xs uppercase tracking-wider text-[#5C5B57]">
+              <thead className="bg-[#f8fafc] text-xs uppercase tracking-wider text-[#64748b]">
                 <tr>
                   <th className="px-5 py-3.5">Imóvel</th>
                   <th className="px-5 py-3.5">Tipo / Finalidade</th>
@@ -126,18 +126,18 @@ export function AdminPropertyTable({ properties }: AdminPropertyTableProps) {
                   <th className="px-5 py-3.5 text-right">Ações</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E2DBD0]">
+              <tbody className="divide-y divide-[#e2e8f0]">
                 {properties.map((prop) => {
                   const isBusy = busyId === prop.id;
                   return (
-                    <tr key={prop.id} className="hover:bg-[#F5F1E9]/35">
+                    <tr key={prop.id} className="hover:bg-[#f8fafc]/35">
                       <td className="px-5 py-4 max-w-xs">
                         <div className="flex items-center gap-2">
-                          <span className="text-xs font-bold text-[#183B35]">
+                          <span className="text-xs font-bold text-[#0e7490]">
                             {prop.reference_code}
                           </span>
                           {prop.is_featured && (
-                            <span className="inline-flex items-center gap-1 rounded bg-[#B79A68]/25 px-1.5 py-0.5 text-[10px] font-semibold text-[#183B35]">
+                            <span className="inline-flex items-center gap-1 rounded bg-[#0891b2]/25 px-1.5 py-0.5 text-[10px] font-semibold text-[#0e7490]">
                               <Star className="h-2.5 w-2.5 fill-current" />
                               Destaque
                             </span>
@@ -146,7 +146,7 @@ export function AdminPropertyTable({ properties }: AdminPropertyTableProps) {
                         <p className="font-semibold text-[#242424] line-clamp-1 mt-0.5">
                           {prop.title}
                         </p>
-                        <p className="text-xs text-[#5C5B57]">
+                        <p className="text-xs text-[#64748b]">
                           {prop.neighborhood}, {prop.city}/{prop.state}
                         </p>
                       </td>
@@ -155,19 +155,19 @@ export function AdminPropertyTable({ properties }: AdminPropertyTableProps) {
                         <span className="font-medium text-[#242424] block">
                           {PROPERTY_TYPE_LABELS[prop.property_type]}
                         </span>
-                        <span className="text-[#5C5B57]">
+                        <span className="text-[#64748b]">
                           {PROPERTY_PURPOSE_LABELS[prop.purpose]}
                         </span>
                       </td>
 
                       <td className="px-5 py-4 text-xs">
                         {prop.sale_price && (
-                          <div className="font-semibold text-[#183B35]">
+                          <div className="font-semibold text-[#0e7490]">
                             Venda: {formatCurrencyBRL(prop.sale_price)}
                           </div>
                         )}
                         {prop.rent_price && (
-                          <div className="font-semibold text-[#183B35]">
+                          <div className="font-semibold text-[#0e7490]">
                             Aluguel: {formatCurrencyBRL(prop.rent_price)}/mês
                           </div>
                         )}
@@ -251,8 +251,8 @@ export function AdminPropertyTable({ properties }: AdminPropertyTableProps) {
                               <Star
                                 className={`h-3.5 w-3.5 ${
                                   prop.is_featured
-                                    ? "fill-[#B79A68] text-[#B79A68]"
-                                    : "text-[#5C5B57]"
+                                    ? "fill-[#0891b2] text-[#0891b2]"
+                                    : "text-[#64748b]"
                                 }`}
                               />
                             </Button>

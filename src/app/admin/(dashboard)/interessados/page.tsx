@@ -22,13 +22,13 @@ export default async function AdminInteressadosPage({
   return (
     <div className="space-y-6">
       <div>
-        <span className="text-xs font-semibold uppercase tracking-widest text-[#B79A68]">
+        <span className="text-xs font-semibold uppercase tracking-widest text-[#0891b2]">
           CRM Imobiliário
         </span>
-        <h1 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#183B35]">
+        <h1 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#0e7490]">
           Gestão de Interessados e Solicitações
         </h1>
-        <p className="text-sm text-[#5C5B57] mt-1">
+        <p className="text-sm text-[#64748b] mt-1">
           Acompanhe contatos recebidos, agendamentos de visitas e captações de
           imóveis.
         </p>
@@ -38,7 +38,7 @@ export default async function AdminInteressadosPage({
       <form
         method="GET"
         action="/admin/interessados"
-        className="grid grid-cols-1 gap-3 rounded-2xl border border-[#E2DBD0] bg-white p-4 sm:grid-cols-12"
+        className="grid grid-cols-1 gap-3 rounded-2xl border border-[#e2e8f0] bg-white p-4 sm:grid-cols-12"
       >
         <div className="sm:col-span-6">
           <Input
@@ -51,7 +51,7 @@ export default async function AdminInteressadosPage({
           <select
             name="status"
             defaultValue={statusFilter}
-            className="h-11 w-full rounded-lg border border-[#E2DBD0] bg-white px-3 text-sm"
+            className="h-11 w-full rounded-lg border border-[#e2e8f0] bg-white px-3 text-sm"
           >
             <option value="todos">Todos os status de atendimento</option>
             {(Object.keys(LEAD_STATUS_LABELS) as LeadStatus[]).map((key) => (
@@ -63,7 +63,7 @@ export default async function AdminInteressadosPage({
         </div>
         <div className="sm:col-span-2">
           <Button type="submit" variant="default" className="w-full h-11">
-            <Search className="h-4 w-4 text-[#B79A68]" />
+            <Search className="h-4 w-4 text-[#0891b2]" />
             <span>Filtrar</span>
           </Button>
         </div>

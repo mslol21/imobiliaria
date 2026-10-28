@@ -9,12 +9,12 @@ export default function NovoImovelAdminPage() {
       <div>
         <Link
           href="/admin/imoveis"
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-[#5C5B57] hover:text-[#183B35] mb-2"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-[#64748b] hover:text-[#0e7490] mb-2"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
           <span>Voltar para listagem de imóveis</span>
         </Link>
-        <h1 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#183B35]">
+        <h1 className="font-editorial text-3xl sm:text-4xl font-semibold text-[#0e7490]">
           Cadastrar Novo Imóvel
         </h1>
       </div>

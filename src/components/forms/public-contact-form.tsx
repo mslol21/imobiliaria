@@ -159,19 +159,19 @@ export function PublicContactForm({
         />
       </div>
 
-      <label className="flex items-start gap-2.5 text-xs text-[#5C5B57] cursor-pointer">
+      <label className="flex items-start gap-2.5 text-xs text-zinc-600 cursor-pointer">
         <input
           type="checkbox"
           checked={consentLgpd}
           onChange={(e) => setConsentLgpd(e.target.checked)}
-          className="mt-0.5 h-4 w-4 rounded border-[#E2DBD0] text-[#183B35]"
+          className="mt-0.5 h-4 w-4 rounded border-zinc-300 text-cyan-700 focus:ring-cyan-600"
         />
         <span>
           Autorizo o contato da imobiliária para atendimento à minha solicitação,
           em conformidade com a{" "}
           <Link
             href="/privacidade"
-            className="underline font-medium text-[#183B35]"
+            className="underline font-medium text-cyan-800 hover:text-cyan-900"
           >
             Política de Privacidade e LGPD
           </Link>
@@ -202,14 +202,14 @@ export function PublicContactForm({
         variant="default"
         size="lg"
         disabled={submitting}
-        className="w-full"
+        className="w-full bg-cyan-700 hover:bg-cyan-800 text-white font-semibold"
       >
-        <Send className="h-4 w-4 text-[#B79A68]" />
+        <Send className="h-4 w-4" />
         <span>{submitting ? "Enviando..." : submitLabel}</span>
       </Button>
 
-      <div className="flex items-center justify-center gap-1.5 text-[11px] text-[#5C5B57]">
-        <ShieldCheck className="h-3.5 w-3.5 text-[#183B35]" />
+      <div className="flex items-center justify-center gap-1.5 text-[11px] text-zinc-500">
+        <ShieldCheck className="h-3.5 w-3.5 text-cyan-700" />
         <span>Atendimento sigiloso e protegido contra spam.</span>
       </div>
     </form>

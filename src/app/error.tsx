@@ -16,24 +16,23 @@ export default function ErrorBoundary({
   }, [error]);
 
   return (
-    <div className="min-h-[60dvh] bg-[#F5F1E9] flex items-center justify-center px-4 py-16">
-      <div className="max-w-md w-full rounded-2xl border border-[#E2DBD0] bg-white p-8 text-center shadow-lg space-y-5">
-        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-red-100 text-red-700">
+    <div className="min-h-[60dvh] bg-zinc-50 flex items-center justify-center px-4 py-16">
+      <div className="max-w-md w-full rounded-2xl border border-zinc-200 bg-white p-8 text-center shadow-md space-y-5">
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-red-700 border border-red-200">
           <AlertCircle className="h-7 w-7" />
         </div>
 
         <div>
-          <h2 className="font-editorial text-2xl font-semibold text-[#183B35]">
+          <h2 className="text-xl font-bold text-zinc-900">
             Ocorreu uma instabilidade temporária
           </h2>
-          <p className="mt-2 text-xs text-[#5C5B57]">
-            Nossa equipe técnica já foi notificada. Você pode tentar recarregar a
-            página.
+          <p className="mt-2 text-xs text-zinc-600">
+            Nossa equipe técnica já foi notificada. Você pode tentar recarregar a página.
           </p>
         </div>
 
         <Button type="button" variant="default" onClick={() => reset()} className="w-full">
-          <RotateCcw className="h-4 w-4 text-[#B79A68]" />
+          <RotateCcw className="h-4 w-4" />
           <span>Tentar novamente</span>
         </Button>
       </div>

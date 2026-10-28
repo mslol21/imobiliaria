@@ -268,7 +268,7 @@ export function PropertyImageUploader({
   return (
     <div className="space-y-5">
       {/* Zona de Upload Direto */}
-      <div className="rounded-2xl border-2 border-dashed border-[#183B35]/30 bg-[#F5F1E9]/60 p-6 text-center">
+      <div className="rounded-2xl border-2 border-dashed border-[#0e7490]/30 bg-[#f8fafc]/60 p-6 text-center">
         <input
           ref={fileInputRef}
           type="file"
@@ -278,17 +278,17 @@ export function PropertyImageUploader({
           className="hidden"
           id="property-images-file-input"
         />
-        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#183B35] text-[#B79A68]">
+        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0e7490] text-[#0891b2]">
           {uploading ? (
             <Loader2 className="h-6 w-6 animate-spin" />
           ) : (
             <Upload className="h-6 w-6" />
           )}
         </div>
-        <h4 className="font-editorial text-xl font-semibold text-[#183B35]">
+        <h4 className="font-editorial text-xl font-semibold text-[#0e7490]">
           Enviar fotografias do computador ou celular
         </h4>
-        <p className="mt-1 text-xs text-[#5C5B57]">
+        <p className="mt-1 text-xs text-[#64748b]">
           Suporta upload múltiplo (JPG, PNG, WEBP, AVIF • até 10 MB por foto)
           com compressão inteligente e armazenamento no Supabase Storage.
         </p>
@@ -299,7 +299,7 @@ export function PropertyImageUploader({
             disabled={uploading}
             onClick={() => fileInputRef.current?.click()}
           >
-            <Upload className="h-4 w-4 text-[#B79A68]" />
+            <Upload className="h-4 w-4 text-[#0891b2]" />
             <span>
               {uploading ? "Enviando fotografias..." : "Selecionar arquivos"}
             </span>
@@ -308,7 +308,7 @@ export function PropertyImageUploader({
       </div>
 
       {/* Adição complementar por URL */}
-      <div className="rounded-xl border border-[#E2DBD0] bg-white p-4">
+      <div className="rounded-xl border border-[#e2e8f0] bg-white p-4">
         <Label htmlFor="ext-img-url">
           Ou adicionar fotografia por URL externa (opcional)
         </Label>
@@ -358,11 +358,11 @@ export function PropertyImageUploader({
               className={cn(
                 "flex flex-col overflow-hidden rounded-xl border bg-white shadow-xs",
                 img.is_cover
-                  ? "border-[#183B35] ring-2 ring-[#B79A68]"
-                  : "border-[#E2DBD0]"
+                  ? "border-[#0e7490] ring-2 ring-[#0891b2]"
+                  : "border-[#e2e8f0]"
               )}
             >
-              <div className="relative aspect-[16/10] w-full bg-[#183B35]/10">
+              <div className="relative aspect-[16/10] w-full bg-[#0e7490]/10">
                 <Image
                   src={img.url}
                   alt={img.alt_text || `Foto ${idx + 1}`}
@@ -375,7 +375,7 @@ export function PropertyImageUploader({
                     #{idx + 1}
                   </span>
                   {img.is_cover && (
-                    <span className="inline-flex items-center gap-1 rounded bg-[#B79A68] px-2 py-0.5 text-[11px] font-bold text-[#183B35]">
+                    <span className="inline-flex items-center gap-1 rounded bg-[#0891b2] px-2 py-0.5 text-[11px] font-bold text-[#0e7490]">
                       <Star className="h-3 w-3 fill-current" />
                       Capa Principal
                     </span>
@@ -385,7 +385,7 @@ export function PropertyImageUploader({
 
               <div className="p-3.5 space-y-3 flex-1 flex flex-col justify-between">
                 <div>
-                  <label className="block text-[10px] font-semibold uppercase tracking-wider text-[#5C5B57] mb-1">
+                  <label className="block text-[10px] font-semibold uppercase tracking-wider text-[#64748b] mb-1">
                     Texto Alternativo (SEO / Acessibilidade)
                   </label>
                   <Input
@@ -396,7 +396,7 @@ export function PropertyImageUploader({
                   />
                 </div>
 
-                <div className="flex items-center justify-between gap-1.5 pt-1 border-t border-[#E2DBD0]">
+                <div className="flex items-center justify-between gap-1.5 pt-1 border-t border-[#e2e8f0]">
                   <div className="flex items-center gap-1">
                     <Button
                       type="button"
@@ -428,7 +428,7 @@ export function PropertyImageUploader({
                         size="sm"
                         onClick={() => handleSetCover(idx)}
                       >
-                        <Star className="h-3 w-3 text-[#B79A68]" />
+                        <Star className="h-3 w-3 text-[#0891b2]" />
                         <span>Definir capa</span>
                       </Button>
                     )}

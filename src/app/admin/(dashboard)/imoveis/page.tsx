@@ -26,17 +26,17 @@ export default async function AdminPropertiesPage({
     <div className="space-y-6">
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
         <div>
-          <span className="text-xs font-semibold uppercase tracking-widest text-[#B79A68]">
+          <span className="text-xs font-semibold uppercase tracking-widest text-[#0891b2]">
             Catálogo Imobiliário
           </span>
-          <h1 className="font-editorial text-3xl font-semibold text-[#183B35]">
+          <h1 className="font-editorial text-3xl font-semibold text-[#0e7490]">
             Gestão de Imóveis
           </h1>
         </div>
 
         <Button asChild variant="default">
           <Link href="/admin/imoveis/novo">
-            <PlusCircle className="h-4 w-4 text-[#B79A68]" />
+            <PlusCircle className="h-4 w-4 text-[#0891b2]" />
             <span>Novo Imóvel</span>
           </Link>
         </Button>
@@ -46,7 +46,7 @@ export default async function AdminPropertiesPage({
       <form
         method="GET"
         action="/admin/imoveis"
-        className="grid grid-cols-1 gap-3 rounded-2xl border border-[#E2DBD0] bg-white p-4 sm:grid-cols-12"
+        className="grid grid-cols-1 gap-3 rounded-2xl border border-[#e2e8f0] bg-white p-4 sm:grid-cols-12"
       >
         <div className="sm:col-span-5">
           <Input
@@ -59,7 +59,7 @@ export default async function AdminPropertiesPage({
           <select
             name="pub"
             defaultValue={params.pub ?? "todos"}
-            className="h-11 w-full rounded-lg border border-[#E2DBD0] bg-white px-3 text-sm"
+            className="h-11 w-full rounded-lg border border-[#e2e8f0] bg-white px-3 text-sm"
           >
             <option value="todos">Todas as publicações</option>
             <option value="publicado">Publicados</option>
@@ -71,7 +71,7 @@ export default async function AdminPropertiesPage({
           <select
             name="avail"
             defaultValue={params.avail ?? "todos"}
-            className="h-11 w-full rounded-lg border border-[#E2DBD0] bg-white px-3 text-sm"
+            className="h-11 w-full rounded-lg border border-[#e2e8f0] bg-white px-3 text-sm"
           >
             <option value="todos">Disponibilidade</option>
             <option value="disponivel">Disponível</option>
@@ -83,7 +83,7 @@ export default async function AdminPropertiesPage({
         </div>
         <div className="sm:col-span-2">
           <Button type="submit" variant="default" className="w-full h-11">
-            <Search className="h-4 w-4 text-[#B79A68]" />
+            <Search className="h-4 w-4 text-[#0891b2]" />
             <span>Filtrar</span>
           </Button>
         </div>

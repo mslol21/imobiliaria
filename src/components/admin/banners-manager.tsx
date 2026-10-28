@@ -86,9 +86,9 @@ export function BannersManager({ banners }: BannersManagerProps) {
     <div className="space-y-8">
       <form
         onSubmit={handleCreateBanner}
-        className="rounded-2xl border border-[#E2DBD0] bg-white p-6 sm:p-8 shadow-xs space-y-4"
+        className="rounded-2xl border border-[#e2e8f0] bg-white p-6 sm:p-8 shadow-xs space-y-4"
       >
-        <h2 className="font-editorial text-2xl font-semibold text-[#183B35]">
+        <h2 className="font-editorial text-2xl font-semibold text-[#0e7490]">
           Adicionar Novo Banner / Destaque
         </h2>
 
@@ -108,7 +108,7 @@ export function BannersManager({ banners }: BannersManagerProps) {
               onChange={(e) =>
                 setPosition(e.target.value as Banner["position"])
               }
-              className="h-11 w-full rounded-lg border border-[#E2DBD0] bg-white px-3 text-sm"
+              className="h-11 w-full rounded-lg border border-[#e2e8f0] bg-white px-3 text-sm"
             >
               <option value="hero">Hero Principal (Home)</option>
               <option value="home_destaque">Destaque Secundário</option>
@@ -148,7 +148,7 @@ export function BannersManager({ banners }: BannersManagerProps) {
               disabled={saving}
               className="w-full h-11"
             >
-              <Plus className="h-4 w-4 text-[#B79A68]" />
+              <Plus className="h-4 w-4 text-[#0891b2]" />
               <span>{saving ? "Salvando..." : "Salvar Banner"}</span>
             </Button>
           </div>
@@ -177,9 +177,9 @@ export function BannersManager({ banners }: BannersManagerProps) {
         {banners.map((banner) => (
           <div
             key={banner.id}
-            className="overflow-hidden rounded-2xl border border-[#E2DBD0] bg-white shadow-xs flex flex-col justify-between"
+            className="overflow-hidden rounded-2xl border border-[#e2e8f0] bg-white shadow-xs flex flex-col justify-between"
           >
-            <div className="relative aspect-[16/9] w-full bg-[#183B35]">
+            <div className="relative aspect-[16/9] w-full bg-[#0e7490]">
               <Image
                 src={banner.image_url}
                 alt={banner.title}
