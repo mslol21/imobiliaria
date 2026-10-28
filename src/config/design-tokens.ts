@@ -104,7 +104,7 @@ export const HOME_CATEGORIES = [
   {
     slug: "apartamentos",
     title: "Apartamentos",
-    subtitle: "Plantas inteligentes, terraços amplos e vistas privilegiadas",
+    subtitle: "Apartamentos para morar ou investir na Zona Leste",
     href: "/imoveis?tipo=apartamento",
     image:
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80",
@@ -112,7 +112,7 @@ export const HOME_CATEGORIES = [
   {
     slug: "casas",
     title: "Casas",
-    subtitle: "Arquitetura autoral, jardins privativos e conforto absoluto",
+    subtitle: "Casas com espaço para diferentes perfis de família",
     href: "/imoveis?tipo=casa",
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
@@ -120,7 +120,7 @@ export const HOME_CATEGORIES = [
   {
     slug: "condominios",
     title: "Condomínios",
-    subtitle: "Segurança 24h, lazer completo e integração com a natureza",
+    subtitle: "Casas e apartamentos em condomínios",
     href: "/imoveis?tipo=condominio",
     image:
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80",
@@ -128,7 +128,7 @@ export const HOME_CATEGORIES = [
   {
     slug: "coberturas",
     title: "Coberturas",
-    subtitle: "Penthouses exclusivas com terraços abertos e vista panorâmica",
+    subtitle: "Coberturas com ambientes amplos",
     href: "/imoveis?tipo=cobertura",
     image:
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80",
@@ -136,7 +136,7 @@ export const HOME_CATEGORIES = [
   {
     slug: "comerciais",
     title: "Imóveis Comerciais",
-    subtitle: "Lajes corporativas, conjuntos executivos e pontos estratégicos",
+    subtitle: "Salões, lojas e espaços para o seu negócio",
     href: "/imoveis?tipo=comercial",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80",
@@ -144,7 +144,7 @@ export const HOME_CATEGORIES = [
   {
     slug: "alto-padrao",
     title: "Alto Padrão",
-    subtitle: "Propriedades raras com assinatura arquitetônica e acabamento nobre",
+    subtitle: "Imóveis com acabamentos e características especiais",
     href: "/imoveis?altoPadrao=true",
     image:
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80",
