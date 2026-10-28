@@ -34,9 +34,9 @@ import {
 import { sanitizePhoneForWhatsApp } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Encontre o Imóvel Ideal | Comprar e Alugar",
+  title: "Casas e Apartamentos em Guaianases e Zona Leste | Comprar e Alugar",
   description:
-    "Explore imóveis para comprar ou alugar e encontre o espaço perfeito para viver seus próximos momentos com segurança e atendimento de corretores especializados.",
+    "Veja casas, apartamentos e imóveis comerciais em Guaianases e na Zona Leste de São Paulo. Encontre opções para comprar ou alugar.",
 };
 
 export default async function HomePage() {
@@ -86,15 +86,15 @@ export default async function HomePage() {
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300 backdrop-blur-md mb-3">
             <Building2 className="h-3.5 w-3.5 text-cyan-300" />
-            <span>Consultoria Imobiliária Especializada</span>
+            <span>Imóveis em Guaianases e Zona Leste</span>
           </span>
 
           <h1 className="max-w-3xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl leading-tight">
-            Encontre o imóvel ideal para você.
+            Seu novo imóvel pode estar aqui na Zona Leste.
           </h1>
 
           <p className="mt-3.5 max-w-2xl text-base leading-relaxed text-zinc-200 sm:text-lg">
-            Encontre casas, apartamentos e imóveis comerciais à venda ou para locação, com informações claras para sua escolha.
+            Explore casas, apartamentos e imóveis comerciais em Guaianases e bairros próximos. Pesquise, compare e entre em contato.
           </p>
 
           {/* Mecanismo de Pesquisa Integrado */}
@@ -109,15 +109,15 @@ export default async function HomePage() {
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-white">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3.5 py-1.5 border border-white/20 shadow-xs">
               <ShieldCheck className="h-4 w-4 text-cyan-300" />
-              <span>Assessoria jurídica completa</span>
+              <span>Busca prática por bairro</span>
             </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3.5 py-1.5 border border-white/20 shadow-xs">
               <Compass className="h-4 w-4 text-teal-300" />
-              <span>Imóveis verificados e selecionados</span>
+              <span>Opções de compra e aluguel</span>
             </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3.5 py-1.5 border border-white/20 shadow-xs">
               <KeyRound className="h-4 w-4 text-amber-300" />
-              <span>Atendimento com corretores credenciados</span>
+              <span>Contato direto para visitas</span>
             </span>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default async function HomePage() {
               <span>Seleção Especial</span>
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900">
-              Imóveis em Destaque
+              Imóveis em destaque na região
             </h2>
             <p className="mt-1.5 max-w-xl text-sm text-zinc-600">
               Explore imóveis disponíveis e encontre opções para morar ou investir.
@@ -187,7 +187,7 @@ export default async function HomePage() {
                 Imóveis para Comprar
               </h2>
               <p className="mt-1.5 max-w-xl text-sm text-zinc-600">
-                Confira casas, apartamentos e outras opções à venda.
+                Explore oportunidades de compra em Guaianases e em outros bairros da zona leste.
               </p>
             </div>
             <Button
@@ -229,7 +229,7 @@ export default async function HomePage() {
                 Imóveis para Alugar
               </h2>
               <p className="mt-1.5 max-w-xl text-sm text-zinc-600">
-                Conheça imóveis residenciais e comerciais disponíveis para locação.
+                Veja imóveis para alugar em Guaianases e nos bairros próximos.
               </p>
             </div>
             <Button
@@ -323,7 +323,7 @@ export default async function HomePage() {
             {settings.about_title || "Consultoria Imobiliária com Segurança e Clareza"}
           </h2>
           <p className="mt-2 text-sm text-zinc-600">
-            Uma abordagem dedicada a orientar cada etapa da negociação com transparência, agilidade e rigor documental.
+            Informações claras e contato acessível para ajudar você a encontrar o imóvel que procura na região.
           </p>
         </div>
 
@@ -391,10 +391,10 @@ export default async function HomePage() {
                 Proprietários
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
-                Quer vender ou alugar o seu imóvel?
+                Tem um imóvel em Guaianases ou na Zona Leste?
               </h2>
               <p className="text-sm sm:text-base leading-relaxed text-slate-200">
-                Anuncie conosco e tenha seu imóvel promovido com fotografia profissional, avaliação de mercado fundamentada e direcionamento a compradores e inquilinos qualificados.
+                Entre em contato para saber como apresentar seu imóvel a pessoas que procuram comprar ou alugar na região.
               </p>
             </div>
 
