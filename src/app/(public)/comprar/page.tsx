@@ -10,9 +10,9 @@ import {
 } from "@/lib/parse-filters";
 
 export const metadata: Metadata = {
-  title: "Imóveis à Venda | Comprar Casas, Apartamentos e Coberturas",
+  title: "Imóveis à Venda em Guaianases e Zona Leste de São Paulo",
   description:
-    "Explore nossa seleção de imóveis disponíveis para compra. Filtre por localização, faixa de preço, área útil, suítes e comodidades.",
+    "Pesquise casas e apartamentos à venda em Guaianases e na Zona Leste de São Paulo. Filtre por bairro, preço e características.",
   alternates: {
     canonical: "/comprar",
   },
@@ -33,9 +33,9 @@ export default async function ComprarPage({
 
   return (
     <PropertiesCatalogView
-      badgeLabel="Aquisição Imobiliária"
-      title="Imóveis selecionados para comprar"
-      subtitle="Encontre apartamentos, residências em condomínio, coberturas e imóveis comerciais com curadoria técnica e segurança jurídica."
+      badgeLabel="Venda de imóveis"
+      title="Casas e apartamentos para comprar na Zona Leste"
+      subtitle="Encontre opções em Guaianases e bairros próximos. Use os filtros para escolher localização, preço e tipo de imóvel."
       basePath="/comprar"
       lockedPurpose="venda"
       filters={filters}
