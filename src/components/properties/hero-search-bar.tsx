@@ -15,18 +15,18 @@ interface HeroSearchBarProps {
 
 const PRICE_RANGES_SALE = [
   { label: "Qualquer valor", min: "", max: "" },
-  { label: "Até R$ 1.500.000", min: "", max: "1500000" },
-  { label: "De R$ 1,5 mi a R$ 4 mi", min: "1500000", max: "4000000" },
-  { label: "De R$ 4 mi a R$ 10 mi", min: "4000000", max: "10000000" },
-  { label: "Acima de R$ 10.000.000", min: "10000000", max: "" },
+  { label: "Até R$ 250 mil", min: "", max: "250000" },
+  { label: "R$ 250 mil a R$ 500 mil", min: "250000", max: "500000" },
+  { label: "R$ 500 mil a R$ 800 mil", min: "500000", max: "800000" },
+  { label: "Acima de R$ 800 mil", min: "800000", max: "" },
 ];
 
 const PRICE_RANGES_RENT = [
   { label: "Qualquer valor", min: "", max: "" },
-  { label: "Até R$ 5.000 / mês", min: "", max: "5000" },
-  { label: "De R$ 5 mil a R$ 15 mil", min: "5000", max: "15000" },
-  { label: "De R$ 15 mil a R$ 30 mil", min: "15000", max: "30000" },
-  { label: "Acima de R$ 30.000 / mês", min: "30000", max: "" },
+  { label: "Até R$ 1.500 / mês", min: "", max: "1500" },
+  { label: "R$ 1.500 a R$ 2.500", min: "1500", max: "2500" },
+  { label: "R$ 2.500 a R$ 4.000", min: "2500", max: "4000" },
+  { label: "Acima de R$ 4.000 / mês", min: "4000", max: "" },
 ];
 
 export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
@@ -93,7 +93,7 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
             className={cn(
               "rounded-lg px-5 py-2 text-xs sm:text-sm font-semibold transition-all cursor-pointer",
               purpose === "venda"
-                ? "bg-gradient-to-r from-cyan-600 to-cyan-700 text-white shadow-sm"
+                ? "bg-cyan-700 text-white shadow-sm"
                 : "text-zinc-600 hover:text-cyan-700 hover:bg-white/80"
             )}
           >
@@ -110,7 +110,7 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
             className={cn(
               "rounded-lg px-5 py-2 text-xs sm:text-sm font-semibold transition-all cursor-pointer",
               purpose === "aluguel"
-                ? "bg-gradient-to-r from-teal-600 to-emerald-700 text-white shadow-sm"
+                ? "bg-cyan-700 text-white shadow-sm"
                 : "text-zinc-600 hover:text-teal-700 hover:bg-white/80"
             )}
           >
@@ -172,7 +172,7 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
               list="hero-locations-datalist"
               value={locationQuery}
               onChange={(e) => setLocationQuery(e.target.value)}
-              placeholder="Digite a cidade ou bairro..."
+              placeholder="Ex.: Guaianases, Lajeado, Itaquera..."
               className="h-11 w-full rounded-lg border border-zinc-200 bg-zinc-50/60 pl-9 pr-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-cyan-600 focus:bg-white focus:outline-none transition-colors"
             />
           </div>
@@ -213,7 +213,7 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
           <Button
             type="submit"
             variant="default"
-            className="h-11 w-full justify-center bg-gradient-to-r from-cyan-600 via-cyan-700 to-teal-700 hover:from-cyan-700 hover:to-teal-800 text-white font-semibold shadow-md shadow-cyan-900/20 border-0"
+            className="h-11 w-full justify-center bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-md shadow-cyan-900/20 border-0"
           >
             <Search className="h-4 w-4" />
             <span>Buscar imóveis</span>
