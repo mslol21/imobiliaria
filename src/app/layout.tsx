@@ -22,12 +22,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
-  const brandName = settings.agency_name || "Plataforma Imobiliária";
+  const brandName = settings.agency_name || "Imóveis na Zona Leste";
 
   return {
     metadataBase: new URL(baseUrl),
     title: {
-      default: `${brandName} | Imóveis de Alto Padrão para Comprar e Alugar`,
+      default: `${brandName} | Casas e Apartamentos em Guaianases e Zona Leste`,
       template: `%s | ${brandName}`,
     },
     description: settings.agency_slogan,
@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       locale: "pt_BR",
       siteName: brandName,
-      title: `${brandName} | Oportunidades Imobiliárias Selecionadas`,
+      title: `${brandName} | Imóveis para Comprar ou Alugar em Guaianases`,
       description: settings.agency_slogan,
     },
     robots: {
