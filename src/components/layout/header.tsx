@@ -62,7 +62,7 @@ export function Header({ settings }: HeaderProps) {
       )}
     >
       {/* Barra de Acento Colorida de Topo */}
-      <div className="h-1 w-full bg-gradient-to-r from-cyan-600 via-teal-500 to-cyan-700" />
+      <div className="h-0.5 w-full bg-cyan-700" />
 
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Símbolo Imobiliário */}
@@ -71,7 +71,7 @@ export function Header({ settings }: HeaderProps) {
           className="group flex items-center gap-3 focus-visible:outline-none"
           aria-label="Página Inicial da Plataforma Imobiliária"
         >
-          <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-700 to-teal-800 text-white shadow-md shadow-cyan-900/20 transition-all duration-200 group-hover:from-cyan-600 group-hover:to-teal-700 group-hover:scale-105">
+          <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-700 text-white shadow-sm transition-all duration-200 group-hover:bg-cyan-800 group-hover:scale-105">
             <svg
               className="h-6 w-6 fill-none stroke-current stroke-[2.2]"
               viewBox="0 0 24 24"
@@ -139,7 +139,7 @@ export function Header({ settings }: HeaderProps) {
             asChild
             variant="default"
             size="default"
-            className="bg-gradient-to-r from-cyan-600 via-cyan-700 to-teal-700 hover:from-cyan-700 hover:to-teal-800 text-white font-semibold shadow-md shadow-cyan-900/15 border-0"
+            className="bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-sm border-0"
           >
             <a
               href={contactHref}
