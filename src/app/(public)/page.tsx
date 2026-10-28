@@ -15,7 +15,7 @@ import {
   Mail,
   MapPin,
   MessageCircle,
-  Sparkles,
+  
 } from "lucide-react";
 import { HeroSearchBar } from "@/components/properties/hero-search-bar";
 import { PropertyCard } from "@/components/properties/property-card";
@@ -79,13 +79,13 @@ export default async function HomePage() {
         />
         {/* Overlay com tonalidade azul-petróleo e meia-noite */}
         <div
-          className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-cyan-950/50 to-slate-950/85"
+          className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/30"
           aria-hidden="true"
         />
 
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300 backdrop-blur-md mb-3">
-            <Sparkles className="h-3.5 w-3.5 text-cyan-300" />
+            <Building2 className="h-3.5 w-3.5 text-cyan-300" />
             <span>Consultoria Imobiliária Especializada</span>
           </span>
 
@@ -94,7 +94,7 @@ export default async function HomePage() {
           </h1>
 
           <p className="mt-3.5 max-w-2xl text-base leading-relaxed text-zinc-200 sm:text-lg">
-            Explore imóveis para comprar ou alugar e encontre o espaço perfeito para viver seus próximos momentos.
+            Encontre casas, apartamentos e imóveis comerciais à venda ou para locação, com informações claras para sua escolha.
           </p>
 
           {/* Mecanismo de Pesquisa Integrado */}
@@ -130,21 +130,21 @@ export default async function HomePage() {
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-200/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="h-3.5 w-3.5 text-cyan-700" />
+              <Building2 className="h-3.5 w-3.5 text-cyan-700" />
               <span>Seleção Especial</span>
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900">
               Imóveis em Destaque
             </h2>
             <p className="mt-1.5 max-w-xl text-sm text-zinc-600">
-              Propriedades selecionadas por sua arquitetura marcante, localização privilegiada e alto padrão construtivo.
+              Explore imóveis disponíveis e encontre opções para morar ou investir.
             </p>
           </div>
           <Button
             asChild
             variant="default"
             size="sm"
-            className="bg-gradient-to-r from-cyan-600 to-teal-700 hover:from-cyan-700 hover:to-teal-800 text-white font-semibold shadow-sm"
+            className="bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-sm"
           >
             <Link href="/imoveis">
               <span>Ver catálogo completo</span>
@@ -176,7 +176,7 @@ export default async function HomePage() {
       {/* =================================================================== */}
       {/* 4. IMÓVEIS PARA COMPRAR                                             */}
       {/* =================================================================== */}
-      <section className="bg-gradient-to-b from-cyan-50/50 via-slate-50/60 to-white py-16 border-y border-cyan-100">
+      <section className="bg-zinc-50 py-16 border-y border-cyan-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
@@ -187,7 +187,7 @@ export default async function HomePage() {
                 Imóveis para Comprar
               </h2>
               <p className="mt-1.5 max-w-xl text-sm text-zinc-600">
-                Residências, coberturas e apartamentos prontos para morar ou investir com solidez.
+                Confira casas, apartamentos e outras opções à venda.
               </p>
             </div>
             <Button
@@ -218,7 +218,7 @@ export default async function HomePage() {
       {/* =================================================================== */}
       {/* 5. IMÓVEIS PARA ALUGAR                                              */}
       {/* =================================================================== */}
-      <section className="bg-gradient-to-b from-white via-emerald-50/30 to-white py-16">
+      <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
@@ -229,7 +229,7 @@ export default async function HomePage() {
                 Imóveis para Alugar
               </h2>
               <p className="mt-1.5 max-w-xl text-sm text-zinc-600">
-                Opções mobiliadas, coberturas e conjuntos comerciais prontos para ocupação com agilidade.
+                Conheça imóveis residenciais e comerciais disponíveis para locação.
               </p>
             </div>
             <Button
@@ -260,7 +260,7 @@ export default async function HomePage() {
       {/* =================================================================== */}
       {/* 6. CATEGORIAS DE IMÓVEIS                                            */}
       {/* =================================================================== */}
-      <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 text-white py-20 relative overflow-hidden border-y border-cyan-900/40">
+      <section className="bg-zinc-900 text-white py-20 relative overflow-hidden border-y border-zinc-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
@@ -289,7 +289,7 @@ export default async function HomePage() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent"
                   aria-hidden="true"
                 />
                 <div className="relative z-10">
@@ -297,7 +297,7 @@ export default async function HomePage() {
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
                       {category.title}
                     </h3>
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-xs transition-colors group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:to-teal-600 group-hover:text-white">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-xs transition-colors group-hover:bg-cyan-700 group-hover:text-white">
                       <ArrowUpRight className="h-4 w-4" />
                     </span>
                   </div>
@@ -331,35 +331,35 @@ export default async function HomePage() {
           {[
             {
               icon: Compass,
-              title: "Curadoria Especializada",
-              desc: "Avaliação técnica criteriosa de cada propriedade quanto a estado construtivo, insolação e planta.",
-              cardBg: "bg-gradient-to-br from-white via-cyan-50/60 to-white border-cyan-200/80 hover:border-cyan-400 hover:shadow-cyan-900/10",
-              iconBg: "bg-gradient-to-br from-cyan-600 to-teal-700 text-white shadow-sm shadow-cyan-600/30",
+              title: "Atendimento personalizado",
+              desc: "Encontre opções adequadas às suas necessidades de localização, espaço e orçamento.",
+              cardBg: "bg-white border-cyan-200/80 hover:border-cyan-400 hover:shadow-cyan-900/10",
+              iconBg: "bg-cyan-700 text-white shadow-sm shadow-cyan-600/30",
               titleColor: "text-cyan-950",
             },
             {
               icon: ShieldCheck,
               title: "Segurança Jurídica",
-              desc: "Auditoria documental completa e suporte contratual em todas as etapas de compra e locação.",
-              cardBg: "bg-gradient-to-br from-white via-emerald-50/60 to-white border-emerald-200/80 hover:border-emerald-400 hover:shadow-emerald-900/10",
-              iconBg: "bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-sm shadow-emerald-600/30",
-              titleColor: "text-emerald-950",
+              desc: "Informações claras para você avaliar cada oportunidade com tranquilidade.",
+              cardBg: "bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-zinc-900/5",
+              iconBg: "bg-cyan-700 text-white shadow-sm shadow-emerald-600/30",
+              titleColor: "text-zinc-900",
             },
             {
               icon: KeyRound,
               title: "Atendimento Consultivo",
               desc: "Acompanhamento dedicado e personalizado para entender suas reais prioridades e necessidades.",
-              cardBg: "bg-gradient-to-br from-white via-indigo-50/60 to-white border-indigo-200/80 hover:border-indigo-400 hover:shadow-indigo-900/10",
-              iconBg: "bg-gradient-to-br from-indigo-600 to-cyan-700 text-white shadow-sm shadow-indigo-600/30",
-              titleColor: "text-indigo-950",
+              cardBg: "bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-zinc-900/5",
+              iconBg: "bg-cyan-700 text-white shadow-sm shadow-indigo-600/30",
+              titleColor: "text-zinc-900",
             },
             {
               icon: Clock,
               title: "Agilidade e Resposta",
-              desc: "Retorno ágil aos seus contatos e agendamento de visitas no momento mais conveniente para você.",
-              cardBg: "bg-gradient-to-br from-white via-amber-50/60 to-white border-amber-200/80 hover:border-amber-400 hover:shadow-amber-900/10",
-              iconBg: "bg-gradient-to-br from-amber-500 to-amber-700 text-white shadow-sm shadow-amber-600/30",
-              titleColor: "text-amber-950",
+              desc: "Entre em contato para esclarecer dúvidas e combinar uma visita.",
+              cardBg: "bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-zinc-900/5",
+              iconBg: "bg-cyan-700 text-white shadow-sm shadow-amber-600/30",
+              titleColor: "text-zinc-900",
             },
           ].map((item) => (
             <div
@@ -384,7 +384,7 @@ export default async function HomePage() {
       {/* 8. CHAMADA PARA ANUNCIAR UM IMÓVEL (OCEANO PROFUNDO & DESTAQUE)     */}
       {/* =================================================================== */}
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-cyan-950 via-slate-900 to-teal-950 text-white p-8 sm:p-14 shadow-2xl border-2 border-cyan-700/50">
+        <div className="relative overflow-hidden rounded-3xl bg-zinc-900 text-white p-8 sm:p-14 shadow-2xl border border-zinc-700">
           <div className="relative z-10 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
             <div className="max-w-2xl space-y-3">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
@@ -403,7 +403,7 @@ export default async function HomePage() {
                 asChild
                 variant="default"
                 size="lg"
-                className="bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-600 hover:to-teal-700 text-white font-bold shadow-lg shadow-cyan-900/30 border-0"
+                className="bg-cyan-700 hover:bg-cyan-800 text-white font-bold shadow-lg shadow-cyan-900/30 border-0"
               >
                 <Link href="/anunciar">
                   <span>Anunciar meu imóvel</span>
@@ -437,7 +437,7 @@ export default async function HomePage() {
       {/* =================================================================== */}
       {/* 9. CONTATO COM CANAIS COLORIDOS                                     */}
       {/* =================================================================== */}
-      <section className="bg-gradient-to-b from-slate-50 via-cyan-50/30 to-white py-16 border-t border-cyan-100">
+      <section className="bg-zinc-50 py-16 border-t border-cyan-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
             <div className="lg:col-span-5 space-y-4">
