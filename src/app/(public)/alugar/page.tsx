@@ -10,9 +10,9 @@ import {
 } from "@/lib/parse-filters";
 
 export const metadata: Metadata = {
-  title: "Imóveis para Alugar | Locação Residencial e Comercial",
+  title: "Imóveis para Alugar em Guaianases e Zona Leste",
   description:
-    "Descubra imóveis selecionados para locação residencial e corporativa. Opções mobiliadas, coberturas, casas e conjuntos comerciais.",
+    "Encontre imóveis para alugar em Guaianases e na Zona Leste de São Paulo. Pesquise por bairro, tipo e faixa de aluguel.",
   alternates: {
     canonical: "/alugar",
   },
@@ -36,9 +36,9 @@ export default async function AlugarPage({
 
   return (
     <PropertiesCatalogView
-      badgeLabel="Locação Selecionada"
-      title="Descubra seu próximo imóvel para alugar"
-      subtitle="Propriedades residenciais e corporativas prontas para ocupação imediata, com contratos estruturados e atendimento ágil."
+      badgeLabel="Imóveis para alugar"
+      title="Encontre seu aluguel na Zona Leste"
+      subtitle="Pesquise casas, apartamentos e imóveis comerciais em Guaianases e nos bairros próximos."
       basePath="/alugar"
       lockedPurpose="aluguel"
       filters={filters}
