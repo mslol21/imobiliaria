@@ -1,4 +1,4 @@
-# Maison Aurum — Sistema Imobiliário Premium Full Stack
+# Plataforma Imobiliária — Site e Painel Administrativo
 
 Plataforma imobiliária de alto padrão desenvolvida com arquitetura moderna, responsiva, segura e pronta para implantação em produção. Combina curadoria arquitetônica no frontend com robustez full stack no backend utilizando Next.js com App Router, TypeScript strict, Tailwind CSS v4, Zod e Supabase (PostgreSQL, Auth, Storage e Row Level Security).
 
@@ -62,11 +62,11 @@ A identidade foi inspirada em portais imobiliários e publicações arquitetôni
 
 | Token | Hex | Aplicação |
 |---|---|---|
-| `Verde Profundo` | `#183B35` | Identidade primária, cabeçalhos, botões principais e backgrounds editoriais |
-| `Bege Claro` | `#F5F1E9` | Superfície de fundo acolhedora e contrastante |
+| `Ciano` | `#0891B2` | Identidade de destaque, links ativos e botões principais |
+| `Cinza claro` | `#F8FAFC` | Superfícies neutras e seções alternadas |
 | `Branco Puro` | `#FFFFFF` | Cards, modais e áreas de leitura |
-| `Dourado Discreto` | `#B79A68` | Detalhes sutis, badges de alto padrão e ícones de destaque |
-| `Grafite` | `#242424` | Tipografia principal de alta legibilidade |
+| `Cinza suave` | `#E5E5E5` | Bordas discretas e divisores |
+| `Grafite` | `#18181B` | Tipografia principal de alta legibilidade |
 
 ---
 
