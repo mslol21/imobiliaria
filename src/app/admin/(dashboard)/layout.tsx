@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Link from "next/link";
 import {
   LayoutDashboard,
@@ -22,12 +22,12 @@ const ADMIN_NAV = [
   },
   {
     href: "/admin/imoveis",
-    label: "Imóveis",
+    label: "ImÃ³veis",
     icon: Home,
   },
   {
     href: "/admin/imoveis/novo",
-    label: "Novo Imóvel",
+    label: "Novo ImÃ³vel",
     icon: PlusCircle,
   },
   {
@@ -42,7 +42,7 @@ const ADMIN_NAV = [
   },
   {
     href: "/admin/configuracoes",
-    label: "Configurações",
+    label: "ConfiguraÃ§Ãµes",
     icon: Settings,
   },
 ];
@@ -61,7 +61,7 @@ export default async function AdminDashboardLayout({
         <div>
           <div className="flex items-center justify-between px-5 py-5 border-b border-white/10">
             <Link href="/admin" className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#B5121B] text-white shadow-sm">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-700 text-white shadow-sm">
                 <svg
                   className="h-5 w-5 fill-none stroke-current stroke-[2.2]"
                   viewBox="0 0 24 24"
@@ -72,9 +72,9 @@ export default async function AdminDashboardLayout({
               </div>
               <div>
                 <span className="font-editorial text-lg font-semibold block leading-none">
-                  Gestão Imobiliária
+                  GestÃ£o ImobiliÃ¡ria
                 </span>
-                <span className="text-[10px] uppercase tracking-widest text-[#B5121B] font-semibold">
+                <span className="text-[10px] uppercase tracking-widest text-cyan-700 font-semibold">
                   Painel Privado
                 </span>
               </div>
@@ -100,17 +100,17 @@ export default async function AdminDashboardLayout({
                 href={item.href}
                 className="flex items-center gap-2.5 whitespace-nowrap rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-medium text-[#D4D4D4] hover:bg-white/10 hover:text-white transition-colors"
               >
-                <item.icon className="h-4 w-4 text-[#B5121B] shrink-0" />
+                <item.icon className="h-4 w-4 text-cyan-700 shrink-0" />
                 <span>{item.label}</span>
               </Link>
             ))}
           </nav>
         </div>
 
-        {/* Rodapé da Sidebar */}
+        {/* RodapÃ© da Sidebar */}
         <div className="hidden lg:block p-4 border-t border-white/10 space-y-3">
           <div className="rounded-xl bg-white/5 p-3 text-xs">
-            <div className="flex items-center gap-1.5 font-semibold text-[#B5121B]">
+            <div className="flex items-center gap-1.5 font-semibold text-cyan-700">
               <ShieldCheck className="h-3.5 w-3.5" />
               <span className="truncate">{admin.fullName}</span>
             </div>
@@ -125,7 +125,7 @@ export default async function AdminDashboardLayout({
               target="_blank"
               className="flex items-center justify-between rounded-lg px-3 py-2 text-xs text-[#D4D4D4] hover:bg-white/10 hover:text-white"
             >
-              <span>Visualizar site público</span>
+              <span>Visualizar site pÃºblico</span>
               <ExternalLink className="h-3.5 w-3.5" />
             </Link>
 
@@ -135,14 +135,14 @@ export default async function AdminDashboardLayout({
                 className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-xs text-red-300 hover:bg-red-950/40 hover:text-red-200 cursor-pointer"
               >
                 <LogOut className="h-3.5 w-3.5" />
-                <span>Encerrar sessão</span>
+                <span>Encerrar sessÃ£o</span>
               </button>
             </form>
           </div>
         </div>
       </aside>
 
-      {/* Conteúdo Principal */}
+      {/* ConteÃºdo Principal */}
       <div className="flex-1 flex flex-col min-w-0">
         <main className="flex-1 p-4 sm:p-6 lg:p-10 max-w-7xl w-full mx-auto">
           {children}
@@ -151,3 +151,4 @@ export default async function AdminDashboardLayout({
     </div>
   );
 }
+

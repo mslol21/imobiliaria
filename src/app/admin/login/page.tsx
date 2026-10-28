@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -51,11 +51,11 @@ function AdminLoginFormContent() {
           className="inline-flex items-center gap-2 text-xs font-medium text-[#D4D4D4] hover:text-white mb-6"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
-          <span>Voltar ao site público</span>
+          <span>Voltar ao site pÃºblico</span>
         </Link>
 
         <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#B5121B] text-white shadow-sm">
+          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-700 text-white shadow-sm">
             <svg
               className="h-6 w-6 fill-none stroke-current stroke-[2.2]"
               viewBox="0 0 24 24"
@@ -81,15 +81,15 @@ function AdminLoginFormContent() {
             <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 text-xs text-amber-950 space-y-2">
               <div className="flex items-center gap-2 font-semibold">
                 <Database className="h-4 w-4 text-amber-800 shrink-0" />
-                <span>Configuração do Supabase Pendente</span>
+                <span>ConfiguraÃ§Ã£o do Supabase Pendente</span>
               </div>
               <p className="leading-relaxed">
-                Para autenticar administradores e gerenciar dados em produção:
+                Para autenticar administradores e gerenciar dados em produÃ§Ã£o:
               </p>
               <ol className="list-decimal pl-4 space-y-1">
                 <li>Preencha <code>.env.local</code> com as chaves do Supabase.</li>
                 <li>Execute a migration <code>supabase/migrations/0001_initial_schema.sql</code>.</li>
-                <li>Crie o usuário em Authentication e vincule o perfil em <code>public.profiles</code>.</li>
+                <li>Crie o usuÃ¡rio em Authentication e vincule o perfil em <code>public.profiles</code>.</li>
               </ol>
             </div>
           )}
@@ -98,7 +98,7 @@ function AdminLoginFormContent() {
             <div className="rounded-xl border border-red-200 bg-red-50 p-3.5 text-xs text-red-900 flex items-start gap-2">
               <AlertCircle className="h-4 w-4 text-red-700 shrink-0 mt-0.5" />
               <span>
-                Usuário não possui perfil ativo de administrador em <code>public.profiles</code>.
+                UsuÃ¡rio nÃ£o possui perfil ativo de administrador em <code>public.profiles</code>.
               </span>
             </div>
           )}
@@ -126,7 +126,7 @@ function AdminLoginFormContent() {
                 autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••••••"
+                placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
               />
             </div>
 
@@ -150,8 +150,8 @@ function AdminLoginFormContent() {
           </form>
 
           <div className="border-t border-[#E5E5E5] pt-4 flex items-center justify-center gap-2 text-[11px] text-[#737373]">
-            <ShieldCheck className="h-4 w-4 text-[#B5121B]" />
-            <span>Sessões criptografadas com Supabase Auth & RLS</span>
+            <ShieldCheck className="h-4 w-4 text-cyan-700" />
+            <span>SessÃµes criptografadas com Supabase Auth & RLS</span>
           </div>
         </div>
       </div>
@@ -164,7 +164,7 @@ export default function AdminLoginPage() {
     <Suspense
       fallback={
         <div className="min-h-dvh bg-[#242424] flex items-center justify-center text-white text-sm">
-          Carregando autenticação...
+          Carregando autenticaÃ§Ã£o...
         </div>
       }
     >
@@ -172,3 +172,4 @@ export default function AdminLoginPage() {
     </Suspense>
   );
 }
+

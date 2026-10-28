@@ -10,15 +10,16 @@ import type {
 
 export const DESIGN_TOKENS = {
   colors: {
-    redPrimary: "#B5121B",
-    redDark: "#8F0D15",
-    redLight: "#D9222C",
-    redMuted: "rgba(181, 18, 27, 0.08)",
+    cyanPrimary: "#0891b2",
+    cyanDark: "#0e7490",
+    cyanLight: "#06b6d4",
+    cyanMuted: "rgba(8, 145, 178, 0.08)",
     white: "#FFFFFF",
-    grayLight: "#F5F5F5",
+    grayLight: "#F8FAFC",
+    graySurface: "#F4F4F5",
     grayBorder: "#E5E5E5",
-    grayMuted: "#737373",
-    charcoal: "#242424",
+    grayMuted: "#71717A",
+    charcoal: "#18181B",
   },
   fonts: {
     serif: "var(--font-serif), Georgia, serif",

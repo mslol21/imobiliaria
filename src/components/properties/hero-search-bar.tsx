@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Search, SlidersHorizontal } from "lucide-react";
+import { Search, SlidersHorizontal, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PROPERTY_TYPE_LABELS } from "@/config/design-tokens";
 import { cn } from "@/lib/utils";
@@ -23,18 +23,17 @@ const PRICE_RANGES_SALE = [
 
 const PRICE_RANGES_RENT = [
   { label: "Qualquer valor", min: "", max: "" },
-  { label: "Até R$ 10.000 / mês", min: "", max: "10000" },
-  { label: "De R$ 10 mil a R$ 25 mil", min: "10000", max: "25000" },
-  { label: "De R$ 25 mil a R$ 50 mil", min: "25000", max: "50000" },
-  { label: "Acima de R$ 50.000 / mês", min: "50000", max: "" },
+  { label: "Até R$ 5.000 / mês", min: "", max: "5000" },
+  { label: "De R$ 5 mil a R$ 15 mil", min: "5000", max: "15000" },
+  { label: "De R$ 15 mil a R$ 30 mil", min: "15000", max: "30000" },
+  { label: "Acima de R$ 30.000 / mês", min: "30000", max: "" },
 ];
 
 export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
   const router = useRouter();
   const [purpose, setPurpose] = useState<"venda" | "aluguel">("venda");
   const [propertyType, setPropertyType] = useState<string>("todos");
-  const [city, setCity] = useState<string>("");
-  const [neighborhood, setNeighborhood] = useState<string>("");
+  const [locationQuery, setLocationQuery] = useState<string>("");
   const [priceRangeIndex, setPriceRangeIndex] = useState<number>(0);
 
   const activeRanges =
@@ -47,11 +46,18 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
     if (propertyType && propertyType !== "todos") {
       params.set("tipo", propertyType);
     }
-    if (city.trim()) {
-      params.set("cidade", city.trim());
-    }
-    if (neighborhood.trim()) {
-      params.set("bairro", neighborhood.trim());
+
+    if (locationQuery.trim()) {
+      // Se coincidir exatamente com uma cidade da lista, envia como cidade, senão como busca geral/bairro
+      const trimmed = locationQuery.trim();
+      const matchedCity = cities.find(
+        (c) => c.toLowerCase() === trimmed.toLowerCase()
+      );
+      if (matchedCity) {
+        params.set("cidade", matchedCity);
+      } else {
+        params.set("busca", trimmed);
+      }
     }
 
     const selectedPrice = activeRanges[priceRangeIndex];
@@ -68,11 +74,11 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
   }
 
   return (
-    <div className="w-full max-w-5xl rounded-2xl bg-white p-5 sm:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.18)] border border-[#E5E5E5] text-left">
+    <div className="w-full max-w-5xl rounded-2xl bg-white p-4 sm:p-6 shadow-[0_16px_40px_rgba(0,0,0,0.14)] border border-zinc-200 text-left">
       {/* Alternância Comprar / Alugar */}
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-3 border-b border-[#E5E5E5] pb-4">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3 border-b border-zinc-200 pb-3.5">
         <div
-          className="inline-flex rounded-xl bg-[#F5F5F5] p-1.5 border border-[#E5E5E5]"
+          className="inline-flex rounded-xl bg-zinc-100 p-1 border border-zinc-200/80"
           role="tablist"
           aria-label="Finalidade do imóvel"
         >
@@ -85,10 +91,10 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
               setPriceRangeIndex(0);
             }}
             className={cn(
-              "rounded-lg px-6 py-2.5 text-xs sm:text-sm font-semibold transition-all cursor-pointer",
+              "rounded-lg px-5 py-2 text-xs sm:text-sm font-semibold transition-all cursor-pointer",
               purpose === "venda"
-                ? "bg-[#B5121B] text-white shadow-sm"
-                : "text-[#242424]/75 hover:text-[#B5121B]"
+                ? "bg-cyan-700 text-white shadow-xs"
+                : "text-zinc-600 hover:text-zinc-900"
             )}
           >
             Comprar
@@ -102,10 +108,10 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
               setPriceRangeIndex(0);
             }}
             className={cn(
-              "rounded-lg px-6 py-2.5 text-xs sm:text-sm font-semibold transition-all cursor-pointer",
+              "rounded-lg px-5 py-2 text-xs sm:text-sm font-semibold transition-all cursor-pointer",
               purpose === "aluguel"
-                ? "bg-[#B5121B] text-white shadow-sm"
-                : "text-[#242424]/75 hover:text-[#B5121B]"
+                ? "bg-cyan-700 text-white shadow-xs"
+                : "text-zinc-600 hover:text-zinc-900"
             )}
           >
             Alugar
@@ -115,23 +121,23 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
         <button
           type="button"
           onClick={() => router.push("/imoveis")}
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B5121B] hover:underline cursor-pointer"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-700 hover:text-cyan-800 hover:underline cursor-pointer"
         >
           <SlidersHorizontal className="h-3.5 w-3.5" />
-          <span>Busca avançada com mais filtros</span>
+          <span>Filtros avançados</span>
         </button>
       </div>
 
       {/* Formulário de Busca */}
       <form
         onSubmit={handleSearch}
-        className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:items-end"
+        className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-12 lg:items-end"
       >
         {/* Tipo de Imóvel */}
         <div className="lg:col-span-3">
           <label
             htmlFor="hero-property-type"
-            className="block text-[11px] font-semibold uppercase tracking-wider text-[#737373] mb-1.5"
+            className="block text-[11px] font-semibold uppercase tracking-wider text-zinc-500 mb-1"
           >
             Tipo de Imóvel
           </label>
@@ -139,7 +145,7 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
             id="hero-property-type"
             value={propertyType}
             onChange={(e) => setPropertyType(e.target.value)}
-            className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] focus:border-[#B5121B] focus:outline-none"
+            className="h-11 w-full rounded-lg border border-zinc-200 bg-zinc-50/60 px-3 text-sm text-zinc-900 focus:border-cyan-600 focus:bg-white focus:outline-none transition-colors"
           >
             <option value="todos">Todos os tipos</option>
             {(Object.keys(PROPERTY_TYPE_LABELS) as PropertyType[]).map((key) => (
@@ -150,67 +156,49 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
           </select>
         </div>
 
-        {/* Cidade */}
-        <div className="lg:col-span-2">
+        {/* Cidade ou Bairro */}
+        <div className="lg:col-span-4">
           <label
-            htmlFor="hero-city"
-            className="block text-[11px] font-semibold uppercase tracking-wider text-[#737373] mb-1.5"
+            htmlFor="hero-location"
+            className="block text-[11px] font-semibold uppercase tracking-wider text-zinc-500 mb-1"
           >
-            Cidade
+            Cidade ou Bairro
           </label>
-          <input
-            id="hero-city"
-            type="text"
-            list="hero-cities-datalist"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            placeholder="Ex: São Paulo"
-            className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] placeholder:text-[#737373]/60 focus:border-[#B5121B] focus:outline-none"
-          />
-          <datalist id="hero-cities-datalist">
+          <div className="relative">
+            <MapPin className="pointer-events-none absolute left-3 top-3.5 h-4 w-4 text-zinc-400" />
+            <input
+              id="hero-location"
+              type="text"
+              list="hero-locations-datalist"
+              value={locationQuery}
+              onChange={(e) => setLocationQuery(e.target.value)}
+              placeholder="Digite a cidade ou bairro..."
+              className="h-11 w-full rounded-lg border border-zinc-200 bg-zinc-50/60 pl-9 pr-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:border-cyan-600 focus:bg-white focus:outline-none transition-colors"
+            />
+          </div>
+          <datalist id="hero-locations-datalist">
             {cities.map((c) => (
-              <option key={c} value={c} />
+              <option key={`city-${c}`} value={c} />
             ))}
-          </datalist>
-        </div>
-
-        {/* Bairro */}
-        <div className="lg:col-span-3">
-          <label
-            htmlFor="hero-neighborhood"
-            className="block text-[11px] font-semibold uppercase tracking-wider text-[#737373] mb-1.5"
-          >
-            Bairro ou Região
-          </label>
-          <input
-            id="hero-neighborhood"
-            type="text"
-            list="hero-neighborhoods-datalist"
-            value={neighborhood}
-            onChange={(e) => setNeighborhood(e.target.value)}
-            placeholder="Ex: Jardim Paulista, Itaim..."
-            className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] placeholder:text-[#737373]/60 focus:border-[#B5121B] focus:outline-none"
-          />
-          <datalist id="hero-neighborhoods-datalist">
             {neighborhoods.map((n) => (
-              <option key={n} value={n} />
+              <option key={`neigh-${n}`} value={n} />
             ))}
           </datalist>
         </div>
 
         {/* Faixa de Preço */}
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-3">
           <label
             htmlFor="hero-price-range"
-            className="block text-[11px] font-semibold uppercase tracking-wider text-[#737373] mb-1.5"
+            className="block text-[11px] font-semibold uppercase tracking-wider text-zinc-500 mb-1"
           >
-            Preço
+            Faixa de Preço
           </label>
           <select
             id="hero-price-range"
             value={priceRangeIndex}
             onChange={(e) => setPriceRangeIndex(Number(e.target.value))}
-            className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] focus:border-[#B5121B] focus:outline-none"
+            className="h-11 w-full rounded-lg border border-zinc-200 bg-zinc-50/60 px-3 text-sm text-zinc-900 focus:border-cyan-600 focus:bg-white focus:outline-none transition-colors"
           >
             {activeRanges.map((range, idx) => (
               <option key={range.label} value={idx}>
@@ -222,7 +210,11 @@ export function HeroSearchBar({ cities, neighborhoods }: HeroSearchBarProps) {
 
         {/* Botão Buscar Imóveis */}
         <div className="sm:col-span-2 lg:col-span-2">
-          <Button type="submit" variant="default" className="h-11 w-full">
+          <Button
+            type="submit"
+            variant="default"
+            className="h-11 w-full justify-center bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-xs"
+          >
             <Search className="h-4 w-4" />
             <span>Buscar imóveis</span>
           </Button>

@@ -55,7 +55,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${cormorant.variable} ${manrope.variable}`}
     >
-      <body className="antialiased selection:bg-[#B5121B] selection:text-white bg-white text-[#242424]">
+      <body className="antialiased selection:bg-cyan-100 selection:text-cyan-950 bg-white text-zinc-900">
         {children}
       </body>
     </html>

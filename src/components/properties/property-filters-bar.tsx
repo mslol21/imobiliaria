@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
@@ -183,9 +183,9 @@ export function PropertyFiltersBar({
               id="filter-purpose"
               value={finalidade}
               onChange={(e) => setFinalidade(e.target.value)}
-              className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] focus:border-[#B5121B] focus:outline-none"
+              className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] focus:border-cyan-600 focus:outline-none"
             >
-              <option value="todos">Venda e Locação</option>
+              <option value="todos">Venda e LocaÃ§Ã£o</option>
               <option value="venda">Comprar</option>
               <option value="aluguel">Alugar</option>
             </select>
@@ -193,12 +193,12 @@ export function PropertyFiltersBar({
         )}
 
         <div>
-          <Label htmlFor="filter-type">Tipo de Imóvel</Label>
+          <Label htmlFor="filter-type">Tipo de ImÃ³vel</Label>
           <select
             id="filter-type"
             value={tipo}
             onChange={(e) => setTipo(e.target.value)}
-            className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] focus:border-[#B5121B] focus:outline-none"
+            className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] focus:border-cyan-600 focus:outline-none"
           >
             <option value="todos">Todos os tipos</option>
             {(Object.keys(PROPERTY_TYPE_LABELS) as PropertyType[]).map((key) => (
@@ -216,7 +216,7 @@ export function PropertyFiltersBar({
             list="filter-cities-list"
             value={cidade}
             onChange={(e) => setCidade(e.target.value)}
-            placeholder="Ex: São Paulo"
+            placeholder="Ex: SÃ£o Paulo"
           />
           <datalist id="filter-cities-list">
             {cities.map((c) => (
@@ -242,10 +242,10 @@ export function PropertyFiltersBar({
         </div>
       </div>
 
-      {/* Faixas de Preço e Área */}
+      {/* Faixas de PreÃ§o e Ãrea */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Label htmlFor="filter-price-min">Valor mínimo (R$)</Label>
+          <Label htmlFor="filter-price-min">Valor mÃ­nimo (R$)</Label>
           <Input
             id="filter-price-min"
             type="number"
@@ -257,7 +257,7 @@ export function PropertyFiltersBar({
           />
         </div>
         <div>
-          <Label htmlFor="filter-price-max">Valor máximo (R$)</Label>
+          <Label htmlFor="filter-price-max">Valor mÃ¡ximo (R$)</Label>
           <Input
             id="filter-price-max"
             type="number"
@@ -269,7 +269,7 @@ export function PropertyFiltersBar({
           />
         </div>
         <div>
-          <Label htmlFor="filter-area-min">Área mínima (m²)</Label>
+          <Label htmlFor="filter-area-min">Ãrea mÃ­nima (mÂ²)</Label>
           <Input
             id="filter-area-min"
             type="number"
@@ -280,7 +280,7 @@ export function PropertyFiltersBar({
           />
         </div>
         <div>
-          <Label htmlFor="filter-area-max">Área máxima (m²)</Label>
+          <Label htmlFor="filter-area-max">Ãrea mÃ¡xima (mÂ²)</Label>
           <Input
             id="filter-area-max"
             type="number"
@@ -292,13 +292,13 @@ export function PropertyFiltersBar({
         </div>
       </div>
 
-      {/* Dormitórios e Especificações */}
+      {/* DormitÃ³rios e EspecificaÃ§Ãµes */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
-          { label: "Dormitórios (mín.)", val: dormitorios, setter: setDormitorios },
-          { label: "Suítes (mín.)", val: suites, setter: setSuites },
-          { label: "Banheiros (mín.)", val: banheiros, setter: setBanheiros },
-          { label: "Vagas (mín.)", val: vagas, setter: setVagas },
+          { label: "DormitÃ³rios (mÃ­n.)", val: dormitorios, setter: setDormitorios },
+          { label: "SuÃ­tes (mÃ­n.)", val: suites, setter: setSuites },
+          { label: "Banheiros (mÃ­n.)", val: banheiros, setter: setBanheiros },
+          { label: "Vagas (mÃ­n.)", val: vagas, setter: setVagas },
         ].map((group) => (
           <div key={group.label}>
             <Label>{group.label}</Label>
@@ -311,8 +311,8 @@ export function PropertyFiltersBar({
                   className={cn(
                     "flex-1 h-10 rounded-lg border text-xs font-semibold transition-colors cursor-pointer",
                     group.val === num
-                      ? "border-[#B5121B] bg-[#B5121B] text-white"
-                      : "border-[#E5E5E5] bg-white text-[#242424] hover:border-[#B5121B]/40"
+                      ? "border-cyan-700 bg-cyan-700 text-white"
+                      : "border-[#E5E5E5] bg-white text-[#242424] hover:border-cyan-600/40"
                   )}
                 >
                   {num === 0 ? "Todos" : `${num}+`}
@@ -323,11 +323,11 @@ export function PropertyFiltersBar({
         ))}
       </div>
 
-      {/* Características Extras */}
+      {/* CaracterÃ­sticas Extras */}
       <div className="flex flex-wrap gap-3 pt-1">
         {[
           {
-            label: "Imóvel mobiliado",
+            label: "ImÃ³vel mobiliado",
             checked: mobiliado,
             toggle: () => setMobiliado((v) => !v),
           },
@@ -337,7 +337,7 @@ export function PropertyFiltersBar({
             toggle: () => setAceitaAnimais((v) => !v),
           },
           {
-            label: "Seleção Alto Padrão",
+            label: "SeleÃ§Ã£o Alto PadrÃ£o",
             checked: altoPadrao,
             toggle: () => setAltoPadrao((v) => !v),
           },
@@ -349,15 +349,15 @@ export function PropertyFiltersBar({
             className={cn(
               "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-medium transition-colors cursor-pointer",
               toggleItem.checked
-                ? "border-[#B5121B] bg-[#B5121B] text-white"
-                : "border-[#E5E5E5] bg-[#F5F5F5] text-[#242424] hover:border-[#B5121B]/40"
+                ? "border-cyan-700 bg-cyan-700 text-white"
+                : "border-[#E5E5E5] bg-[#F5F5F5] text-[#242424] hover:border-cyan-600/40"
             )}
           >
             <span
               className={cn(
                 "flex h-4 w-4 items-center justify-center rounded-full border",
                 toggleItem.checked
-                  ? "border-white bg-white text-[#B5121B]"
+                  ? "border-white bg-white text-cyan-700"
                   : "border-[#737373]/40"
               )}
             >
@@ -382,8 +382,8 @@ export function PropertyFiltersBar({
                 className={cn(
                   "rounded-lg border px-3 py-1.5 text-xs transition-colors cursor-pointer",
                   active
-                    ? "border-[#B5121B] bg-[#B5121B] text-white font-medium"
-                    : "border-[#E5E5E5] bg-white text-[#737373] hover:border-[#B5121B]/40 hover:text-[#242424]"
+                    ? "border-cyan-700 bg-cyan-700 text-white font-medium"
+                    : "border-[#E5E5E5] bg-white text-[#737373] hover:border-cyan-600/40 hover:text-[#242424]"
                 )}
               >
                 {amenity}
@@ -397,7 +397,7 @@ export function PropertyFiltersBar({
 
   return (
     <section
-      aria-label="Filtros e ordenação de imóveis"
+      aria-label="Filtros e ordenaÃ§Ã£o de imÃ³veis"
       className="mb-8 rounded-2xl border border-[#E5E5E5] bg-white p-4 sm:p-6 shadow-sm"
     >
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -411,7 +411,7 @@ export function PropertyFiltersBar({
             <SlidersHorizontal className="h-4 w-4" />
             <span>Filtrar</span>
             {activeFilterCount > 0 && (
-              <span className="ml-1 rounded-full bg-[#B5121B] px-2 py-0.5 text-[11px] text-white">
+              <span className="ml-1 rounded-full bg-cyan-700 px-2 py-0.5 text-[11px] text-white">
                 {activeFilterCount}
               </span>
             )}
@@ -423,12 +423,12 @@ export function PropertyFiltersBar({
             onClick={() => setShowAdvancedDesktop((prev) => !prev)}
             className="hidden lg:inline-flex"
           >
-            <SlidersHorizontal className="h-4 w-4 text-[#B5121B]" />
+            <SlidersHorizontal className="h-4 w-4 text-cyan-700" />
             <span>
-              {showAdvancedDesktop ? "Ocultar filtros" : "Filtros avançados"}
+              {showAdvancedDesktop ? "Ocultar filtros" : "Filtros avanÃ§ados"}
             </span>
             {activeFilterCount > 0 && (
-              <span className="ml-1 rounded-full bg-[#B5121B] px-2 py-0.5 text-[11px] text-white">
+              <span className="ml-1 rounded-full bg-cyan-700 px-2 py-0.5 text-[11px] text-white">
                 {activeFilterCount}
               </span>
             )}
@@ -440,7 +440,7 @@ export function PropertyFiltersBar({
               variant="ghost"
               size="sm"
               onClick={clearAllFilters}
-              className="text-xs text-[#737373] hover:text-[#B5121B]"
+              className="text-xs text-[#737373] hover:text-cyan-700"
             >
               <RotateCcw className="h-3.5 w-3.5" />
               <span>Limpar filtros</span>
@@ -451,14 +451,14 @@ export function PropertyFiltersBar({
             <strong className="font-semibold text-[#242424]">
               {totalResults}
             </strong>{" "}
-            {totalResults === 1 ? "imóvel encontrado" : "imóveis encontrados"}
+            {totalResults === 1 ? "imÃ³vel encontrado" : "imÃ³veis encontrados"}
           </p>
         </div>
 
-        {/* Ordenação */}
+        {/* OrdenaÃ§Ã£o */}
         <div className="flex items-center gap-2">
           <ArrowUpDown
-            className="h-4 w-4 text-[#B5121B] shrink-0"
+            className="h-4 w-4 text-cyan-700 shrink-0"
             aria-hidden="true"
           />
           <label htmlFor="sort-select" className="text-xs font-medium text-[#737373]">
@@ -472,7 +472,7 @@ export function PropertyFiltersBar({
               setOrdenar(nextSort);
               applyFilters(nextSort);
             }}
-            className="h-10 rounded-lg border border-[#E5E5E5] bg-[#F5F5F5] px-3 text-xs font-semibold text-[#242424] focus:border-[#B5121B] focus:outline-none"
+            className="h-10 rounded-lg border border-[#E5E5E5] bg-[#F5F5F5] px-3 text-xs font-semibold text-[#242424] focus:border-cyan-600 focus:outline-none"
           >
             {(Object.keys(SORT_OPTION_LABELS) as PropertySortOption[]).map(
               (key) => (
@@ -485,7 +485,7 @@ export function PropertyFiltersBar({
         </div>
       </div>
 
-      {/* Barra Rápida Desktop */}
+      {/* Barra RÃ¡pida Desktop */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -513,12 +513,12 @@ export function PropertyFiltersBar({
         ) : (
           <div className="grid grid-cols-12 gap-3 items-end">
             <div className="col-span-3">
-              <Label htmlFor="quick-type">Tipo de Imóvel</Label>
+              <Label htmlFor="quick-type">Tipo de ImÃ³vel</Label>
               <select
                 id="quick-type"
                 value={tipo}
                 onChange={(e) => setTipo(e.target.value)}
-                className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] focus:border-[#B5121B] focus:outline-none"
+                className="h-11 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 text-sm text-[#242424] focus:border-cyan-600 focus:outline-none"
               >
                 <option value="todos">Todos os tipos</option>
                 {(Object.keys(PROPERTY_TYPE_LABELS) as PropertyType[]).map(
@@ -536,7 +536,7 @@ export function PropertyFiltersBar({
                 id="quick-city"
                 value={cidade}
                 onChange={(e) => setCidade(e.target.value)}
-                placeholder="Ex: São Paulo"
+                placeholder="Ex: SÃ£o Paulo"
               />
             </div>
             <div className="col-span-3">
@@ -569,7 +569,7 @@ export function PropertyFiltersBar({
           <div className="mt-auto flex max-h-[90dvh] w-full flex-col rounded-t-3xl bg-white shadow-2xl">
             <div className="flex items-center justify-between border-b border-[#E5E5E5] px-5 py-4">
               <h2 className="font-editorial text-xl font-semibold text-[#242424]">
-                Filtrar Imóveis
+                Filtrar ImÃ³veis
               </h2>
               <Button
                 type="button"
@@ -611,3 +611,4 @@ export function PropertyFiltersBar({
     </section>
   );
 }
+

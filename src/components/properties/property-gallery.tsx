@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
@@ -100,10 +100,10 @@ export function PropertyGallery({
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/15 pointer-events-none" />
 
-        {/* Contador e Botão Lightbox */}
+        {/* Contador e BotÃ£o Lightbox */}
         <div className="absolute top-4 right-4 flex items-center gap-2">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-black/65 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
-            <Camera className="h-3.5 w-3.5 text-[#B5121B]" />
+            <Camera className="h-3.5 w-3.5 text-cyan-700" />
             <span>
               {activeIndex + 1} / {total}
             </span>
@@ -127,15 +127,15 @@ export function PropertyGallery({
               type="button"
               onClick={goPrev}
               aria-label="Fotografia anterior"
-              className="absolute left-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-[#242424] shadow-md transition-transform hover:scale-105 hover:text-[#B5121B] cursor-pointer"
+              className="absolute left-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-[#242424] shadow-md transition-transform hover:scale-105 hover:text-cyan-700 cursor-pointer"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               type="button"
               onClick={goNext}
-              aria-label="Próxima fotografia"
-              className="absolute right-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-[#242424] shadow-md transition-transform hover:scale-105 hover:text-[#B5121B] cursor-pointer"
+              aria-label="PrÃ³xima fotografia"
+              className="absolute right-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-white/95 text-[#242424] shadow-md transition-transform hover:scale-105 hover:text-cyan-700 cursor-pointer"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
@@ -164,7 +164,7 @@ export function PropertyGallery({
               className={cn(
                 "relative h-20 w-28 sm:h-24 sm:w-36 shrink-0 overflow-hidden rounded-xl border-2 transition-all cursor-pointer",
                 idx === activeIndex
-                  ? "border-[#B5121B] ring-2 ring-[#B5121B]/30 opacity-100"
+                  ? "border-cyan-700 ring-2 ring-cyan-600/30 opacity-100"
                   : "border-transparent opacity-65 hover:opacity-100"
               )}
             >
@@ -192,10 +192,10 @@ export function PropertyGallery({
         >
           <div className="flex items-center justify-between px-4 py-4 sm:px-8 text-white">
             <div className="text-sm font-medium">
-              <span className="text-[#B5121B] font-semibold">
+              <span className="text-cyan-700 font-semibold">
                 {activeIndex + 1} / {total}
               </span>{" "}
-              — {activeImage.alt_text || propertyTitle}
+              â€” {activeImage.alt_text || propertyTitle}
             </div>
             <button
               type="button"
@@ -231,7 +231,7 @@ export function PropertyGallery({
                 <button
                   type="button"
                   onClick={goNext}
-                  aria-label="Próxima"
+                  aria-label="PrÃ³xima"
                   className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-white hover:bg-white/30 cursor-pointer"
                 >
                   <ChevronRight className="h-6 w-6" />
@@ -250,7 +250,7 @@ export function PropertyGallery({
                 className={cn(
                   "relative h-14 w-20 shrink-0 overflow-hidden rounded-lg border-2 transition-all cursor-pointer",
                   idx === activeIndex
-                    ? "border-[#B5121B] opacity-100"
+                    ? "border-cyan-700 opacity-100"
                     : "border-transparent opacity-50 hover:opacity-80"
                 )}
               >
@@ -269,3 +269,4 @@ export function PropertyGallery({
     </div>
   );
 }
+

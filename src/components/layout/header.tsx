@@ -22,6 +22,7 @@ const NAV_LINKS = [
   { href: "/", label: "Início" },
   { href: "/comprar", label: "Comprar" },
   { href: "/alugar", label: "Alugar" },
+  { href: "/imoveis", label: "Imóveis" },
   { href: "/sobre", label: "Sobre nós" },
   { href: "/contato", label: "Contato" },
 ];
@@ -47,7 +48,7 @@ export function Header({ settings }: HeaderProps) {
   const cleanWhatsapp = sanitizePhoneForWhatsApp(settings.whatsapp);
   const contactHref = cleanWhatsapp
     ? `https://wa.me/${cleanWhatsapp}?text=${encodeURIComponent(
-        "Olá! Gostaria de falar com um especialista sobre oportunidades imobiliárias."
+        "Olá! Gostaria de falar com um corretor sobre oportunidades imobiliárias."
       )}`
     : "/contato";
 
@@ -56,30 +57,32 @@ export function Header({ settings }: HeaderProps) {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#E5E5E5]"
-          : "bg-white/90 backdrop-blur-sm border-b border-[#E5E5E5]/70"
+          ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-zinc-200"
+          : "bg-white/90 backdrop-blur-xs border-b border-zinc-200/80"
       )}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Símbolo Imobiliário Minimalista (sem texto/sem nome inventado) */}
+        {/* Símbolo Imobiliário Discreto (sem nome comercial inventado) */}
         <Link
           href="/"
           className="group flex items-center gap-3 focus-visible:outline-none"
           aria-label="Página Inicial da Plataforma Imobiliária"
         >
-          {/* Ícone Arquitetônico Minimalista Geométrico */}
-          <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-[#B5121B] text-white shadow-sm transition-transform duration-200 group-hover:scale-105">
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-900 text-cyan-400 shadow-xs transition-colors duration-200 group-hover:bg-cyan-700 group-hover:text-white">
             <svg
-              className="h-6 w-6 fill-none stroke-current stroke-[2.2]"
+              className="h-5 w-5 fill-none stroke-current stroke-[2.2]"
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
-              {/* Fachada arquitetônica minimalista contemporânea */}
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"
+              />
             </svg>
           </div>
           {settings.agency_name ? (
-            <span className="font-editorial text-xl font-bold tracking-tight text-[#242424]">
+            <span className="font-sans text-lg font-bold tracking-tight text-zinc-900">
               {settings.agency_name}
             </span>
           ) : (
@@ -102,16 +105,16 @@ export function Header({ settings }: HeaderProps) {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative rounded-md px-4 py-2 text-sm font-medium transition-colors",
+                  "relative rounded-md px-3.5 py-2 text-sm font-medium transition-colors",
                   isActive
-                    ? "text-[#B5121B] font-semibold"
-                    : "text-[#242424]/80 hover:text-[#B5121B] hover:bg-[#B5121B]/5"
+                    ? "text-cyan-700 font-semibold"
+                    : "text-zinc-700 hover:text-cyan-700 hover:bg-zinc-100"
                 )}
               >
                 {item.label}
                 {isActive && (
                   <span
-                    className="absolute inset-x-4 -bottom-1 h-0.5 rounded-full bg-[#B5121B]"
+                    className="absolute inset-x-3.5 -bottom-1 h-0.5 rounded-full bg-cyan-700"
                     aria-hidden="true"
                   />
                 )}
@@ -120,11 +123,11 @@ export function Header({ settings }: HeaderProps) {
           })}
         </nav>
 
-        {/* Ações Desktop: Botão destacado "Fale com um especialista" */}
+        {/* Ações Desktop: Botão de destaque "Fale com um corretor" */}
         <div className="hidden lg:flex lg:items-center lg:gap-3">
           <Link
             href="/anunciar"
-            className="text-xs font-semibold uppercase tracking-wider text-[#242424] hover:text-[#B5121B] transition-colors px-2 py-1"
+            className="text-xs font-semibold text-zinc-600 hover:text-cyan-700 transition-colors px-2 py-1"
           >
             Anunciar Imóvel
           </Link>
@@ -136,7 +139,7 @@ export function Header({ settings }: HeaderProps) {
               rel={cleanWhatsapp ? "noopener noreferrer" : undefined}
             >
               <PhoneCall className="h-4 w-4" aria-hidden="true" />
-              <span>Fale com um especialista</span>
+              <span>Fale com um corretor</span>
               {cleanWhatsapp && (
                 <ArrowUpRight className="h-3.5 w-3.5 opacity-80" aria-hidden="true" />
               )}
@@ -156,9 +159,9 @@ export function Header({ settings }: HeaderProps) {
             aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
             {mobileMenuOpen ? (
-              <X className="h-6 w-6 text-[#242424]" />
+              <X className="h-6 w-6 text-zinc-800" />
             ) : (
-              <Menu className="h-6 w-6 text-[#242424]" />
+              <Menu className="h-6 w-6 text-zinc-800" />
             )}
           </Button>
         </div>
@@ -168,7 +171,7 @@ export function Header({ settings }: HeaderProps) {
       {mobileMenuOpen && (
         <div
           id="mobile-navigation-drawer"
-          className="border-t border-[#E5E5E5] bg-white px-4 pt-3 pb-6 shadow-xl lg:hidden"
+          className="border-t border-zinc-200 bg-white px-4 pt-3 pb-6 shadow-xl lg:hidden"
         >
           <nav className="flex flex-col space-y-1" aria-label="Menu móvel">
             {NAV_LINKS.map((item) => {
@@ -183,27 +186,27 @@ export function Header({ settings }: HeaderProps) {
                   className={cn(
                     "flex items-center justify-between rounded-lg px-4 py-3 text-base font-medium transition-colors",
                     isActive
-                      ? "bg-red-50 text-[#B5121B] font-semibold"
-                      : "text-[#242424] hover:bg-[#F5F5F5]"
+                      ? "bg-cyan-50 text-cyan-800 font-semibold"
+                      : "text-zinc-800 hover:bg-zinc-100"
                   )}
                 >
                   <span>{item.label}</span>
                   {isActive && (
-                    <span className="h-2 w-2 rounded-full bg-[#B5121B]" />
+                    <span className="h-2 w-2 rounded-full bg-cyan-700" />
                   )}
                 </Link>
               );
             })}
             <Link
               href="/anunciar"
-              className="flex items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-[#B5121B] hover:bg-[#F5F5F5]"
+              className="flex items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-cyan-700 hover:bg-zinc-100"
             >
               <span>Quero anunciar meu imóvel</span>
-              <ArrowUpRight className="h-4 w-4 text-[#B5121B]" />
+              <ArrowUpRight className="h-4 w-4 text-cyan-700" />
             </Link>
           </nav>
 
-          <div className="mt-5 flex flex-col gap-2.5 border-t border-[#E5E5E5] pt-4">
+          <div className="mt-5 flex flex-col gap-2.5 border-t border-zinc-200 pt-4">
             <Button asChild variant="default" size="lg" className="w-full">
               <a
                 href={contactHref}
@@ -211,12 +214,12 @@ export function Header({ settings }: HeaderProps) {
                 rel={cleanWhatsapp ? "noopener noreferrer" : undefined}
               >
                 <PhoneCall className="h-4 w-4" />
-                <span>Fale com um especialista</span>
+                <span>Fale com um corretor</span>
               </a>
             </Button>
             <Link
               href="/admin"
-              className="inline-flex items-center justify-center gap-1.5 py-2 text-xs text-[#737373] hover:text-[#B5121B]"
+              className="inline-flex items-center justify-center gap-1.5 py-2 text-xs text-zinc-500 hover:text-cyan-700"
             >
               <ShieldCheck className="h-3.5 w-3.5" />
               <span>Painel Administrativo</span>

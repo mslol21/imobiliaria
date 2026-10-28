@@ -83,18 +83,18 @@ export function PropertiesCatalogView({
   neighborhoods,
 }: PropertiesCatalogViewProps) {
   return (
-    <div className="min-h-screen bg-[#FFFFFF] pb-24">
+    <div className="min-h-screen bg-white pb-24 text-zinc-900">
       {/* Banner de Cabeçalho */}
-      <div className="bg-[#242424] text-white py-14 sm:py-18 border-b border-[#B5121B]">
+      <div className="bg-zinc-900 text-white py-12 sm:py-16 border-b border-zinc-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-[#B5121B] mb-4">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400 mb-3.5">
             <Sparkles className="h-3.5 w-3.5" />
             <span>{badgeLabel}</span>
           </div>
-          <h1 className="font-editorial text-3xl sm:text-5xl font-semibold tracking-tight text-white max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white max-w-3xl">
             {title}
           </h1>
-          <p className="mt-3 text-base sm:text-lg text-[#D4D4D4] max-w-2xl">
+          <p className="mt-2.5 text-base sm:text-lg text-zinc-300 max-w-2xl">
             {subtitle}
           </p>
         </div>
@@ -103,16 +103,16 @@ export function PropertiesCatalogView({
       <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
         {/* Aviso de Modo Demonstração */}
         {result.dataSource === "dev_preview" && (
-          <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-red-200 bg-red-50/60 px-4 py-3 text-xs text-[#242424]">
+          <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-xl border border-cyan-200 bg-cyan-50/70 px-4 py-3 text-xs text-zinc-800">
             <div className="flex items-center gap-2.5">
-              <Info className="h-4 w-4 text-[#B5121B] shrink-0" />
+              <Info className="h-4 w-4 text-cyan-700 shrink-0" />
               <span>
                 <strong>Demonstração Comercial:</strong> Exibindo acervo demonstrativo. O banco de dados e as informações reais poderão ser administrados pelo painel exclusivo.
               </span>
             </div>
             <Link
               href="/admin"
-              className="font-semibold text-[#B5121B] underline shrink-0"
+              className="font-semibold text-cyan-800 underline shrink-0 hover:text-cyan-950"
             >
               Configurar painel →
             </Link>
@@ -131,7 +131,7 @@ export function PropertiesCatalogView({
         {/* Grid de Resultados ou Estado Vazio */}
         {result.items.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {result.items.map((property, idx) => (
                 <PropertyCard
                   key={property.id}
@@ -145,8 +145,8 @@ export function PropertiesCatalogView({
             {/* Paginação */}
             {result.totalPages > 1 && (
               <nav
+                className="mt-14 flex items-center justify-center gap-2"
                 aria-label="Paginação de imóveis"
-                className="mt-12 flex items-center justify-center gap-2"
               >
                 {result.page > 1 ? (
                   <Button asChild variant="outline" size="sm">
@@ -172,7 +172,7 @@ export function PropertiesCatalogView({
                 <div className="flex items-center gap-1.5 px-2">
                   {Array.from(
                     { length: result.totalPages },
-                    (_, index) => index + 1
+                    (_, i) => i + 1
                   ).map((pageNum) => (
                     <Link
                       key={pageNum}
@@ -182,13 +182,10 @@ export function PropertiesCatalogView({
                         pageNum,
                         lockedPurpose
                       )}
-                      aria-current={
-                        pageNum === result.page ? "page" : undefined
-                      }
                       className={`flex h-9 w-9 items-center justify-center rounded-lg text-xs font-semibold transition-colors ${
                         pageNum === result.page
-                          ? "bg-[#B5121B] text-white"
-                          : "bg-white text-[#242424] border border-[#E5E5E5] hover:border-[#B5121B]"
+                          ? "bg-cyan-700 text-white"
+                          : "bg-white text-zinc-800 border border-zinc-200 hover:border-cyan-700 hover:text-cyan-700"
                       }`}
                     >
                       {pageNum}
@@ -220,12 +217,12 @@ export function PropertiesCatalogView({
             )}
           </>
         ) : (
-          <div className="rounded-2xl border border-[#E5E5E5] bg-[#F5F5F5] p-12 text-center">
-            <Building2 className="mx-auto mb-4 h-12 w-12 text-[#B5121B]" />
-            <h2 className="font-editorial text-2xl font-semibold text-[#242424]">
+          <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-12 text-center">
+            <Building2 className="mx-auto mb-3 h-10 w-10 text-cyan-700" />
+            <h2 className="text-xl font-bold text-zinc-900">
               Nenhum imóvel corresponde aos filtros selecionados
             </h2>
-            <p className="mx-auto mt-2 max-w-lg text-sm text-[#737373]">
+            <p className="mx-auto mt-2 max-w-lg text-sm text-zinc-600">
               Amplie a faixa de preços ou limpe os filtros para visualizar outras oportunidades.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
@@ -233,7 +230,7 @@ export function PropertiesCatalogView({
                 <Link href={basePath}>Limpar filtros</Link>
               </Button>
               <Button asChild variant="default">
-                <Link href="/contato">Solicitar atendimento consultivo</Link>
+                <Link href="/contato">Fale com um corretor</Link>
               </Button>
             </div>
           </div>
