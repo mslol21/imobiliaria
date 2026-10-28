@@ -8,6 +8,10 @@
   --color-brand-charcoal: #242424;
   --color-brand-muted: #737373;
   --color-border-subtle: #E5E5E5;
+  --color-tech-bg: #09090b;
+  --color-tech-card: #18181b;
+  --color-tech-cyan: #06b6d4;
+  --color-tech-cyan-glow: rgba(6, 182, 212, 0.4);
 }
 
 @theme inline {
@@ -24,8 +28,8 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #FFFFFF;
-  color: var(--color-brand-charcoal);
+  background-color: #09090b;
+  color: #f4f4f5;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,21 +38,58 @@ html {
 body {
   min-height: 100dvh;
   overflow-x: hidden;
-  background-color: #FFFFFF;
-  color: var(--color-brand-charcoal);
+  background-color: #09090b;
+  color: #f4f4f5;
 }
 
-h1,
-h2,
-h3,
-.font-editorial {
-  font-family: var(--font-serif);
+/* Keyframes para animação de feixe de laser (Magic UI Border Beam) */
+@keyframes border-beam {
+  100% {
+    offset-distance: 100%;
+  }
 }
 
-/* Acessibilidade WCAG 2.2 AA: Foco visível com vermelho de alto contraste */
+.animate-border-beam {
+  animation: border-beam var(--duration) infinite linear;
+}
+
+/* Shimmer pulse para botões de alta conversão */
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer-sweep 2.5s infinite ease-in-out;
+}
+
+/* Acessibilidade WCAG 2.2 AA: Foco visível com ciano e anel de brilho */
 :focus-visible {
-  outline: 2px solid var(--color-brand-red);
+  outline: 2px solid #06b6d4;
   outline-offset: 2px;
+}
+
+/* Custom scrollbar para estética dark tech-luxury */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
 }
 
 /* Respeito às preferências de movimento reduzido */
