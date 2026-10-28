@@ -41,13 +41,13 @@ export function PropertyCard({
 
   const purposeBadgeClass =
     property.purpose === "aluguel"
-      ? "bg-emerald-600 text-white"
+      ? "bg-zinc-700 text-white"
       : property.purpose === "ambos"
-        ? "bg-indigo-600 text-white"
+        ? "bg-zinc-800 text-white"
         : "bg-cyan-700 text-white";
 
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-950/5">
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-zinc-200/90 bg-white shadow-xs transition-all duration-300 hover:border-zinc-300 hover:shadow-md">
       {/* Fotografia Principal */}
       <Link
         href={`/imoveis/${property.slug}`}
@@ -60,7 +60,7 @@ export function PropertyCard({
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority={priority}
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.025]"
         />
         <div
           className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"
@@ -79,7 +79,7 @@ export function PropertyCard({
               {PROPERTY_PURPOSE_LABELS[property.purpose]}
             </span>
             {(property.is_high_end || property.property_type === "alto_padrao") && (
-              <span className="inline-flex items-center gap-1 rounded-md bg-gradient-to-r from-amber-500 to-amber-600 px-2.5 py-1 text-[11px] font-bold text-white shadow-xs">
+              <span className="inline-flex items-center gap-1 rounded-md bg-zinc-800 px-2.5 py-1 text-[11px] font-bold text-white shadow-xs">
                 <Sparkles className="h-3 w-3 text-white" />
                 <span>Alto Padrão</span>
               </span>
@@ -116,7 +116,7 @@ export function PropertyCard({
           {/* Preço em Destaque */}
           <div className="pt-1">
             <div className="flex items-baseline gap-1">
-              <span className="text-2xl font-black tracking-tight text-cyan-950 group-hover:text-cyan-700 transition-colors">
+              <span className="text-2xl font-bold tracking-tight text-cyan-950 group-hover:text-cyan-700 transition-colors">
                 {priceInfo.value}
               </span>
               {priceInfo.suffix && (
@@ -181,7 +181,7 @@ export function PropertyCard({
             asChild
             variant="secondary"
             size="sm"
-            className="w-full justify-center bg-cyan-50/70 text-cyan-800 border border-cyan-200/90 hover:bg-gradient-to-r hover:from-cyan-600 hover:to-teal-700 hover:text-white hover:border-transparent transition-all duration-200 font-semibold shadow-xs"
+            className="w-full justify-center bg-cyan-50/70 text-cyan-800 border border-cyan-200/90 hover:bg-cyan-700 hover:text-white hover:border-transparent transition-all duration-200 font-semibold shadow-xs"
           >
             <Link href={`/imoveis/${property.slug}`}>
               <span>Ver detalhes</span>
