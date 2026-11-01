@@ -84,8 +84,8 @@ export default async function HomePage() {
         />
 
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300 backdrop-blur-md mb-3">
-            <Building2 className="h-3.5 w-3.5 text-cyan-300" />
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/20 border border-orange-400/40 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-orange-300 backdrop-blur-md mb-3">
+            <Building2 className="h-3.5 w-3.5 text-orange-300" />
             <span>S&A Imobiliária • Guaianases</span>
           </span>
 
@@ -108,11 +108,11 @@ export default async function HomePage() {
           {/* Indicadores de Confiança com Pílulas Coloridas */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs text-white">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3.5 py-1.5 border border-white/20 shadow-xs">
-              <ShieldCheck className="h-4 w-4 text-cyan-300" />
+              <ShieldCheck className="h-4 w-4 text-orange-300" />
               <span>Busca prática por bairro</span>
             </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3.5 py-1.5 border border-white/20 shadow-xs">
-              <Compass className="h-4 w-4 text-teal-300" />
+              <Compass className="h-4 w-4 text-orange-300" />
               <span>Opções de compra e aluguel</span>
             </span>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3.5 py-1.5 border border-white/20 shadow-xs">
@@ -129,7 +129,7 @@ export default async function HomePage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-200/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
               <Building2 className="h-3.5 w-3.5 text-amber-700" />
               <span>Seleção Especial</span>
             </span>
@@ -164,8 +164,8 @@ export default async function HomePage() {
             ))}
           </div>
         ) : (
-          <div className="mt-8 rounded-2xl border border-cyan-100 bg-cyan-50/40 p-10 text-center">
-            <Building2 className="mx-auto h-8 w-8 text-cyan-600 mb-2" />
+          <div className="mt-8 rounded-2xl border border-orange-100 bg-orange-50/40 p-10 text-center">
+            <Building2 className="mx-auto h-8 w-8 text-orange-600 mb-2" />
             <p className="text-sm text-zinc-600">
               Nenhum imóvel em destaque no momento.
             </p>
@@ -176,7 +176,7 @@ export default async function HomePage() {
       {/* =================================================================== */}
       {/* 4. IMÓVEIS PARA COMPRAR                                             */}
       {/* =================================================================== */}
-      <section className="bg-zinc-50 py-16 border-y border-cyan-100">
+      <section className="bg-zinc-50 py-16 border-y border-orange-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
@@ -194,7 +194,7 @@ export default async function HomePage() {
               asChild
               variant="default"
               size="sm"
-              className="bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-xs"
+              className="bg-orange-700 hover:bg-orange-800 text-white font-semibold shadow-xs"
             >
               <Link href="/comprar">
                 <span>Ver todos para comprar</span>
@@ -236,7 +236,7 @@ export default async function HomePage() {
               asChild
               variant="default"
               size="sm"
-              className="bg-emerald-700 hover:bg-amber-700 text-white font-semibold shadow-xs"
+              className="bg-orange-700 hover:bg-amber-700 text-white font-semibold shadow-xs"
             >
               <Link href="/alugar">
                 <span>Ver todos para alugar</span>
@@ -263,7 +263,7 @@ export default async function HomePage() {
       <section className="bg-zinc-900 text-white py-20 relative overflow-hidden border-y border-zinc-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/20 text-orange-300 border border-orange-400/40 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
               Tipologias
             </span>
             <h2 className="mt-2 text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
@@ -279,7 +279,7 @@ export default async function HomePage() {
               <Link
                 key={category.slug}
                 href={category.href}
-                className="group relative flex h-64 flex-col justify-end overflow-hidden rounded-2xl border border-cyan-900/50 bg-slate-900 p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/70 hover:shadow-cyan-900/20"
+                className="group relative flex h-64 flex-col justify-end overflow-hidden rounded-2xl border border-orange-900/50 bg-slate-900 p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-orange-400/70 hover:shadow-orange-900/20"
               >
                 <Image
                   src={category.image}
@@ -294,10 +294,10 @@ export default async function HomePage() {
                 />
                 <div className="relative z-10">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                    <h3 className="text-xl font-bold text-white group-hover:text-orange-300 transition-colors">
                       {category.title}
                     </h3>
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-xs transition-colors group-hover:bg-cyan-700 group-hover:text-white">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-xs transition-colors group-hover:bg-orange-700 group-hover:text-white">
                       <ArrowUpRight className="h-4 w-4" />
                     </span>
                   </div>
@@ -316,7 +316,7 @@ export default async function HomePage() {
       {/* =================================================================== */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-200/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
             Sobre Nós
           </span>
           <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900">
@@ -333,16 +333,16 @@ export default async function HomePage() {
               icon: Compass,
               title: "Atendimento personalizado",
               desc: "Encontre opções adequadas às suas necessidades de localização, espaço e orçamento.",
-              cardBg: "bg-white border-cyan-200/80 hover:border-cyan-400 hover:shadow-cyan-900/10",
-              iconBg: "bg-cyan-700 text-white shadow-sm shadow-cyan-600/30",
-              titleColor: "text-cyan-950",
+              cardBg: "bg-white border-orange-200/80 hover:border-orange-400 hover:shadow-orange-900/10",
+              iconBg: "bg-orange-700 text-white shadow-sm shadow-orange-600/30",
+              titleColor: "text-orange-950",
             },
             {
               icon: ShieldCheck,
               title: "Segurança Jurídica",
               desc: "Informações claras para você avaliar cada oportunidade com tranquilidade.",
               cardBg: "bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-zinc-900/5",
-              iconBg: "bg-cyan-700 text-white shadow-sm shadow-emerald-600/30",
+              iconBg: "bg-orange-700 text-white shadow-sm shadow-orange-600/30",
               titleColor: "text-zinc-900",
             },
             {
@@ -350,7 +350,7 @@ export default async function HomePage() {
               title: "Atendimento Consultivo",
               desc: "Acompanhamento dedicado e personalizado para entender suas reais prioridades e necessidades.",
               cardBg: "bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-zinc-900/5",
-              iconBg: "bg-cyan-700 text-white shadow-sm shadow-indigo-600/30",
+              iconBg: "bg-orange-700 text-white shadow-sm shadow-indigo-600/30",
               titleColor: "text-zinc-900",
             },
             {
@@ -358,7 +358,7 @@ export default async function HomePage() {
               title: "Agilidade e Resposta",
               desc: "Entre em contato para esclarecer dúvidas e combinar uma visita.",
               cardBg: "bg-white border-zinc-200 hover:border-zinc-300 hover:shadow-zinc-900/5",
-              iconBg: "bg-cyan-700 text-white shadow-sm shadow-amber-600/30",
+              iconBg: "bg-orange-700 text-white shadow-sm shadow-amber-600/30",
               titleColor: "text-zinc-900",
             },
           ].map((item) => (
@@ -387,7 +387,7 @@ export default async function HomePage() {
         <div className="relative overflow-hidden rounded-3xl bg-zinc-900 text-white p-8 sm:p-14 shadow-2xl border border-zinc-700">
           <div className="relative z-10 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
             <div className="max-w-2xl space-y-3">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/20 text-orange-300 border border-orange-400/40 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
                 Proprietários
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
@@ -403,7 +403,7 @@ export default async function HomePage() {
                 asChild
                 variant="default"
                 size="lg"
-                className="bg-cyan-700 hover:bg-cyan-800 text-white font-bold shadow-lg shadow-cyan-900/30 border-0"
+                className="bg-orange-700 hover:bg-orange-800 text-white font-bold shadow-lg shadow-orange-900/30 border-0"
               >
                 <Link href="/anunciar">
                   <span>Anunciar meu imóvel</span>
@@ -415,7 +415,7 @@ export default async function HomePage() {
                   asChild
                   variant="default"
                   size="lg"
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-lg shadow-emerald-950/30 border-0"
+                  className="bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-lg shadow-orange-950/30 border-0"
                 >
                   <a
                     href={`https://wa.me/${cleanWhatsapp}?text=${encodeURIComponent(
@@ -437,11 +437,11 @@ export default async function HomePage() {
       {/* =================================================================== */}
       {/* 9. CONTATO COM CANAIS COLORIDOS                                     */}
       {/* =================================================================== */}
-      <section className="bg-zinc-50 py-16 border-t border-cyan-100">
+      <section className="bg-zinc-50 py-16 border-t border-orange-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
             <div className="lg:col-span-5 space-y-4">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-200/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
                 Atendimento
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 leading-tight">
@@ -454,7 +454,7 @@ export default async function HomePage() {
               <div className="pt-4 space-y-3.5 text-sm text-zinc-800">
                 {settings.phone && (
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-100 text-cyan-800 border border-cyan-200/80 shrink-0">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 text-orange-800 border border-orange-200/80 shrink-0">
                       <Phone className="h-5 w-5" />
                     </div>
                     <span className="font-medium">{settings.phone}</span>
@@ -462,14 +462,14 @@ export default async function HomePage() {
                 )}
                 {settings.whatsapp && cleanWhatsapp && (
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-800 border border-emerald-200/80 shrink-0">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 text-orange-800 border border-orange-200/80 shrink-0">
                       <MessageCircle className="h-5 w-5" />
                     </div>
                     <a
                       href={`https://wa.me/${cleanWhatsapp}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-medium text-emerald-900 hover:text-emerald-700 hover:underline transition-colors"
+                      className="font-medium text-orange-900 hover:text-orange-700 hover:underline transition-colors"
                     >
                       WhatsApp: {settings.whatsapp}
                     </a>
@@ -498,11 +498,11 @@ export default async function HomePage() {
 
               <div className="pt-2 space-y-2 text-xs text-zinc-600">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-orange-600 shrink-0" />
                   <span>Atendimento confidencial e em conformidade com a LGPD</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-600 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-orange-600 shrink-0" />
                   <span>Opções selecionadas de acordo com o seu perfil</span>
                 </div>
               </div>
@@ -510,7 +510,7 @@ export default async function HomePage() {
 
             {/* Formulário Funcional */}
             <div className="lg:col-span-7">
-              <div className="rounded-2xl border border-cyan-100 bg-white p-6 sm:p-8 shadow-xl shadow-cyan-900/5">
+              <div className="rounded-2xl border border-orange-100 bg-white p-6 sm:p-8 shadow-xl shadow-orange-900/5">
                 <PublicContactForm source="contato_geral" />
               </div>
             </div>
