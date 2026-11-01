@@ -70,12 +70,12 @@ export function Header({ settings }: HeaderProps) {
         <Link
           href="/"
           className="group flex items-center gap-3 focus-visible:outline-none"
-          aria-label="Página inicial da S&A Imobiliária"
+          aria-label="Página inicial da S&A Gestora Imobiliária"
         >
-          <Image src="/sa-imobiliaria-logo.png" alt="S&A Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain" priority />
-          {(settings.agency_name || "S&A Imobiliária") ? (
+          <Image src="/sa-imobiliaria-logo.png" alt="S&A Gestora Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain" priority />
+          {(settings.agency_name || "S&A Gestora Imobiliária") ? (
             <span className="font-sans text-lg font-bold tracking-tight text-zinc-900">
-              {settings.agency_name || "S&A Imobiliária"}
+              {settings.agency_name || "S&A Gestora Imobiliária"}
             </span>
           ) : (
             <span className="sr-only">Início</span>
