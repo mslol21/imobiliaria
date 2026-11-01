@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   MapPin,
@@ -24,31 +25,19 @@ export function Footer({ settings }: FooterProps) {
   const cleanWhatsapp = sanitizePhoneForWhatsApp(settings.whatsapp);
 
   return (
-    <footer className="bg-slate-950 text-slate-300 border-t-4 border-cyan-700 relative">
+    <footer className="bg-slate-950 text-slate-300 border-t-4 border-orange-700 relative">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12">
           {/* Coluna 1: Símbolo e Descrição */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-700 text-white shadow-sm">
-                <svg
-                  className="h-6 w-6 fill-none stroke-current stroke-[2.2]"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"
-                  />
-                </svg>
-              </div>
+              <Image src="/sa-imobiliaria-logo.png" alt="Logo S&A Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain bg-white" />
               <div>
                 <span className="font-sans text-xl font-bold tracking-tight text-white block leading-none">
-                  {settings.agency_name || "Imóveis para comprar e alugar"}
+                  {settings.agency_name || "S&A Imobiliária"}
                 </span>
-                <span className="text-[11px] uppercase tracking-wider text-cyan-400 font-semibold mt-1 block">
-                  Imóveis Selecionados
+                <span className="text-[11px] uppercase tracking-wider text-orange-400 font-semibold mt-1 block">
+                  Guaianases • Zona Leste
                 </span>
               </div>
             </Link>
@@ -61,13 +50,13 @@ export function Footer({ settings }: FooterProps) {
             {/* CRECI */}
             <div className="pt-2">
               {settings.creci ? (
-                <div className="inline-flex items-center gap-2 rounded-lg border border-cyan-900/50 bg-cyan-950/40 px-3 py-1.5 text-xs text-cyan-200">
-                  <ShieldCheck className="h-4 w-4 text-cyan-400" />
+                <div className="inline-flex items-center gap-2 rounded-lg border border-orange-900/50 bg-orange-950/40 px-3 py-1.5 text-xs text-orange-200">
+                  <ShieldCheck className="h-4 w-4 text-orange-400" />
                   <span>Registro Profissional: {settings.creci}</span>
                 </div>
               ) : (
-                <div className="inline-flex items-center gap-2 rounded-lg border border-cyan-900/40 bg-cyan-950/30 px-3 py-1.5 text-xs text-cyan-300">
-                  <ShieldCheck className="h-4 w-4 text-cyan-400" />
+                <div className="inline-flex items-center gap-2 rounded-lg border border-orange-900/40 bg-orange-950/30 px-3 py-1.5 text-xs text-orange-300">
+                  <ShieldCheck className="h-4 w-4 text-orange-400" />
                   <span>Dados profissionais a serem cadastrados</span>
                 </div>
               )}
@@ -85,7 +74,7 @@ export function Footer({ settings }: FooterProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800/80 text-zinc-300 hover:border-cyan-400 hover:text-cyan-400 transition-colors"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800/80 text-zinc-300 hover:border-orange-400 hover:text-orange-400 transition-colors"
                   >
                     <Instagram className="h-4 w-4" />
                   </a>
@@ -96,7 +85,7 @@ export function Footer({ settings }: FooterProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800/80 text-zinc-300 hover:border-cyan-400 hover:text-cyan-400 transition-colors"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800/80 text-zinc-300 hover:border-orange-400 hover:text-orange-400 transition-colors"
                   >
                     <Linkedin className="h-4 w-4" />
                   </a>
@@ -107,7 +96,7 @@ export function Footer({ settings }: FooterProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="YouTube"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800/80 text-zinc-300 hover:border-cyan-400 hover:text-cyan-400 transition-colors"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800/80 text-zinc-300 hover:border-orange-400 hover:text-orange-400 transition-colors"
                   >
                     <Youtube className="h-4 w-4" />
                   </a>
@@ -118,7 +107,7 @@ export function Footer({ settings }: FooterProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
-                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800/80 text-zinc-300 hover:border-cyan-400 hover:text-cyan-400 transition-colors"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-700 bg-zinc-800/80 text-zinc-300 hover:border-orange-400 hover:text-orange-400 transition-colors"
                   >
                     <Facebook className="h-4 w-4" />
                   </a>
@@ -129,7 +118,7 @@ export function Footer({ settings }: FooterProps) {
 
           {/* Coluna 2: Navegação Rápida */}
           <div className="lg:col-span-2 space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-cyan-400 font-sans">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-orange-400 font-sans">
               Navegação
             </h3>
             <ul className="space-y-2.5 text-sm text-zinc-300">
@@ -173,7 +162,7 @@ export function Footer({ settings }: FooterProps) {
 
           {/* Coluna 3: Categorias */}
           <div className="lg:col-span-2 space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-cyan-400 font-sans">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-orange-400 font-sans">
               Categorias
             </h3>
             <ul className="space-y-2.5 text-sm text-zinc-300">
@@ -230,14 +219,14 @@ export function Footer({ settings }: FooterProps) {
 
           {/* Coluna 4: Atendimento */}
           <div className="lg:col-span-4 space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-cyan-400 font-sans">
+            <h3 className="text-xs font-semibold uppercase tracking-wider text-orange-400 font-sans">
               Atendimento & Contato
             </h3>
 
             <ul className="space-y-3 text-sm text-zinc-300">
               {settings.address_line ? (
                 <li className="flex items-start gap-3">
-                  <MapPin className="h-4 w-4 text-cyan-400 shrink-0 mt-1" />
+                  <MapPin className="h-4 w-4 text-orange-400 shrink-0 mt-1" />
                   <span>
                     {settings.address_line}
                     {settings.city ? ` — ${settings.city}/${settings.state}` : ""}
@@ -246,7 +235,7 @@ export function Footer({ settings }: FooterProps) {
                 </li>
               ) : (
                 <li className="flex items-start gap-3 text-zinc-400">
-                  <MapPin className="h-4 w-4 text-cyan-400 shrink-0 mt-1" />
+                  <MapPin className="h-4 w-4 text-orange-400 shrink-0 mt-1" />
                   <span>
                     {settings.city}/{settings.state} • Atendimento presencial com agendamento
                   </span>
@@ -255,7 +244,7 @@ export function Footer({ settings }: FooterProps) {
 
               {settings.phone && (
                 <li className="flex items-center gap-3">
-                  <Phone className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <Phone className="h-4 w-4 text-orange-400 shrink-0" />
                   <a
                     href={`tel:${settings.phone.replace(/\D/g, "")}`}
                     className="hover:text-white transition-colors"
@@ -267,7 +256,7 @@ export function Footer({ settings }: FooterProps) {
 
               {settings.whatsapp && cleanWhatsapp && (
                 <li className="flex items-center gap-3">
-                  <MessageCircle className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <MessageCircle className="h-4 w-4 text-orange-400 shrink-0" />
                   <a
                     href={`https://wa.me/${cleanWhatsapp}`}
                     target="_blank"
@@ -281,7 +270,7 @@ export function Footer({ settings }: FooterProps) {
 
               {settings.email && (
                 <li className="flex items-center gap-3">
-                  <Mail className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <Mail className="h-4 w-4 text-orange-400 shrink-0" />
                   <a
                     href={`mailto:${settings.email}`}
                     className="hover:text-white transition-colors"
@@ -293,7 +282,7 @@ export function Footer({ settings }: FooterProps) {
 
               {settings.business_hours && (
                 <li className="flex items-start gap-3 text-xs text-zinc-400 pt-1">
-                  <Clock className="h-4 w-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <Clock className="h-4 w-4 text-orange-400 shrink-0 mt-0.5" />
                   <span>{settings.business_hours}</span>
                 </li>
               )}
