@@ -31,7 +31,7 @@ export function Footer({ settings }: FooterProps) {
           {/* Coluna 1: Símbolo e Descrição */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <Image src="/sa-imobiliaria-logo.png" alt="Logo S&A Gestora Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain bg-white" />
+              <Image src="/sa-gestora-logo.svg" alt="Logo S&A Gestora Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain bg-white" />
               <div>
                 <span className="font-sans text-xl font-bold tracking-tight text-white block leading-none">
                   {settings.agency_name || "S&A Gestora Imobiliária"}
