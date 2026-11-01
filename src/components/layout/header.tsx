@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Menu,
@@ -57,12 +58,12 @@ export function Header({ settings }: HeaderProps) {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md border-b border-cyan-100"
+          ? "bg-white/95 backdrop-blur-md shadow-md border-b border-amber-100"
           : "bg-white/90 backdrop-blur-xs border-b border-zinc-200/80"
       )}
     >
       {/* Barra de Acento Colorida de Topo */}
-      <div className="h-0.5 w-full bg-cyan-700" />
+      <div className="h-0.5 w-full bg-amber-600" />
 
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Símbolo Imobiliário */}
@@ -71,22 +72,10 @@ export function Header({ settings }: HeaderProps) {
           className="group flex items-center gap-3 focus-visible:outline-none"
           aria-label="Página Inicial da Plataforma Imobiliária"
         >
-          <div className="relative flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-700 text-white shadow-sm transition-all duration-200 group-hover:bg-cyan-800 group-hover:scale-105">
-            <svg
-              className="h-6 w-6 fill-none stroke-current stroke-[2.2]"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"
-              />
-            </svg>
-          </div>
-          {settings.agency_name ? (
+          <Image src="/sa-imobiliaria-logo.png" alt="S&A Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain" priority />
+          {(settings.agency_name || "S&A Imobiliária") ? (
             <span className="font-sans text-lg font-bold tracking-tight text-zinc-900">
-              {settings.agency_name}
+              {settings.agency_name || "S&A Imobiliária"}
             </span>
           ) : (
             <span className="sr-only">Início</span>
@@ -110,8 +99,8 @@ export function Header({ settings }: HeaderProps) {
                 className={cn(
                   "relative rounded-md px-3.5 py-2 text-sm font-medium transition-colors",
                   isActive
-                    ? "text-cyan-700 font-semibold"
-                    : "text-zinc-700 hover:text-cyan-700 hover:bg-zinc-100"
+                    ? "text-amber-700 font-semibold"
+                    : "text-zinc-700 hover:text-amber-700 hover:bg-zinc-100"
                 )}
               >
                 {item.label}
@@ -130,7 +119,7 @@ export function Header({ settings }: HeaderProps) {
         <div className="hidden lg:flex lg:items-center lg:gap-3">
           <Link
             href="/anunciar"
-            className="rounded-lg px-3 py-2 text-xs font-semibold text-cyan-800 bg-cyan-50/80 hover:bg-cyan-100 border border-cyan-200/80 transition-colors"
+            className="rounded-lg px-3 py-2 text-xs font-semibold text-amber-800 bg-amber-50/80 hover:bg-cyan-100 border border-amber-200/80 transition-colors"
           >
             Anunciar Imóvel
           </Link>
@@ -139,7 +128,7 @@ export function Header({ settings }: HeaderProps) {
             asChild
             variant="default"
             size="default"
-            className="bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-sm border-0"
+            className="bg-cyan-700 hover:bg-amber-700 text-white font-semibold shadow-sm border-0"
           >
             <a
               href={contactHref}
