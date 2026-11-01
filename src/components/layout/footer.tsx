@@ -31,10 +31,10 @@ export function Footer({ settings }: FooterProps) {
           {/* Coluna 1: Símbolo e Descrição */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <Image src="/sa-imobiliaria-logo.png" alt="Logo S&A Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain bg-white" />
+              <Image src="/sa-imobiliaria-logo.png" alt="Logo S&A Gestora Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain bg-white" />
               <div>
                 <span className="font-sans text-xl font-bold tracking-tight text-white block leading-none">
-                  {settings.agency_name || "S&A Imobiliária"}
+                  {settings.agency_name || "S&A Gestora Imobiliária"}
                 </span>
                 <span className="text-[11px] uppercase tracking-wider text-orange-400 font-semibold mt-1 block">
                   Guaianases • Zona Leste
