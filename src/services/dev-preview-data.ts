@@ -757,7 +757,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
  */
 export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   id: "default-site-settings",
-  agency_name: "S&A Imobiliária",
+  agency_name: "S&A Gestora Imobiliária",
   agency_slogan:
     "Encontre casas e apartamentos para comprar ou alugar em Guaianases e na Zona Leste de São Paulo.",
   creci: "", // Sem inventar dados legais
@@ -770,9 +770,9 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   state: "SP",
   zip_code: "",
   business_hours: "Consulte nossos canais de atendimento",
-  about_title: "S&A Imobiliária — Guaianases e Zona Leste",
+  about_title: "S&A Gestora Imobiliária — Guaianases e Zona Leste",
   about_history:
-    "A S&A Imobiliária apresenta oportunidades de compra e locação em Guaianases e em outros bairros da Zona Leste de São Paulo. Consulte nossa equipe para conhecer os imóveis disponíveis.",
+    "A S&A Gestora Imobiliária apresenta oportunidades de compra e locação em Guaianases e em outros bairros da Zona Leste de São Paulo. Consulte nossa equipe para conhecer os imóveis disponíveis.",
   about_positioning:
     "Navegue pelos anúncios, filtre por bairro e valor e entre em contato diretamente para saber mais sobre os imóveis.",
   about_differentials: [
