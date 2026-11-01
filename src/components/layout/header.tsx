@@ -72,7 +72,7 @@ export function Header({ settings }: HeaderProps) {
           className="group flex items-center gap-3 focus-visible:outline-none"
           aria-label="Página inicial da S&A Gestora Imobiliária"
         >
-          <Image src="/sa-imobiliaria-logo.png" alt="S&A Gestora Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain" priority />
+          <Image src="/sa-gestora-logo.svg" alt="S&A Gestora Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain" priority />
           {(settings.agency_name || "S&A Gestora Imobiliária") ? (
             <span className="font-sans text-lg font-bold tracking-tight text-zinc-900">
               {settings.agency_name || "S&A Gestora Imobiliária"}
