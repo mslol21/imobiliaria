@@ -58,19 +58,19 @@ export function Header({ settings }: HeaderProps) {
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md border-b border-amber-100"
+          ? "bg-white/95 backdrop-blur-md shadow-md border-b border-orange-100"
           : "bg-white/90 backdrop-blur-xs border-b border-zinc-200/80"
       )}
     >
       {/* Barra de Acento Colorida de Topo */}
-      <div className="h-0.5 w-full bg-amber-600" />
+      <div className="h-0.5 w-full bg-orange-600" />
 
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Símbolo Imobiliário */}
         <Link
           href="/"
           className="group flex items-center gap-3 focus-visible:outline-none"
-          aria-label="Página Inicial da Plataforma Imobiliária"
+          aria-label="Página inicial da S&A Imobiliária"
         >
           <Image src="/sa-imobiliaria-logo.png" alt="S&A Imobiliária" width={52} height={52} className="h-12 w-12 rounded-full object-contain" priority />
           {(settings.agency_name || "S&A Imobiliária") ? (
@@ -99,14 +99,14 @@ export function Header({ settings }: HeaderProps) {
                 className={cn(
                   "relative rounded-md px-3.5 py-2 text-sm font-medium transition-colors",
                   isActive
-                    ? "text-amber-700 font-semibold"
-                    : "text-zinc-700 hover:text-amber-700 hover:bg-zinc-100"
+                    ? "text-orange-700 font-semibold"
+                    : "text-zinc-700 hover:text-orange-700 hover:bg-zinc-100"
                 )}
               >
                 {item.label}
                 {isActive && (
                   <span
-                    className="absolute inset-x-3.5 -bottom-1 h-0.5 rounded-full bg-cyan-700"
+                    className="absolute inset-x-3.5 -bottom-1 h-0.5 rounded-full bg-orange-600"
                     aria-hidden="true"
                   />
                 )}
@@ -119,7 +119,7 @@ export function Header({ settings }: HeaderProps) {
         <div className="hidden lg:flex lg:items-center lg:gap-3">
           <Link
             href="/anunciar"
-            className="rounded-lg px-3 py-2 text-xs font-semibold text-amber-800 bg-amber-50/80 hover:bg-cyan-100 border border-amber-200/80 transition-colors"
+            className="rounded-lg px-3 py-2 text-xs font-semibold text-orange-800 bg-orange-50/80 hover:bg-cyan-100 border border-orange-200/80 transition-colors"
           >
             Anunciar Imóvel
           </Link>
@@ -128,7 +128,7 @@ export function Header({ settings }: HeaderProps) {
             asChild
             variant="default"
             size="default"
-            className="bg-cyan-700 hover:bg-amber-700 text-white font-semibold shadow-sm border-0"
+            className="bg-orange-600 hover:bg-orange-700 text-white font-semibold shadow-sm border-0"
           >
             <a
               href={contactHref}
@@ -183,23 +183,23 @@ export function Header({ settings }: HeaderProps) {
                   className={cn(
                     "flex items-center justify-between rounded-lg px-4 py-3 text-base font-medium transition-colors",
                     isActive
-                      ? "bg-cyan-50 text-cyan-800 font-semibold"
+                      ? "bg-orange-50 text-orange-800 font-semibold"
                       : "text-zinc-800 hover:bg-zinc-100"
                   )}
                 >
                   <span>{item.label}</span>
                   {isActive && (
-                    <span className="h-2 w-2 rounded-full bg-cyan-700" />
+                    <span className="h-2 w-2 rounded-full bg-orange-600" />
                   )}
                 </Link>
               );
             })}
             <Link
               href="/anunciar"
-              className="flex items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-cyan-700 hover:bg-zinc-100"
+              className="flex items-center justify-between rounded-lg px-4 py-3 text-base font-medium text-orange-700 hover:bg-zinc-100"
             >
               <span>Quero anunciar meu imóvel</span>
-              <ArrowUpRight className="h-4 w-4 text-cyan-700" />
+              <ArrowUpRight className="h-4 w-4 text-orange-700" />
             </Link>
           </nav>
 
@@ -216,7 +216,7 @@ export function Header({ settings }: HeaderProps) {
             </Button>
             <Link
               href="/admin"
-              className="inline-flex items-center justify-center gap-1.5 py-2 text-xs text-zinc-500 hover:text-cyan-700"
+              className="sr-only"
             >
               <ShieldCheck className="h-3.5 w-3.5" />
               <span>Painel Administrativo</span>
