@@ -15,8 +15,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "apartamento-alto-padrao-jardim-paulista-ref-201",
     property_type: "alto_padrao",
     purpose: "venda",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -102,8 +101,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "casa-contemporanea-cidade-jardim-ref-202",
     property_type: "casa",
     purpose: "venda",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -176,8 +174,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "apartamento-mobiliado-itaim-bibi-ref-203",
     property_type: "apartamento",
     purpose: "aluguel",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -249,8 +246,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "cobertura-duplex-vila-nova-conceicao-ref-204",
     property_type: "cobertura",
     purpose: "venda",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -324,8 +320,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "conjunto-comercial-faria-lima-ref-205",
     property_type: "comercial",
     purpose: "aluguel",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -397,8 +392,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "apartamento-reformado-moema-passaros-ref-206",
     property_type: "apartamento",
     purpose: "venda",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -471,8 +465,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "casa-condominio-morumbi-ref-207",
     property_type: "condominio",
     purpose: "venda",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -545,8 +538,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "apartamento-elegante-higienopolis-ref-208",
     property_type: "apartamento",
     purpose: "aluguel",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -617,8 +609,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "casa-campo-porto-feliz-ref-209",
     property_type: "casa",
     purpose: "venda",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -691,8 +682,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
     slug: "apartamento-novo-pinheiros-ref-210",
     property_type: "apartamento",
     purpose: "ambos",
-    description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+    description: "Conheça opções por localização, tipo e faixa de preço.",
     short_description:
       "Anúncio demonstrativo. Fotos e informações ilustrativas.",
     zip_code: "",
@@ -767,7 +757,7 @@ export const DEV_PREVIEW_PROPERTIES: Property[] = [
  */
 export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   id: "default-site-settings",
-  agency_name: "", // Vazio por padrão: exibe símbolo minimalista sem texto
+  agency_name: "S&A Imobiliária",
   agency_slogan:
     "Encontre casas e apartamentos para comprar ou alugar em Guaianases e na Zona Leste de São Paulo.",
   creci: "", // Sem inventar dados legais
@@ -780,26 +770,23 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   state: "SP",
   zip_code: "",
   business_hours: "Horários de atendimento a definir",
-  about_title: "Imóveis em Guaianases e Zona Leste de São Paulo",
+  about_title: "S&A Imobiliária — Guaianases e Zona Leste",
   about_history:
     "Este é um modelo de site para uma imobiliária que atua em Guaianases e nos bairros próximos da Zona Leste de São Paulo. As informações comerciais serão cadastradas pela empresa responsável.",
   about_positioning:
     "Navegue pelos anúncios, filtre por bairro e valor e entre em contato diretamente para saber mais sobre os imóveis.",
   about_differentials: [
     {
-      title: "Curadoria Especializada",
-      description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+      title: "Busca de imóveis",
+      description: "Conheça opções por localização, tipo e faixa de preço.",
     },
     {
-      title: "Atendimento Individualizado",
-      description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+      title: "Atendimento direto",
+      description: "Conheça opções por localização, tipo e faixa de preço.",
     },
     {
-      title: "Segurança e Conformidade",
-      description:
-      "Imóvel ilustrativo para apresentação do site. As características, o valor e a disponibilidade não correspondem a uma oferta real. Consulte os dados definitivos após a publicação do anúncio.",
+      title: "Compra e locação",
+      description: "Conheça opções por localização, tipo e faixa de preço.",
     },
   ],
   about_consulting:
