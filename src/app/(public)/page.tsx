@@ -86,7 +86,7 @@ export default async function HomePage() {
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/20 border border-cyan-400/40 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-300 backdrop-blur-md mb-3">
             <Building2 className="h-3.5 w-3.5 text-cyan-300" />
-            <span>Imóveis em Guaianases e Zona Leste</span>
+            <span>S&A Imobiliária • Guaianases</span>
           </span>
 
           <h1 className="max-w-3xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl leading-tight">
@@ -130,7 +130,7 @@ export default async function HomePage() {
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-200/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
-              <Building2 className="h-3.5 w-3.5 text-cyan-700" />
+              <Building2 className="h-3.5 w-3.5 text-amber-700" />
               <span>Seleção Especial</span>
             </span>
             <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900">
@@ -144,7 +144,7 @@ export default async function HomePage() {
             asChild
             variant="default"
             size="sm"
-            className="bg-cyan-700 hover:bg-cyan-800 text-white font-semibold shadow-sm"
+            className="bg-amber-600 hover:bg-amber-700 text-white font-semibold shadow-sm"
           >
             <Link href="/imoveis">
               <span>Ver catálogo completo</span>
@@ -180,7 +180,7 @@ export default async function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-700 text-white px-3.5 py-1 text-xs font-bold uppercase tracking-wider shadow-xs">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-600 text-white px-3.5 py-1 text-xs font-bold uppercase tracking-wider shadow-xs">
                 Venda
               </span>
               <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900">
@@ -222,7 +222,7 @@ export default async function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-700 text-white px-3.5 py-1 text-xs font-bold uppercase tracking-wider shadow-xs">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-600 text-white px-3.5 py-1 text-xs font-bold uppercase tracking-wider shadow-xs">
                 Locação
               </span>
               <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900">
@@ -236,7 +236,7 @@ export default async function HomePage() {
               asChild
               variant="default"
               size="sm"
-              className="bg-emerald-700 hover:bg-emerald-800 text-white font-semibold shadow-xs"
+              className="bg-emerald-700 hover:bg-amber-700 text-white font-semibold shadow-xs"
             >
               <Link href="/alugar">
                 <span>Ver todos para alugar</span>
