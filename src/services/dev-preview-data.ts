@@ -769,10 +769,10 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   city: "São Paulo",
   state: "SP",
   zip_code: "",
-  business_hours: "Horários de atendimento a definir",
+  business_hours: "Consulte nossos canais de atendimento",
   about_title: "S&A Imobiliária — Guaianases e Zona Leste",
   about_history:
-    "Este é um modelo de site para uma imobiliária que atua em Guaianases e nos bairros próximos da Zona Leste de São Paulo. As informações comerciais serão cadastradas pela empresa responsável.",
+    "A S&A Imobiliária apresenta oportunidades de compra e locação em Guaianases e em outros bairros da Zona Leste de São Paulo. Consulte nossa equipe para conhecer os imóveis disponíveis.",
   about_positioning:
     "Navegue pelos anúncios, filtre por bairro e valor e entre em contato diretamente para saber mais sobre os imóveis.",
   about_differentials: [
@@ -790,7 +790,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     },
   ],
   about_consulting:
-    "Informações e atendimento personalizados após a configuração dos dados da imobiliária.",
+    "Atendimento para quem deseja comprar, alugar ou anunciar imóveis na região.",
   instagram_url: "",
   linkedin_url: "",
   youtube_url: "",
