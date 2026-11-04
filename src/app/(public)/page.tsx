@@ -313,6 +313,22 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <section className="relative h-[68vh] min-h-[440px] overflow-hidden bg-zinc-900" aria-label="Encontre seu lugar na Zona Leste">
+        <div data-motion-zoom-image className="absolute inset-0">
+          <Image
+            src={heroImage}
+            alt="Imagem ilustrativa de imóvel residencial"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
+        </div>
+        <div className="pointer-events-none relative z-10 flex h-full items-center justify-center px-5 text-center">
+          <h2 className="max-w-3xl text-3xl font-bold text-white sm:text-5xl">Um novo endereço. Novas possibilidades.</h2>
+        </div>
+      </section>
+
       {/* =================================================================== */}
       {/* 7. SOBRE A IMOBILIÁRIA (4 DIFERENCIAIS COLORIDOS)                   */}
       {/* =================================================================== */}
