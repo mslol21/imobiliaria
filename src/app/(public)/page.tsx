@@ -17,6 +17,7 @@ import {
   MessageCircle,
   
 } from "lucide-react";
+import { HomeScrollMotion } from "@/components/motion/home-scroll-motion";
 import { HeroSearchBar } from "@/components/properties/hero-search-bar";
 import { PropertyCard } from "@/components/properties/property-card";
 import { PublicContactForm } from "@/components/forms/public-contact-form";
@@ -65,17 +66,18 @@ export default async function HomePage() {
 
   return (
     <div className="bg-white text-zinc-900">
+      <HomeScrollMotion />
       {/* =================================================================== */}
       {/* 2. HERO COM FOTOGRAFIA IMOBILIÁRIA E PESQUISA                       */}
       {/* =================================================================== */}
-      <section className="relative min-h-[520px] lg:min-h-[580px] flex items-center justify-center overflow-hidden bg-slate-950">
+      <section data-motion-hero className="relative min-h-[520px] lg:min-h-[580px] flex items-center justify-center overflow-hidden bg-slate-950">
         <Image
           src={heroImage}
           alt="Fachada residencial moderna e elegante"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-center" data-motion-hero-image
         />
         {/* Overlay com tonalidade azul-petróleo e meia-noite */}
         <div
@@ -86,14 +88,14 @@ export default async function HomePage() {
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-4 py-12 text-center sm:px-6 lg:px-8 lg:py-16">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/20 border border-orange-400/40 px-4 py-1 text-xs font-semibold uppercase tracking-wider text-orange-300 backdrop-blur-md mb-3">
             <Building2 className="h-3.5 w-3.5 text-orange-300" />
-            <span>S&A Imobiliária • Guaianases</span>
+            <span>S&A Gestora Imobiliária • Guaianases</span>
           </span>
 
           <h1 className="max-w-3xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl leading-tight">
-            Seu novo imóvel pode estar aqui na Zona Leste.
+            <span className="block overflow-hidden"><span data-motion-hero-title className="block">Seu novo imóvel pode estar</span></span><span className="block overflow-hidden"><span data-motion-hero-title className="block">aqui na Zona Leste.</span></span>
           </h1>
 
-          <p className="mt-3.5 max-w-2xl text-base leading-relaxed text-zinc-200 sm:text-lg">
+          <p data-motion-hero-subtitle className="mt-3.5 max-w-2xl text-base leading-relaxed text-zinc-200 sm:text-lg">
             Explore casas, apartamentos e imóveis comerciais em Guaianases e bairros próximos. Pesquise, compare e entre em contato.
           </p>
 
@@ -154,7 +156,7 @@ export default async function HomePage() {
         </div>
 
         {featuredResult.items.length > 0 ? (
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div data-motion-reveal className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuredResult.items.map((property, index) => (
               <PropertyCard
                 key={property.id}
@@ -260,7 +262,7 @@ export default async function HomePage() {
       {/* =================================================================== */}
       {/* 6. CATEGORIAS DE IMÓVEIS                                            */}
       {/* =================================================================== */}
-      <section className="bg-zinc-900 text-white py-20 relative overflow-hidden border-y border-zinc-800">
+      <section data-motion-horizontal className="bg-zinc-900 text-white py-20 relative overflow-hidden border-y border-zinc-800">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-2xl">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/20 text-orange-300 border border-orange-400/40 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
@@ -274,12 +276,12 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div data-motion-horizontal-track className="mt-10 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 md:overflow-visible md:pb-0">
             {HOME_CATEGORIES.map((category) => (
               <Link
                 key={category.slug}
                 href={category.href}
-                className="group relative flex h-64 flex-col justify-end overflow-hidden rounded-2xl border border-orange-900/50 bg-slate-900 p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-orange-400/70 hover:shadow-orange-900/20"
+                className="group relative flex h-64 min-w-[80vw] snap-start flex-col justify-end overflow-hidden rounded-2xl md:min-w-[360px] lg:min-w-[420px] border border-orange-900/50 bg-slate-900 p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-orange-400/70 hover:shadow-orange-900/20"
               >
                 <Image
                   src={category.image}
@@ -315,19 +317,19 @@ export default async function HomePage() {
       {/* 7. SOBRE A IMOBILIÁRIA (4 DIFERENCIAIS COLORIDOS)                   */}
       {/* =================================================================== */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div data-motion-reveal className="text-center max-w-2xl mx-auto mb-14">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
             Sobre Nós
           </span>
           <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-zinc-900">
-            {settings.about_title || "Consultoria Imobiliária com Segurança e Clareza"}
+            {settings.about_title || "Imóveis e atendimento na Zona Leste"}
           </h2>
           <p className="mt-2 text-sm text-zinc-600">
             Informações claras e contato acessível para ajudar você a encontrar o imóvel que procura na região.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div data-motion-reveal className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             {
               icon: Compass,
@@ -384,7 +386,7 @@ export default async function HomePage() {
       {/* 8. CHAMADA PARA ANUNCIAR UM IMÓVEL (OCEANO PROFUNDO & DESTAQUE)     */}
       {/* =================================================================== */}
       <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-zinc-900 text-white p-8 sm:p-14 shadow-2xl border border-zinc-700">
+        <div data-motion-reveal className="relative overflow-hidden rounded-3xl bg-zinc-900 text-white p-8 sm:p-14 shadow-2xl border border-zinc-700">
           <div className="relative z-10 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
             <div className="max-w-2xl space-y-3">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-500/20 text-orange-300 border border-orange-400/40 px-3.5 py-1 text-xs font-bold uppercase tracking-wider">
